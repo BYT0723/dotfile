@@ -1,0 +1,11 @@
+neww -n music ncmpcpp
+
+# ncmpcpp start config
+# playlist, browser, search_engine, media_library, playlist_editor, tag_editor, outputs, visualizer, clock 
+
+splitw -h -p 30 ncmpcpp -s visualizer
+splitw -v -p 60 ncmpcpp -s search_engine
+selectp -L
+
+splitw -v -p 20 ncpamixer
+selectp -U
