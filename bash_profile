@@ -3,8 +3,7 @@
 #
 
 # proxy
-# alias proxy='HTTP_PROXY=http://127.0.0.1:8889 HTTPS_PROXY=http://127.0.0.1:8889'
-alias proxy='ALL_PROXY=socks5://frp.byt0723.xyz:1080'
+alias proxy='HTTPS_PROXY=socks5://127.0.0.1:1080'
 #
 # Start Server
 # 
@@ -120,5 +119,7 @@ alias layoutRight="xrandr --output eDP1 --auto --output HDMI2 --auto --mode 2560
 alias layoutMirror="xrandr --output eDP1 --auto --output HDMI2 --auto --mode 1920x1080 --same-as eDP1"
 alias layoutOnlyHDMI="xrandr --output eDP1 --off --output HDMI2 --auto --mode 2560x1440"
 alias layoutOnlyDP="xrandr --output HDMI2 --off --output eDP1 --auto --mode 1920x1080 "
+
+alias wallpapers="cd /home/tao/winDesk/G/Steam/steamapps/workshop/content/431960/"
 
 # [[ -f ~/.bashrc ]] && . ~/.bashrc

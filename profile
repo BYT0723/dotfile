@@ -1,8 +1,8 @@
-export GTK_IM_MODULE DEFAULT=fcitx
+export GTK_IM_MODULE DEFAULT=fcitx5
 export QT_IM_MODULE  DEFAULT=fcitx5
-export XMODIFIERS    DEFAULT=\@im=fcitx
-export INPUT_METHOD  DEFAULT=fcitx
-export SDL_IM_MODULE DEFAULT=fcitx
+export XMODIFIERS    DEFAULT=\@im=fcitx5
+export INPUT_METHOD  DEFAULT=fcitx5
+export SDL_IM_MODULE DEFAULT=fcitx5
 export GLFW_IM_MODULE DEFAULT=ibus
 
 export QT_QPA_PLATFORMTHEME="qt5ct"
@@ -13,10 +13,6 @@ export EDITOR=/usr/bin/nvim
 export TERMINAL=st
 export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
-
-# proxy
-# export HTTP_PROXY=http://127.0.0.1:8889
-# export HTTPS_PROXY=http://127.0.0.1:8889
 
 # nvim markdown preview
 export INSTANT_MARKDOWN_OPEN_TO_THE_WORLD=1

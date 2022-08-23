@@ -2,7 +2,7 @@ backup:
 	cp ~/.profile ./profile
 	cp ~/.bash_profile ./bash_profile
 	cp ~/.tmux.conf ./tmux.conf
-	cp -r ~/.tmux ./tmux
+	cp ~/.tmux/* ./tmux
 	cp ~/.config/ranger/rc.conf ./rc.conf
 
 
