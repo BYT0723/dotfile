@@ -1,5 +1,10 @@
 update:
 	cp ~/.bash_profile            ./
+	cp ~/.zshrc                   ./
+	cp ~/.p10k.zsh                ./
+	cp ~/.zimrc                   ./
+	cp -r ~/.zim                  ./
+	cp ~/.p10k.zsh                ./
 	cp -r ~/.config/mpd           ./.config/
 	cp -r ~/.config/mpv           ./.config/
 	cp -r ~/.config/ncmpcpp       ./.config/
