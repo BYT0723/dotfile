@@ -1,14 +1,11 @@
-backup:
-	cp ~/.profile ./profile
-	cp ~/.bash_profile ./bash_profile
-	cp ~/.tmux.conf ./tmux.conf
-	cp ~/.tmux/* ./tmux
-	cp ~/.config/ranger/rc.conf ./rc.conf
-
-
-install:
-	cp ~/profile ~/.profile
-	cp ~/bash_profile ~/.bash_profile
-	cp ~/tmux.conf ~/.tmux.conf
-	cp -r ./tmux ~/.tmux
-	cp ./rc.conf ~/.config/ranger/rc.conf
+update:
+	cp ~/.profile ./
+	cp ~/.bash_profile ./
+	cp -r ~/.config/mpd ./
+	cp -r ~/.config/mpv ./
+	cp -r ~/.config/ncmpcpp ./
+	cp -r ~/.config/neofetch ./
+	cp -r ~/.config/nnn ./
+	cp -r ~/.config/osdlyrics ./
+	cp -r ~/.config/tmux ./
+	cp ~/.config/screenkey.json ./

@@ -1,6 +1,6 @@
-neww -n e5code-front -c /home/tao/Documents/Github/e5code/
-splitw -h -p 24 -c /home/tao/Documents/Github/e5code/ npm run serve
+neww -n e5code-front -c ~/Documents/Github/e5code/
+splitw -h -p 24 -c ~/Documents/Github/e5code/ npm run serve
 selectp -L
 
-neww -n e5code-service -c /home/tao/Documents/Github/e5Code-Service/
+neww -n e5code-service -c ~/Documents/Github/e5Code-Service/
 
