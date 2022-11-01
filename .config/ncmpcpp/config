@@ -1,4 +1,4 @@
-lyrics_directory = "~/music/Lyrics"
+lyrics_directory = "~/Music/mpd/.lyrics"
 visualizer_data_source = "/tmp/mpd.fifo"
 visualizer_output_name = Visualizer feed
 visualizer_in_stereo = yes

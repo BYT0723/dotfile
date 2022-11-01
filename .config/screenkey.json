@@ -5,7 +5,7 @@
     "compr_cnt": 3,
     "ignore": [],
     "position": "fixed",
-    "persist": false,
+    "persist": true,
     "window": null,
     "font_desc": "Sans Bold",
     "font_size": "medium",
@@ -27,6 +27,6 @@
     ],
     "screen": 0,
     "start_disabled": false,
-    "mouse": true,
+    "mouse": false,
     "button_hide_duration": 1.0
 }
