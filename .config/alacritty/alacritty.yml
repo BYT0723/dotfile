@@ -1,0 +1,46 @@
+import:
+  - ~/.config/alacritty/solarized-dark.yml
+
+env:
+  TERM: alacritty
+
+window:
+  opacity: 0.8
+  title: Alacritty
+  dynamic_title: true
+  class:
+    instance: Alacritty
+    general: Alacritty
+
+font:
+  normal:
+    family: CaskaydiaCove Nerd Font
+    style: SemiLight
+
+  bold:
+    style: Bold
+
+  italic:
+    style: Italic
+
+  bold_italic:
+    style: Bold Italic
+
+  size: 9
+  builtin_box_drawing: true
+
+draw_bold_text_with_bright_colors: true
+
+scrolling:
+  history: 100000
+  multiplier: 6
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: true
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+  unfocused_hollow: true

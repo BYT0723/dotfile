@@ -4,8 +4,8 @@
 
 # ---------- env -----------
 # User configuration
-export BROWSER=/usr/bin/firefox
-export EDITOR=/usr/bin/nvim
+export BROWSER=firefox
+export EDITOR=nvim
 export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 
@@ -21,7 +21,7 @@ export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,winDesk,.npm} --type f"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
 
 # nnn
-export NNN_PLUG='i:imgview;p:preview-tabbed;f:fzcd'
+export NNN_PLUG='i:imgview;p:preview-tabbed;t:preview-tui;f:fzcd'
 export NNN_BMS='w:~/Desktop/Wallpapers'
 export NNN_SEL='/tmp/.sel'
 export NNN_FIFO='/tmp/nnn.fifo'
@@ -40,8 +40,7 @@ export PATH=$PATH:~/.cargo/bin
 
 # ---------- alias ----------
 # proxy
-# alias proxy='HTTPS_PROXY=socks5://127.0.0.1:1080'
-alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
+alias proxy='ALL_PROXY=socks5://127.0.0.1:1080 HTTP_PROXY=socks5://127.0.0.1:1080 http_proxy=socks5://127.0.0.1:1080'
 
 # nbfc
 alias startnbfc='systemctl start nbfc'
@@ -74,13 +73,16 @@ alias dcmic='bluetoothctl disconnect 5A:FD:1C:35:B4:FA'
 #
 # ncmpcpp
 alias nm='ncmpcpp'
-alias pam='pulsemixer'
+alias np='ncpamixer'
 # ranger
 alias ra='ranger'
 # neofetch
 alias neo='neofetch'
-# lazygit
+# git
 alias lgit='lazygit'
+# docker
+alias ldk='lazydocker'
+alias dkc='docker-compose'
 # traslate
 # alias tse='trans en:zh -speak'
 # alias tsc='trans zh:en -speak'
@@ -95,23 +97,16 @@ alias mcloud='sudo mount -o user=walter,pass=wangtao,uid=1000,gid=1000 //192.168
 alias umcloud='sudo umount ~/Cloud'
 alias mtemp='sudo mount /dev/sdb1 -o uid=1000,gid=1000 ~/winDesk/temp'
 alias umtemp='sudo umount ~/winDesk/temp'
-# clear trash(~/Trash)
-alias del='sudo mv -t ~/Trash/'
-alias cleartrash='sudo rm -rf ~/Trash/*'
 
 #
 # Quick Change Directory
 #
 # cd
 alias cdnv='cd ~/.config/nvim/'
-alias cdhub='cd ~/Documents/Github/'
-alias cdlab='cd ~/Documents/GitLab/'
-alias cdee='cd ~/Documents/Gitee/'
-alias cddwm='cd ~/Documents/Github/dwm/'
-alias cdst='cd ~/Documents/Github/st/'
-alias cdblog='cd ~/Documents/Github/blog/'
-alias cde5s='cd ~/Documents/Github/e5Code-Service/'
-alias cde5='cd ~/Documents/Github/e5code/'
+alias cdhub='cd ~/Workspace/Github/'
+alias cddwm='cd ~/Workspace/Github/dwm/'
+alias cdst='cd ~/Workspace/Github/st/'
+alias cdblog='cd ~/Workspace/Github/blog/'
 alias cdstudy='cd ~/Desktop/Study/'
 
 #
@@ -121,8 +116,8 @@ alias cdstudy='cd ~/Desktop/Study/'
 alias v='nvim'
 alias sv='sudo -E nvim'
 alias vc='nvim ~/.config/nvim/init.vim'
-alias env='nvim ~/.bash_profile'
-alias soenv='source ~/.bash_profile'
+alias profile='nvim ~/.bash_profile'
+alias soprofile='source ~/.bash_profile'
 alias pcconf='nvim ~/.dwm/configs/picom.conf'
 
 # edit tmux config file

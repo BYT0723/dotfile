@@ -130,5 +130,7 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 
 [ -f ~/.bash_profile ] && source ~/.bash_profile
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(starship init zsh)"
+
+zmodload zsh/zprof
+alias tt="time zsh -i -c exit"
