@@ -8,6 +8,7 @@ export BROWSER=firefox
 export EDITOR=nvim
 export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
+export TERMINAL=alacritty
 
 # wine
 export WINEPREFIX=~/.local/lib/wine-wechat/default
@@ -38,15 +39,19 @@ export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
 export PATH=$PATH:~/.cargo/bin
 
+# flutter
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+
 # ---------- alias ----------
 # proxy
-alias proxy='ALL_PROXY=socks5://127.0.0.1:1080 HTTP_PROXY=socks5://127.0.0.1:1080 http_proxy=socks5://127.0.0.1:1080'
+alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
 
 # nbfc
 alias startnbfc='systemctl start nbfc'
 alias stopnbfc='systemctl stop nbfc'
 # ssh
-alias ssharml='ssh tao@192.168.3.23'
+alias sshpi='ssh pi@192.168.3.7'
 
 # alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
 alias sshtrojan='ssh -l root byt0723.xyz -p 29793'
@@ -93,8 +98,10 @@ alias tsc='ydict'
 # System Property
 #
 # samba
-alias mcloud='sudo mount -o user=walter,pass=wangtao,uid=1000,gid=1000 //192.168.3.23/Cloud /home/tao/Cloud'
-alias umcloud='sudo umount ~/Cloud'
+alias mprivate='sudo mount -o user=pi,pass=wangtao,uid=1000,gid=1000 //192.168.3.7/private /home/walter/disk/private -O _netdev'
+alias umprivate='sudo umount ~/disk/private'
+alias msources='sudo mount -o user=pi,pass=wangtao,uid=1000,gid=1000 //192.168.3.7/sources /home/walter/disk/resource -O _netdev'
+alias umsources='sudo umount ~/disk/resource'
 alias mtemp='sudo mount /dev/sdb1 -o uid=1000,gid=1000 ~/winDesk/temp'
 alias umtemp='sudo umount ~/winDesk/temp'
 

@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/solarized-dark.yml
+  - ~/.config/alacritty/theme/tokyonight_night.yml
 
 env:
   TERM: alacritty
@@ -15,7 +15,7 @@ window:
 font:
   normal:
     family: CaskaydiaCove Nerd Font
-    style: SemiLight
+    style: Regualr
 
   bold:
     style: Bold
@@ -26,7 +26,14 @@ font:
   bold_italic:
     style: Bold Italic
 
-  size: 9
+  size: 6.5
+  # size: 8
+  offset:
+    x: 0
+    y: 2
+  glyph_offset:
+    x: 0
+    y: 1
   builtin_box_drawing: true
 
 draw_bold_text_with_bright_colors: true
@@ -44,3 +51,6 @@ cursor:
     shape: Block
     blinking: Always
   unfocused_hollow: true
+
+mouse:
+  hide_when_typing: true
