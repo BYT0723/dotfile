@@ -4,14 +4,14 @@
     "recent_thr": 0.1,
     "compr_cnt": 3,
     "ignore": [],
-    "position": "fixed",
+    "position": "bottom",
     "persist": true,
     "window": null,
-    "font_desc": "Sans Bold",
-    "font_size": "medium",
-    "font_color": "#777776767b7b",
+    "font_desc": "CaskaydiaCove Nerd Font Semi-Light 10",
+    "font_size": "small",
+    "font_color": "#9a9a99999696",
     "bg_color": "#24241f1f3131",
-    "opacity": 0.7,
+    "opacity": 0.8,
     "key_mode": "composed",
     "bak_mode": "normal",
     "mods_mode": "normal",
@@ -19,14 +19,9 @@
     "multiline": false,
     "vis_shift": false,
     "vis_space": true,
-    "geometry": [
-        1333,
-        888,
-        533,
-        79
-    ],
+    "geometry": null,
     "screen": 0,
     "start_disabled": false,
     "mouse": false,
-    "button_hide_duration": 1.0
+    "button_hide_duration": 2.0
 }

@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/theme/tokyonight_night.yml
+  - ~/.config/alacritty/theme/tokyonight_moon.yml
 
 env:
   TERM: alacritty
@@ -15,7 +15,8 @@ window:
 font:
   normal:
     family: CaskaydiaCove Nerd Font
-    style: Regualr
+    style: Regular
+    # style: SemiLight
 
   bold:
     style: Bold
@@ -26,14 +27,13 @@ font:
   bold_italic:
     style: Bold Italic
 
-  size: 6.5
-  # size: 8
+  size: 7
   offset:
     x: 0
-    y: 2
+    y: 0
   glyph_offset:
     x: 0
-    y: 1
+    y: 0
   builtin_box_drawing: true
 
 draw_bold_text_with_bright_colors: true

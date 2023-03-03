@@ -9,12 +9,16 @@ export EDITOR=nvim
 export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 export TERMINAL=alacritty
+# export TERM=xterm
 
 # wine
-export WINEPREFIX=~/.local/lib/wine-wechat/default
+# export WINEPREFIX=~/.local/lib/wine-wechat/default
 
 # vim lsp manager
 export PATH=$PATH:~/.local/share/nvim/mason/bin/
+
+# git
+export GIT_TERMINAL_PROMPT=1
 
 # fzf config
 export FZF_COMPLETION_TRIGGER="?"
@@ -43,6 +47,15 @@ export PATH=$PATH:~/.cargo/bin
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
+# android
+export ANDPORD_HOME=/opt/android-sdk
+export PATH=$PATH:$ANDPORD_HOME/platform-tools
+
+# cuda
+export CUDA_PATH=/opt/cuda
+export PATH=$PATH:$CUDA_PATH/bin
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
 # ---------- alias ----------
 # proxy
 alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
@@ -59,6 +72,9 @@ alias sshtrojan='ssh -l root byt0723.xyz -p 29793'
 # alias sshfrp='ssh root@42.192.5.238'
 alias sshfrp='ssh root@frp.byt0723.xyz'
 alias sshgit='ssh git@git.byt0723.xyz'
+
+# live
+alias danmu="surf 'https://blc.lolicon.app/live.html#face=true&room=23970948'"
 
 #
 # Quickly Change Bluetooth Device
@@ -81,6 +97,8 @@ alias nm='ncmpcpp'
 alias np='ncpamixer'
 # ranger
 alias ra='ranger'
+# nnn
+alias nnn='nnn -de'
 # neofetch
 alias neo='neofetch'
 # git
@@ -98,12 +116,11 @@ alias tsc='ydict'
 # System Property
 #
 # samba
-alias mprivate='sudo mount -o user=pi,pass=wangtao,uid=1000,gid=1000 //192.168.3.7/private /home/walter/disk/private -O _netdev'
-alias umprivate='sudo umount ~/disk/private'
-alias msources='sudo mount -o user=pi,pass=wangtao,uid=1000,gid=1000 //192.168.3.7/sources /home/walter/disk/resource -O _netdev'
-alias umsources='sudo umount ~/disk/resource'
+alias mcloud='sudo mount -t cifs -o user=pi,pass=wangtao,uid=1000,gid=1000 //192.168.3.7/disk /home/walter/disk/cloud'
+# alias mcloud='sudo mount -o user=pi,pass=wangtao,uid=1000,gid=1000 //raspberrypi.local/disk /home/walter/disk/cloud -O _netdev'
+alias umcloud='sudo umount ~/disk/cloud'
 alias mtemp='sudo mount /dev/sdb1 -o uid=1000,gid=1000 ~/winDesk/temp'
-alias umtemp='sudo umount ~/winDesk/temp'
+alias umtemp='sudo umount ~/disk/temp'
 
 #
 # Quick Change Directory
