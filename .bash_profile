@@ -8,14 +8,10 @@ export BROWSER=firefox
 export EDITOR=nvim
 export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
-export TERMINAL=alacritty
-# export TERM=xterm
+export TERM=xterm-256color
 
 # wine
-# export WINEPREFIX=~/.local/lib/wine-wechat/default
-
-# vim lsp manager
-export PATH=$PATH:~/.local/share/nvim/mason/bin/
+export WINEPREFIX=~/.local/lib/wine-wechat/default/
 
 # git
 export GIT_TERMINAL_PROMPT=1
@@ -30,6 +26,8 @@ export NNN_PLUG='i:imgview;p:preview-tabbed;t:preview-tui;f:fzcd'
 export NNN_BMS='w:~/Desktop/Wallpapers'
 export NNN_SEL='/tmp/.sel'
 export NNN_FIFO='/tmp/nnn.fifo'
+
+export PATH=$PATH:~/.local/bin
 
 # go env
 export GOROOT=/usr/lib/go
@@ -51,20 +49,35 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export ANDPORD_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDPORD_HOME/platform-tools
 
+# nodejs
+export NPM_PACKAGES=~/.npm-packages
+export NODE_PATH=$NPM_PACKAGES/lib/node_modules:$NODE_PATH
+export PATH=$NPM_PACKAGES/bin:$PATH
+
 # cuda
 export CUDA_PATH=/opt/cuda
 export PATH=$PATH:$CUDA_PATH/bin
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
 
+# openai
+export OPENAI_API_KEY=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
+
 # ---------- alias ----------
+alias tt="time zsh -i -c exit"
 # proxy
 alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
+alias noproxy='http_proxy="" https_proxy=""'
+alias shadowscoks-start='sudo sslocal -c /etc/shadowsocks.json -d start'
+alias shadowscoks-stop='sudo sslocal -c /etc/shadowsocks.json -d stop'
+
+alias pac='sudo -E nvim /etc/privoxy/pac.action'
 
 # nbfc
 alias startnbfc='systemctl start nbfc'
 alias stopnbfc='systemctl stop nbfc'
+alias nbfcconf='sudo -E nvim "/opt/nbfc/Configs/Xiaomi Mi Book (TM1613, TM1703).xml"'
 # ssh
-alias sshpi='ssh pi@192.168.3.7'
+alias sshpi='ssh 192.168.3.8'
 
 # alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
 alias sshtrojan='ssh -l root byt0723.xyz -p 29793'
@@ -74,7 +87,8 @@ alias sshfrp='ssh root@frp.byt0723.xyz'
 alias sshgit='ssh git@git.byt0723.xyz'
 
 # live
-alias danmu="surf 'https://blc.lolicon.app/live.html#face=true&room=23970948'"
+# alias danmu="surf 'https://blc.lolicon.app/live.html#face=true&room=23970948'"
+alias danmu="bilibili-live-tui -c /home/walter/Workspace/Github/bilibili_live_tui/themes/simple.toml"
 
 #
 # Quickly Change Bluetooth Device
@@ -102,22 +116,24 @@ alias nnn='nnn -de'
 # neofetch
 alias neo='neofetch'
 # git
-alias lgit='lazygit'
+alias lg='lazygit'
 # docker
 alias ldk='lazydocker'
 alias dkc='docker-compose'
 # traslate
-# alias tse='trans en:zh -speak'
-# alias tsc='trans zh:en -speak'
-alias tse='ydict -v 1 -c'
-alias tsc='ydict'
+alias ts='ydict -v 1 -c'
+alias tse='trans en:zh -speak'
+alias tsc='trans zh:en -speak'
+
+# note
+alias note='cat ~/.note'
 
 #
 # System Property
 #
 # samba
-alias mcloud='sudo mount -t cifs -o user=pi,pass=wangtao,uid=1000,gid=1000 //192.168.3.7/disk /home/walter/disk/cloud'
-# alias mcloud='sudo mount -o user=pi,pass=wangtao,uid=1000,gid=1000 //raspberrypi.local/disk /home/walter/disk/cloud -O _netdev'
+# alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //192.168.3.8/Cloud /home/walter/disk/cloud'
+alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberrypi.local/Cloud /home/walter/disk/cloud'
 alias umcloud='sudo umount ~/disk/cloud'
 alias mtemp='sudo mount /dev/sdb1 -o uid=1000,gid=1000 ~/winDesk/temp'
 alias umtemp='sudo umount ~/disk/temp'

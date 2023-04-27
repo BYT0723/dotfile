@@ -1,8 +1,8 @@
 import:
-  - ~/.config/alacritty/theme/tokyonight_moon.yml
+  - ~/.config/alacritty/theme/tokyonight_storm.yml
 
 env:
-  TERM: alacritty
+  TERM: xterm-256color
 
 window:
   opacity: 0.8
@@ -16,7 +16,6 @@ font:
   normal:
     family: CaskaydiaCove Nerd Font
     style: Regular
-    # style: SemiLight
 
   bold:
     style: Bold
@@ -27,7 +26,7 @@ font:
   bold_italic:
     style: Bold Italic
 
-  size: 7
+  size: 14
   offset:
     x: 0
     y: 0
@@ -49,7 +48,7 @@ selection:
 cursor:
   style:
     shape: Block
-    blinking: Always
+    blinking: Off
   unfocused_hollow: true
 
 mouse:

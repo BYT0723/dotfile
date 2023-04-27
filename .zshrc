@@ -133,4 +133,10 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 eval "$(starship init zsh)"
 
 zmodload zsh/zprof
-alias tt="time zsh -i -c exit"
+
+
+# 当打开alacritty并且为zsh时，attach tmux | new tmux session
+# if [ -z "$TMUX" -a $(ps h o cmd -p $PPID | awk '{print $1}') = "alacritty" ]; then
+#     tmux attach -t Main || tmux new -s Main
+# fi
+

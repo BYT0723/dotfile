@@ -17,7 +17,7 @@ $rust\
 $scala\
 $docker_context\
 $time\
-[ ](fg:#11FF11)\
+[ ](fg:#00ff33)\
 """
 
 [aws]
