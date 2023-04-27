@@ -11,7 +11,7 @@ export MYVIMRC=~/.config/nvim/init.vim
 export TERM=xterm-256color
 
 # wine
-export WINEPREFIX=~/.local/lib/wine-wechat/default/
+export WINEPREFIX=~/.local/lib/wine-wechat/default
 
 # git
 export GIT_TERMINAL_PROMPT=1
@@ -58,9 +58,6 @@ export PATH=$NPM_PACKAGES/bin:$PATH
 export CUDA_PATH=/opt/cuda
 export PATH=$PATH:$CUDA_PATH/bin
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
-
-# openai
-export OPENAI_API_KEY=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
 
 # ---------- alias ----------
 alias tt="time zsh -i -c exit"
