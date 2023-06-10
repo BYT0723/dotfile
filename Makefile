@@ -11,8 +11,8 @@ update:
 	cp -r ~/.config/neofetch    ./.config/
 	cp -r ~/.config/osdlyrics   ./.config/
 	cp -r ~/.config/dunst       ./.config/
-	cp ~/.config/ranger/*      ./.config/ranger/
-	cp ~/.config/tmux/*        ./.config/tmux/
+	$(cp  ~/.config/ranger      ./.config)
+	$(cp  ~/.config/tmux        ./.config)
 
 install:
 	cp ./.bash_profile ~/.bash_profile

@@ -140,3 +140,7 @@ zmodload zsh/zprof
 #     tmux attach -t Main || tmux new -s Main
 # fi
 
+if [[ $(tty) = *"tty"* ]]; then
+    export $LANG=en_US.UTF-8
+fi
+

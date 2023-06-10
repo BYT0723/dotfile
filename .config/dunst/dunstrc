@@ -33,7 +33,7 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 15x40
+    offset = 5x45
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -68,7 +68,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.). (X11 only)
-    transparency = 4
+    transparency = 6
 
     # Draw a line of "separator_height" pixel height between two
     # notifications.
@@ -90,7 +90,7 @@
     frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#000000"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -196,7 +196,7 @@
     enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = Adwaita
+    icon_theme = WhiteSur
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
@@ -209,10 +209,10 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 32
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
+    # icon_path = /usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/legacy/
 
     ### History ###
 
@@ -245,7 +245,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0
+    corner_radius = 10
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -416,12 +416,7 @@
 #    # This notification will not be displayed
 #    summary = "foobar"
 #    skip_display = true
-
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
-
+#
 #[skip-display]
 #    # This notification will not be displayed, but will be included in the history
 #    summary = "foobar"
@@ -447,8 +442,27 @@
 #    summary = *twitter.com*
 #    urgency = normal
 #
-#[stack-volumes]
-#    appname = "some_volume_notifiers"
-#    set_stack_tag = "volume"
-#
 # vim: ft=cfg
+
+[mail]
+    appname = thunderbird
+    timeout = 0
+
+[music]
+    category = "mpd"
+    timeout = 2
+    history_ignore = yes
+    urgency = low
+
+[tools]
+    # This notification will not be saved in history
+    category = "tools"
+    timeout = 1
+    history_ignore = yes
+    background = "#f0f0f0"
+    foreground = "#0f0f0f"
+
+[status]
+    category = "status"
+    new_icon = "nil"
+    history_ignore = yes

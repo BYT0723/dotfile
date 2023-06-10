@@ -1,6 +1,6 @@
 {
     "no_systray": false,
-    "timeout": 1.0,
+    "timeout": 0.5,
     "recent_thr": 0.1,
     "compr_cnt": 3,
     "ignore": [],
@@ -11,7 +11,7 @@
     "font_size": "small",
     "font_color": "#9a9a99999696",
     "bg_color": "#24241f1f3131",
-    "opacity": 0.7,
+    "opacity": 0.5,
     "key_mode": "composed",
     "bak_mode": "normal",
     "mods_mode": "normal",
@@ -23,5 +23,5 @@
     "screen": 0,
     "start_disabled": false,
     "mouse": false,
-    "button_hide_duration": 2.0
+    "button_hide_duration": 1.0
 }

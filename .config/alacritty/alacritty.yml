@@ -1,5 +1,5 @@
 import:
-  - ~/.config/alacritty/theme/tokyonight_storm.yml
+  - ~/.config/alacritty/theme/tokyonight_night.yml
 
 env:
   TERM: xterm-256color
@@ -14,6 +14,7 @@ window:
 
 font:
   normal:
+    # family: VictorMono Nerd Font Mono
     family: CaskaydiaCove Nerd Font
     style: Regular
 
