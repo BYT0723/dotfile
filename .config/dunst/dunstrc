@@ -448,6 +448,11 @@
     appname = thunderbird
     timeout = 0
 
+[networkmanager]
+    appname = NetworkManager
+    timeout = 2
+    history_ignore = yes
+
 [music]
     category = "mpd"
     timeout = 2

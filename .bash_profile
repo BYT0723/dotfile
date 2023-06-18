@@ -10,9 +10,6 @@ export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 export TERM=xterm-256color
 
-# wine
-export WINEPREFIX=~/.local/lib/wine-wechat/default
-
 # git
 export GIT_TERMINAL_PROMPT=1
 
@@ -56,6 +53,8 @@ export PATH=$PATH:$NPM_PACKAGES/bin
 
 # ---------- alias ----------
 alias tt="time zsh -i -c exit"
+# protect
+alias rm=trash
 # proxy
 alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
 alias noproxy='http_proxy="" https_proxy=""'
