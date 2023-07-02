@@ -1,6 +1,7 @@
 add_newline = false
 
 format = """
+$hostname\
 $directory\
 $git_branch\
 $git_status\
@@ -16,8 +17,16 @@ $nim\
 $rust\
 $scala\
 $docker_context\
-$time\
 $character\
+$sudo\
+"""
+
+
+right_format = """
+$memory_usage\
+$cmd_duration\
+$time\
+$status\
 """
 
 [aws]
@@ -26,6 +35,7 @@ format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
 [buf]
 symbol = " "
+
 
 [c]
 symbol = " "
@@ -84,7 +94,10 @@ format = '\[[$symbol($version)]($style)\]'
 
 [memory_usage]
 symbol = " "
-format = '\[$symbol[$ram( | $swap)]($style)\]'
+format = '\[[$symbol$ram( | $swap)]($style)\]'
+disabled = false
+threshold = 80
+style = 'bold dimmed blue'
 
 [meson]
 symbol = "喝 "
@@ -136,7 +149,8 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
-format = '\[[⏱ $duration]($style)\]'
+format = '\[[⏱  $duration]($style)\]'
+disabled = true
 
 [cobol]
 format = '\[[$symbol($version)]($style)\]'
@@ -169,7 +183,8 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [kubernetes]
-format = '\[[$symbol$context( \($namespace\))]($style)\]'
+format = '\[[⛵ ($user on )($cluster in )$context \($namespace\)](dimmed green)\]'
+disabled = false
 
 [ocaml]
 format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
@@ -195,9 +210,6 @@ format = '\[[$symbol($version-$vm_version)]($style)\]'
 [red]
 format = '\[[$symbol($version)]($style)\]'
 
-[sudo]
-format = '\[[as $symbol]\]'
-
 [swift]
 format = '\[[$symbol($version)]($style)\]'
 
@@ -206,6 +218,7 @@ format = '\[[$symbol$workspace]($style)\]'
 
 [time]
 format = '\[[$time]($style)\]'
+disabled = false
 
 [username]
 format = '\[[$user]($style)\]'
@@ -219,8 +232,19 @@ format = '\[[$symbol($version)]($style)\]'
 [zig]
 format = '\[[$symbol($version)]($style)\]'
 
+[status]
+symbol = ' '
+success_symbol = ' '
+format = '[$common_meaning$signal_name$maybe_int$symbol]($style)'
+map_symbol = true
+disabled = false
 
 [character]
-success_symbol = '[ ](bold green)'
-error_symbol = '[ ](bold red)'
-vimcmd_symbol = '[ ](bold green)'
+success_symbol = '[](green)'
+error_symbol = '[](green)'
+vimcmd_symbol = '[](green)'
+
+[hostname]
+ssh_only = true
+format = '[$ssh_symbol](bold blue)'
+disabled = false
