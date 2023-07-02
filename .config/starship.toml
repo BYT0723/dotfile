@@ -17,7 +17,7 @@ $rust\
 $scala\
 $docker_context\
 $time\
-[ ](fg:#00ff33)\
+$character\
 """
 
 [aws]
@@ -218,3 +218,9 @@ format = '\[[$symbol($version)]($style)\]'
 
 [zig]
 format = '\[[$symbol($version)]($style)\]'
+
+
+[character]
+success_symbol = '[ ](bold green)'
+error_symbol = '[ ](bold red)'
+vimcmd_symbol = '[ ](bold green)'
