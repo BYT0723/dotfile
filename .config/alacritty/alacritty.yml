@@ -14,7 +14,6 @@ window:
 
 font:
   normal:
-    # family: VictorMono Nerd Font Mono
     family: CaskaydiaCove Nerd Font
     style: Regular
 
@@ -27,13 +26,13 @@ font:
   bold_italic:
     style: Bold Italic
 
-  size: 14
+  size: 15
   offset:
     x: 0
-    y: 0
+    y: 2
   glyph_offset:
     x: 0
-    y: 0
+    y: 1
   builtin_box_drawing: true
 
 draw_bold_text_with_bright_colors: true

@@ -2,6 +2,20 @@
 # ~/.bash_profile
 #
 
+# ----------- system environments -----------
+# GTK_IM_MODULE=fcitx
+# QT_IM_MODULE=fcitx
+# XMODIFIERS=@im=fcitx
+# SDL_IM_MODULE=fcitx
+# GLFW_IM_MODULE=ibus
+#
+# http_proxy=http://127.0.0.1:8118
+# https_proxy=http://127.0.0.1:8118
+# all_proxy=http://127.0.0.1:8118
+#
+# # fix Menu disappearing in Java program in Dwm
+# export _JAVA_AWT_WM_NONREPARENTING=1
+
 # ---------- env -----------
 # User configuration
 export BROWSER=firefox
@@ -29,6 +43,7 @@ export PATH=$PATH:~/.local/bin
 # go env
 export GOROOT=/usr/lib/go
 export GO111MODULE=on
+export CGO_ENABLED=0
 export GOPROXY=https://goproxy.cn/
 export GOPATH=~/GoPath
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
