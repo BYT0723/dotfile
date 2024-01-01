@@ -24,16 +24,16 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (200, 600)
+    width = (200, 800)
 
     # The maximum height of a single notification, excluding the frame.
     height = 400
 
     # Position the notification in the top right corner
-    origin = top-right
+    origin = bottom-center
 
     # Offset from the origin
-    offset = 5x45
+    offset = 0x120
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -118,7 +118,7 @@
 
     ### Text ###
 
-    font = CaskaydiaCove Nerd Font SemiLight 12
+    font = LXGW WenKai Mono 14
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -162,7 +162,7 @@
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = left
+    alignment = left 
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".
@@ -452,9 +452,12 @@
     appname = NetworkManager
     timeout = 2
     history_ignore = yes
+    origin = bottom-center
 
 [music]
     category = "mpd"
+    origin = top-center
+    offset = 0x50
     timeout = 2
     history_ignore = yes
     urgency = low
@@ -463,6 +466,8 @@
     # This notification will not be saved in history
     category = "tools"
     timeout = 1
+    origin = bottom-center
+    offset = 0x50
     history_ignore = yes
     background = "#f0f0f0"
     foreground = "#0f0f0f"

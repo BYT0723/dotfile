@@ -2,6 +2,7 @@
 #
 # User configuration sourced by interactive shells
 #
+[ -f ~/.bash_profile ] && source ~/.bash_profile
 
 # -----------------
 # Zsh configuration
@@ -62,32 +63,8 @@ WORDCHARS=${WORDCHARS//[\/]}
 # Set a custom terminal title format using prompt expansion escape sequences.
 # See http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Simple-Prompt-Escapes
 # If none is provided, the default '%n@%m: %~' is used.
-zstyle ':zim:termtitle' format '%2~'
+zstyle ':zim:termtitle' format '%1~'
 
-#
-# zsh-autosuggestions
-#
-
-# Disable automatic widget re-binding on each precmd. This can be set when
-# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-
-# Customize the style that the suggestions are shown with.
-# See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
-
-#
-# zsh-syntax-highlighting
-#
-
-# Set what highlighters will be used.
-# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-# Customize the main highlighter styles.
-# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
-#typeset -A ZSH_HIGHLIGHT_STYLES
-#ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
 
 # ------------------
 # Initialize modules
@@ -111,6 +88,36 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
+#
+# zsh-autosuggestions
+#
+
+# Disable automatic widget re-binding on each precmd. This can be set when
+# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
+# ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
+# Customize the style that the suggestions are shown with.
+# See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+
+#
+# zsh-syntax-highlighting
+#
+
+# Set what highlighters will be used.
+# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# Customize the main highlighter styles.
+# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
+#typeset -A ZSH_HIGHLIGHT_STYLES
+#ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
+
+
+# Initialize fzf 
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
@@ -128,19 +135,12 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 # unset key
 # }}} End configuration added by Zim install
 
-[ -f ~/.bash_profile ] && source ~/.bash_profile
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(starship init zsh)"
 
 zmodload zsh/zprof
-
 
 # 当打开alacritty并且为zsh时，attach tmux | new tmux session
 # if [ -z "$TMUX" -a $(ps h o cmd -p $PPID | awk '{print $1}') = "alacritty" ]; then
 #     tmux attach -t Main || tmux new -s Main
 # fi
-
-if [[ $(tty) = *"tty"* ]]; then
-    export $LANG=en_US.UTF-8
-fi
 

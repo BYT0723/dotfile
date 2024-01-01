@@ -14,7 +14,9 @@
 # all_proxy=http://127.0.0.1:8118
 #
 # # fix Menu disappearing in Java program in Dwm
-# export _JAVA_AWT_WM_NONREPARENTING=1
+export _JAVA_AWT_WM_NONREPARENTING=1
+#
+export WINEPREFIX=~/.local/lib/wine-wechat/default/
 
 # ---------- env -----------
 # User configuration
@@ -39,6 +41,7 @@ export NNN_SEL='/tmp/.sel'
 export NNN_FIFO='/tmp/nnn.fifo'
 
 export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/opt/net.downloadhelper.coapp/bin
 
 # go env
 export GOROOT=/usr/lib/go
@@ -69,10 +72,10 @@ export PATH=$PATH:$NPM_PACKAGES/bin
 # ---------- alias ----------
 alias tt="time zsh -i -c exit"
 # protect
-alias rm=trash
+alias rm='gio trash'
 # proxy
 alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
-alias noproxy='http_proxy="" https_proxy=""'
+alias noproxy='http_proxy="" https_proxy="" all_proxy=""'
 
 alias pac='sudo -E nvim /etc/privoxy/pac.action'
 
@@ -87,7 +90,7 @@ alias sshpi='ssh 192.168.3.8'
 alias sshtrojan='ssh -l root byt0723.xyz -p 29793'
 
 # live
-alias danmu="surf 'https://blc.lolicon.app/live.html#face=true&room=23970948'"
+alias danmu="surf 'https://blc.lolicon.app/live.html#face=false&room=23970948'"
 
 #
 # Start APP
