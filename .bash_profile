@@ -88,6 +88,7 @@ alias sshpi='ssh 192.168.3.8'
 
 # alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
 alias sshtrojan='ssh -l root byt0723.xyz -p 29793'
+alias scptrojan='sudo scp -P 29793 root@byt0723.xyz:~/config.json /etc/trojan/config.json'
 
 # live
 alias danmu="surf 'https://blc.lolicon.app/live.html#face=false&room=23970948'"
