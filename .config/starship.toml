@@ -241,9 +241,9 @@ map_symbol = true
 disabled = false
 
 [character]
-success_symbol = '[ ](green)'
-error_symbol = '[ ](green)'
-vimcmd_symbol = '[ ](green)'
+success_symbol = '[](green)'
+error_symbol = '[](green)'
+vimcmd_symbol = '[](green)'
 
 [hostname]
 ssh_only = true

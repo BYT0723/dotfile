@@ -476,3 +476,8 @@
     category = "status"
     new_icon = "nil"
     history_ignore = yes
+
+[note]
+    category = "status"
+    new_icon = "nil"
+    history_ignore = yes
