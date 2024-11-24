@@ -13,6 +13,10 @@ update:
 	cp -r ~/.config/dunst       ./.config/
 	$(cp  ~/.config/ranger      ./.config)
 	$(cp  ~/.config/tmux        ./.config)
+	cp -r ~/.config/zathura     ./.config/
+	cp -r ~/.config/yazi				./.config/
+	cp -r ~/.config/aerc				./.config/
+	cp -r ~/.config/lazygit			./.config/
 
 install:
 	cp ./.bash_profile ~/.bash_profile
