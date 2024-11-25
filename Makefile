@@ -11,15 +11,17 @@ update:
 	cp -r ~/.config/neofetch    ./.config/
 	cp -r ~/.config/osdlyrics   ./.config/
 	cp -r ~/.config/dunst       ./.config/
-	$(cp  ~/.config/ranger      ./.config)
-	$(cp  ~/.config/tmux        ./.config)
 	cp -r ~/.config/zathura     ./.config/
 	cp -r ~/.config/yazi				./.config/
 	cp -r ~/.config/aerc				./.config/
 	cp -r ~/.config/lazygit			./.config/
+	# cp  ~/.config/ranger				./.config/
+	# cp  ~/.config/tmux					./.config/
+	rm -f crontab && crontab -l >> crontab
 
 install:
 	cp ./.bash_profile ~/.bash_profile
 	cp ./.zshrc        ~/.zshrc
 	cp ./.zimrc        ~/.zimrc
 	cp -r ./.config    ~/.config
+	(cat crontab) | crontab -

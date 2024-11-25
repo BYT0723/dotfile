@@ -16,7 +16,7 @@
 # # fix Menu disappearing in Java program in Dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
 #
-export WINEPREFIX=~/.local/lib/wine-wechat/default/
+# export WINEPREFIX=~/.local/lib/wine-wechat/default/
 
 # ---------- env -----------
 # User configuration
@@ -142,11 +142,13 @@ alias tsc='trans zh:en -speak'
 # System Property
 #
 # samba
-# alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //192.168.3.8/Cloud /home/walter/disk/cloud'
-alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberrypi.local/Cloud /home/walter/disk/cloud'
-alias umcloud='sudo umount ~/disk/cloud'
-alias mtemp='sudo mount /dev/sdb1 -o uid=1000,gid=1000 ~/winDesk/temp'
-alias umtemp='sudo umount ~/disk/temp'
+
+alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/private /home/walter/disks/private'
+alias umcloud='sudo umount ~/disks/private'
+alias mresource='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/share /home/walter/disks/resource'
+alias umresource='sudo umount ~/disks/resource'
+# alias mshare='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberry.local/private /home/walter/disks/private'
+# alias umshare='sudo umount ~/disks/private'
 
 #
 # Quick Change Directory
@@ -173,10 +175,10 @@ alias pcconf='nvim ~/.dwm/configs/picom.conf'
 alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
 
 # display
-alias layoutAbove="xrandr --output eDP1 --auto --output HDMI2 --auto --mode 2560x1440 --above eDP1"
-alias layoutRight="xrandr --output eDP1 --auto --output HDMI2 --auto --mode 2560x1440 --right-of eDP1"
-alias layoutMirror="xrandr --output eDP1 --auto --output HDMI2 --auto --mode 1920x1080 --same-as eDP1"
-alias layoutOnlyHDMI="xrandr --output eDP1 --off --output HDMI2 --auto --mode 2560x1440"
-alias layoutOnlyDP="xrandr --output HDMI2 --off --output eDP1 --auto --mode 1920x1080 "
+alias layoutAbove="xrandr --output eDP --auto --output HDMI-A-0 --auto --mode 2560x1440 --above eDP --dpi 96"
+alias layoutRight="xrandr --output eDP --auto --output HDMI-A-0 --auto --mode 2560x1440 --right-of eDP --dpi 96"
+alias layoutMirror="xrandr --output eDP --auto --output HDMI-A-0 --auto --mode 1920x1080 --same-as eDP"
+alias layoutOnlyHDMI="xrandr --output eDP --off --output HDMI-A-0 --auto --mode 2560x1440"
+alias layoutOnlyDP="xrandr --output HDMI-A-0 --off --output eDP --auto --mode 1920x1080 "
 
 alias wallpapers="cd ~/.local/share/Steam/steamapps/workshop/content/431960/"
