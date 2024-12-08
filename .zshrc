@@ -160,14 +160,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-if [[ -f "$HOME/.note" ]]; then
+note="$HOME/.note"
+if [[ -f "$note" ]]; then
     if [[ ! -z "$(command -v boxes)" ]]; then
-        grep '^\*' /home/walter/.note | boxes -d parchment | lolcat -p 2 -S $RANDOM
+        grep '^\*' "$note" | boxes -d parchment | lolcat -p 2 -S $RANDOM
         echo ""
     elif [[ ! -z "$(command -v cowsay)" ]]; then
-        grep '^\*' /home/walter/.note | cowsay -f small -W $(tput cols) -n | lolcat -p 2 -S $RANDOM
+        grep '^\*' "$note" | cowsay -f small -W $(tput cols) -n | lolcat -p 2 -S $RANDOM
     else
-        grep '^\*' /home/walter/.note | lolcat -p 2 -S $RANDOM
+        grep '^\*' "$note" | lolcat -p 2 -S $RANDOM
     fi
 fi
 
