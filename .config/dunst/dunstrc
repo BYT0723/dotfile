@@ -308,16 +308,19 @@
     background = "#1e2030"
     foreground = "#c8d3f5"
     frame_color = "#c8d3f5"
+    highlight = "#86e1fc"
 
 [urgency_normal]
     background = "#222436"
     foreground = "#c8d3f5"
     frame_color = "#c8d3f5"
+    highlight = "#86e1fc"
 
 [urgency_critical]
     background = "#2f334d"
     foreground = "#c53b53"
     frame_color = "#c53b53"
+    highlight = "#ff757f"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
