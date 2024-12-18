@@ -462,15 +462,8 @@
     origin = bottom-center
     offset = 0x50
     history_ignore = yes
-    background = "#f0f0f0"
-    foreground = "#0f0f0f"
 
 [status]
     category = "status"
-    new_icon = "nil"
     history_ignore = yes
-
-[note]
-    category = "status"
-    new_icon = "nil"
-    history_ignore = yes
+    format = "<small>%b</small>"
