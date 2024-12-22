@@ -16,7 +16,7 @@ update:
 	cp -r ~/.config/aerc				./.config/
 	cp -r ~/.config/lazygit			./.config/
 	cp -r ~/.config/newsboat		./.config/
-	# cp  ~/.config/ranger				./.config/
+	cp -r ~/.config/yazi				./.config/
 	# cp  ~/.config/tmux					./.config/
 	rm -f crontab && crontab -l >> crontab
 
