@@ -3,4 +3,4 @@ require("smart-enter"):setup({
 })
 require("git"):setup()
 
-require("starship"):setup({ config_file = "/home/walter/.config/yazi/starship.toml" })
+require("starship"):setup({ config_file = "~/.config/yazi/starship.toml" })
