@@ -69,7 +69,7 @@ export PATH=$PATH:/opt/net.downloadhelper.coapp/bin
 # go env
 export GOROOT=/usr/lib/go
 export GO111MODULE=on
-export CGO_ENABLED=0
+export CGO_ENABLED=1
 export GOPROXY=https://goproxy.cn/
 export GOPATH=~/GoPath
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
@@ -109,9 +109,9 @@ alias nbfcconf='sudo -E nvim "/opt/nbfc/Configs/Xiaomi Mi Book (TM1613, TM1703).
 # ssh
 alias sshpi='ssh 192.168.3.8'
 
-# alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
-alias sshtrojan='ssh -l root byt0723.xyz -p 29793'
-alias scptrojan='sudo scp -P 29793 root@byt0723.xyz:~/config.json /etc/trojan/config.json'
+alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
+# alias sshtrojan='ssh -l root proxy.byt0723.xyz -p 29793'
+# alias scptrojan='sudo scp -P 29793 root@byt0723.xyz:~/config.json /etc/trojan/config.json'
 
 # live
 alias danmu="surf 'https://blc.lolicon.app/live.html#face=false&room=23970948'"
@@ -122,16 +122,14 @@ alias danmu="surf 'https://blc.lolicon.app/live.html#face=false&room=23970948'"
 # ncmpcpp
 alias nm='ncmpcpp'
 alias np='ncpamixer'
-# ranger
-alias ra='ranger'
-# nnn
-alias nnn='nnn -de'
 # neofetch
 alias neo='neofetch'
 # git
 alias lg='lazygit'
 # docker
-alias ldk='lazydocker'
+alias ld='lazydocker'
+alias le='yazi'
+alias lmail='aerc'
 alias dkc='docker-compose'
 # traslate
 alias ts='ydict -v 1 -c'
@@ -182,3 +180,5 @@ alias layoutOnlyHDMI="xrandr --output eDP --off --output HDMI-A-0 --auto --mode 
 alias layoutOnlyDP="xrandr --output HDMI-A-0 --off --output eDP --auto --mode 1920x1080 "
 
 alias wallpapers="cd ~/.local/share/Steam/steamapps/workshop/content/431960/"
+
+alias rv='bash /home/walter/.dwm/random_file.sh /home/walter/disks/private/share/'
