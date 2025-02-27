@@ -26,6 +26,12 @@ export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 export TERM=xterm-256color
 
+
+# AI
+export OPENAI_API_KEY=8ab203dd-ce91-4865-9924-4320f62c84ca
+export GEMINI_API_KEY=AIzaSyBhVreStZCjgKj07vGNN9IkNClQHzJWHs0
+export DEEPSEEK_API_KEY=sk-01950b4296174ce7b237ee7f158f5aaa
+
 # git
 export GIT_TERMINAL_PROMPT=1
 
