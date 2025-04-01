@@ -19,13 +19,13 @@ title_format   = "Yazi: {cwd}"
 [preview]
 wrap            = "no"
 tab_size        = 2
-max_width       = 900
-max_height      = 900
-cache_dir       = ""
+max_width       = 1280
+max_height      = 720
+cache_dir       = "~/.cache/yazi"
 image_delay     = 30
 image_filter    = "triangle"
-image_quality   = 75
-sixel_fraction  = 15
+image_quality   = 50
+sixel_fraction  = 20
 ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
 
@@ -228,3 +228,9 @@ run  = "git"
 id   = "git"
 name = "*/"
 run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "mime"
+name = "*"
+run  = "mime-ext"
+prio = "high"
