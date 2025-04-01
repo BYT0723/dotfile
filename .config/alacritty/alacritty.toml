@@ -32,7 +32,8 @@ y = 1
 style = "Italic"
 
 [font.normal]
-family = "CaskaydiaCove Nerd Font"
+# family = "CaskaydiaCove Nerd Font"
+family = "ComicShannsMono Nerd Font"
 style = "Regular"
 
 [font.offset]
