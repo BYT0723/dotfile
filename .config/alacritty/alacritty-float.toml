@@ -16,7 +16,7 @@ TERM = "xterm-256color"
 
 [font]
 builtin_box_drawing = true
-size = 12
+size = 10
 
 [font.bold]
 style = "Bold"
@@ -60,5 +60,5 @@ general = "float-term"
 instance = "float-term"
 
 [window.dimensions]
-columns = 130
-lines = 40
+columns = 160
+lines = 48

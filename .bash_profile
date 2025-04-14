@@ -26,7 +26,6 @@ export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 export TERM=xterm-256color
 
-
 # AI
 export OPENAI_API_KEY=8ab203dd-ce91-4865-9924-4320f62c84ca
 export GEMINI_API_KEY=AIzaSyBhVreStZCjgKj07vGNN9IkNClQHzJWHs0
@@ -115,8 +114,8 @@ alias nbfcconf='sudo -E nvim "/opt/nbfc/Configs/Xiaomi Mi Book (TM1613, TM1703).
 # ssh
 alias sshpi='ssh 192.168.3.8'
 
-alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
-# alias sshtrojan='ssh -l root proxy.byt0723.xyz -p 29793'
+# alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
+alias sshtrojan='ssh -l root proxy.byt0723.xyz -p 29793'
 # alias scptrojan='sudo scp -P 29793 root@byt0723.xyz:~/config.json /etc/trojan/config.json'
 
 # live
@@ -187,4 +186,5 @@ alias layoutOnlyDP="xrandr --output HDMI-A-0 --off --output eDP --auto --mode 19
 
 alias wallpapers="cd ~/.local/share/Steam/steamapps/workshop/content/431960/"
 
-alias rv='bash /home/walter/.dwm/random_file.sh /home/walter/disks/private/share/'
+alias rav='bash /home/walter/.dwm/random_file.sh /home/walter/disks/private/share/'
+alias rv='bash /home/walter/.dwm/random_file.sh'
