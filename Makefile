@@ -17,6 +17,7 @@ update:
 	cp -r ~/.config/lazygit			./.config/
 	cp -r ~/.config/newsboat		./.config/
 	cp -r ~/.config/yazi				./.config/
+	cp -r ~/.config/conky				./.config/
 	mkdir -p ./.config/easyeffects
 	cp -r ~/.config/easyeffects/input ./.config/easyeffects/
 	cp -r ~/.config/easyeffects/output ./.config/easyeffects/
