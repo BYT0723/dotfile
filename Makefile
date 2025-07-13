@@ -1,33 +1,32 @@
 update:
-	cp ~/.bash_profile          ./
-	cp ~/.zshrc                 ./
-	cp ~/.zimrc                 ./
-	cp ~/.config/starship.toml  ./.config/
-	cp ~/.config/screenkey.json ./.config/
-	cp -r ~/.config/alacritty   ./.config/
-	cp -r ~/.config/mpd         ./.config/
-	cp -r ~/.config/mpv         ./.config/
-	cp -r ~/.config/ncmpcpp     ./.config/
-	cp -r ~/.config/neofetch    ./.config/
-	cp -r ~/.config/osdlyrics   ./.config/
-	cp -r ~/.config/dunst       ./.config/
-	cp -r ~/.config/zathura     ./.config/
-	cp -r ~/.config/yazi				./.config/
-	cp -r ~/.config/aerc				./.config/
-	cp -r ~/.config/lazygit			./.config/
-	cp -r ~/.config/newsboat		./.config/
-	cp -r ~/.config/yazi				./.config/
-	cp -r ~/.config/conky				./.config/
-	mkdir -p ./.config/easyeffects
-	cp -r ~/.config/easyeffects/input ./.config/easyeffects/
-	cp -r ~/.config/easyeffects/output ./.config/easyeffects/
-	mkdir -p ./.config/tmux
-	cp  ~/.config/tmux/tmux.conf					./.config/tmux
-	rm -f crontab && crontab -l >> crontab
+	@rsync -av ~/.bash_profile ./
+	@rsync -av ~/.zshrc ./
+	@rsync -av ~/.zimrc ./
+	@rsync -av ~/.config/starship.toml ./.config/
+	@rsync -av ~/.config/screenkey.json ./.config/
+	@rsync -av --delete ~/.config/alacritty/ ./.config/alacritty/
+	@rsync -av --delete ~/.config/mpd/       ./.config/mpd/
+	@rsync -av --delete ~/.config/mpv/       ./.config/mpv/
+	@rsync -av --delete ~/.config/ncmpcpp/   ./.config/ncmpcpp/
+	@rsync -av --delete ~/.config/neofetch/  ./.config/neofetch/
+	@rsync -av --delete ~/.config/osdlyrics/ ./.config/osdlyrics/
+	@rsync -av --delete ~/.config/dunst/     ./.config/dunst/
+	@rsync -av --delete ~/.config/zathura/   ./.config/zathura/
+	@rsync -av --delete ~/.config/yazi/      ./.config/yazi/ --exclude 'plugins/'
+	@rsync -av --delete ~/.config/aerc/      ./.config/aerc/
+	@rsync -av --delete ~/.config/lazygit/   ./.config/lazygit/
+	@rsync -av --delete ~/.config/newsboat/  ./.config/newsboat/
+	@rsync -av --delete ~/.config/conky/     ./.config/conky/
+	@rsync -av --delete ~/.config/easyeffects/input/  ./.config/easyeffects/input/
+	@rsync -av --delete ~/.config/easyeffects/output/ ./.config/easyeffects/output/
+	@mkdir -p ./.config/tmux
+	@rsync -av ~/.config/tmux/tmux.conf ./.config/tmux/ --exclude 'plugins/'
+	@crontab -l > crontab
 
 install:
-	cp ./.bash_profile ~/.bash_profile
-	cp ./.zshrc        ~/.zshrc
-	cp ./.zimrc        ~/.zimrc
-	cp -r ./.config    ~/.config
-	(cat crontab) | crontab -
+	# 同理，把 ./. 同步回 ~/
+	@rsync -av --delete ./.bash_profile ~/.bash_profile
+	@rsync -av --delete ./.zshrc ~/.zshrc
+	@rsync -av --delete ./.zimrc ~/.zimrc
+	@rsync -av --delete ./.config/ ~/.config/
+	@(cat crontab) | crontab -

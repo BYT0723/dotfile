@@ -26,6 +26,8 @@ export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 export TERM=xterm-256color
 
+# export KITTY_SHELL_INTEGRATION=no-cursor
+
 # AI
 export OPENAI_API_KEY=8ab203dd-ce91-4865-9924-4320f62c84ca
 export GEMINI_API_KEY=AIzaSyBhVreStZCjgKj07vGNN9IkNClQHzJWHs0
