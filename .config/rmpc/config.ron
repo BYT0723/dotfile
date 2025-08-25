@@ -150,20 +150,20 @@
 			pane: Split(
 				direction: Vertical,
 				panes: [
-					(size: "90%", pane: Split(
+					(size: "85%", pane: Split(
 						direction: Horizontal,
 						panes: [
 							(size: "30%", pane: Split(
 								direction: Vertical,
 								panes: [
-									(size: "50%", pane: Pane(AlbumArt)),
-									(size: "50%", pane: Pane(Lyrics)),
+									(size: "40%", pane: Pane(AlbumArt)),
+									(size: "60%", pane: Pane(Lyrics)),
 								],
 							)),
 							(size: "70%", pane: Pane(Queue)),
 						],
 					)),
-					(size: "10%", pane: Pane(Cava)),
+					(size: "15%", pane: Pane(Cava)),
 				],
 			),
 		),
