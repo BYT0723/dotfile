@@ -1,0 +1,87 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    draw_borders: false,
+    show_song_table_header: false,
+    symbols: (song: "🎵", dir: "📁", playlist: "🎼", marker: "\u{e0b0}"),
+    layout: Split(
+        direction: Vertical,
+        panes: [
+            (
+                pane: Pane(Header),
+                size: "3",
+            ),
+            (
+                pane: Pane(TabContent),
+                size: "100%",
+            ),
+			(size: "1", pane: Split(
+				direction: Horizontal,
+				panes: [
+					(size: "100%", pane: Pane(ProgressBar)),
+					(size: "14", pane:  Pane(Property(
+						content: [
+							(kind: Property(Status(Elapsed))),
+							(kind: Text(" / ")),
+							(kind: Property(Status(Duration))),
+						],
+						align: Right,
+					)))
+				],
+			)),
+        ],
+    ),
+    progress_bar: (
+        symbols: ["", "", "⭘", " ", " "],
+    ),
+    scrollbar: (
+        symbols: ["│", "█", "▲", "▼"],
+        track_style: (),
+        ends_style: (),
+    ),
+    tab_bar: (),
+    song_table_format: [
+        (
+            prop: (kind: Property(Artist), default: (kind: Text("Unknown"))),
+            width: "50%",
+            alignment: Right,
+        ),
+        (
+            prop: (kind: Text("-"), default: (kind: Text("Unknown"))),
+            width: "1",
+            alignment: Center,
+        ),
+        (
+            prop: (kind: Property(Title), default: (kind: Text("Unknown"))),
+            width: "50%",
+            alignment: Left,
+        ),
+    ],
+	header: (
+        rows: [
+            (
+                left: [
+					(kind: Property(Status(RepeatV2(on_label: "  ", off_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"))))),
+					(kind: Property(Status(RandomV2(on_label: "  ", off_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"))))),
+					(kind: Property(Status(ConsumeV2(on_label: "  ", off_label: "  ", oneshot_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"), oneshot_style: (fg: "gray"))))),
+					(kind: Property(Status(SingleV2(on_label: "  ", off_label: "  ", oneshot_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"), oneshot_style: (fg: "gray")))))
+                ],
+                center: [
+                    (kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"),default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold"))),
+                    (kind: Text(" - ")),
+                    (kind: Property(Song(Title)),default: (kind: Text("Unknown"))),
+					(kind: Text("(")), (kind: Property(Status(Bitrate))), (kind: Text(" kbps) ")),
+                    (kind: Text(" ")),
+                    (kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "yellow", modifiers: "Bold"))
+                ],
+                right: [
+                    (kind: Property(Widget(ScanStatus)), style: (fg: "blue")),
+                    (kind: Text("Vol: "), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Property(Status(Volume)), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Text("%"), style: (fg: "#b7bdf8", modifiers: "Bold"))
+                ]
+            ),
+        ],
+    ),
+)

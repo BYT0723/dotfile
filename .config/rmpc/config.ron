@@ -4,7 +4,7 @@
 (
     address: "127.0.0.1:6600",
     password: None,
-    theme: None,
+    theme: Some("custom"),
     cache_dir: None,
 	lyrics_dir: Some("~/Music/.lyrics"),
     on_song_change: None,
@@ -18,8 +18,6 @@
     rewind_to_start_sec: None,
     reflect_changes_to_playlist: false,
     select_current_song_on_change: false,
-    browser_song_sort: [Disc, Track, Artist, Title],
-    directories_sort: SortFormat(group_by_type: true, reverse: false),
     album_art: (
         method: Auto,
         max_size_px: (width: 1200, height: 1200),
@@ -59,12 +57,12 @@
             "<S-Tab>": PreviousTab,
             "1":       SwitchToTab("Queue"),
             "2":       SwitchToTab("Playlists"),
-            "3":       SwitchToTab("Search"),
-            "4":       SwitchToTab("Directories"),
-            "5":       SwitchToTab("Artists"),
-            "6":       SwitchToTab("Album Artists"),
-            "7":       SwitchToTab("Albums"),
-			"8": 	   SwitchToTab("Lyrics"),
+			"3": 	   SwitchToTab("Lyrics"),
+            "4":       SwitchToTab("Search"),
+            "5":       SwitchToTab("Directories"),
+            "6":       SwitchToTab("Artists"),
+            "7":       SwitchToTab("Album Artists"),
+            "8":       SwitchToTab("Albums"),
             "q":       Quit,
             ">":       NextTrack,
             "p":       TogglePause,
@@ -172,6 +170,10 @@
             pane: Pane(Playlists),
         ),
         (
+            name: "Lyrics",
+            pane: Pane(Lyrics),
+        ),
+        (
             name: "Search",
             pane: Pane(Search),
         ),
@@ -190,10 +192,6 @@
         (
             name: "Albums",
             pane: Pane(Albums),
-        ),
-        (
-            name: "Lyrics",
-            pane: Pane(Lyrics),
         ),
     ],
 )
