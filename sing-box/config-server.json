@@ -1,0 +1,57 @@
+{
+	"log": {
+		"level": "info"
+	},
+  "inbounds": [
+    {
+      "type": "trojan",
+      "tag": "trojan-in",
+      "listen": "0.0.0.0",
+      "listen_port": 9723,
+      "users": [
+        {
+          "name": "tyler",
+          "password": "tylersproxy"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.byt0723.xyz",
+        "certificate_path": "/root/.acme.sh/blog.byt0723.xyz_ecc/fullchain.cer",
+        "key_path": "/root/.acme.sh/blog.byt0723.xyz_ecc/blog.byt0723.xyz.key"
+      },
+      "fallback": {
+        "server": "127.0.0.1",
+        "server_port": 80
+      },
+      "multiplex": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hy2-in",
+      "listen": "0.0.0.0",
+      "listen_port": 21212,
+      "users": [
+        {
+          "name": "tyler",
+          "password": "tylersproxy"
+        }
+      ],
+      "up_mbps": 100,
+      "down_mbps": 100,
+      "obfs": {
+        "type": "salamander",
+        "password": "tylersobfs"
+      },
+      "ignore_client_bandwidth": false,
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.byt0723.xyz",
+        "certificate_path": "/root/.acme.sh/blog.byt0723.xyz_ecc/fullchain.cer",
+        "key_path": "/root/.acme.sh/blog.byt0723.xyz_ecc/blog.byt0723.xyz.key"
+      }
+    }
+  ]
+}

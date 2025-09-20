@@ -1,0 +1,132 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "type": "https",
+        "server": "9.9.9.9",
+        "detour": "trojan-out"
+      },
+      { "tag": "ali", "type": "tls", "server": "223.5.5.5" },
+      { "tag": "local", "type": "local" }
+    ],
+    "final": "google",
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun0",
+      "address": ["172.18.0.1/30", "fdfe:dcba:9876::1/126"],
+      "route_address": ["0.0.0.0/1", "128.0.0.0/1", "::/1", "8000::/1"],
+      "auto_route": true,
+      "auto_redirect": true
+    },
+    {
+      "listen": "0.0.0.0",
+      "listen_port": 10808,
+      "tag": "mixed-in",
+      "type": "mixed",
+      "users": [{ "username": "guest", "password": "tylersmixedsingbox" }]
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct-out"
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hy2-out",
+      "server": "x.byt0723.xyz",
+      "server_port": 21212,
+      "up_mbps": 20,
+      "down_mbps": 100,
+      "obfs": {
+        "type": "salamander",
+        "password": "tylersobfs"
+      },
+      "password": "tylersproxy",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.byt0723.xyz"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-out",
+      "server": "x.byt0723.xyz",
+      "server_port": 9723,
+      "password": "tylersproxy",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.byt0723.xyz"
+      },
+      "multiplex": {
+        "enabled": true,
+        "protocol": "smux"
+      }
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "default_domain_resolver": {
+      "server": "local",
+      "strategy": "prefer_ipv4",
+      "rewrite_ttl": 60,
+      "client_subnet": "1.1.1.1"
+    },
+    "rules": [
+      { "action": "sniff" },
+      { "protocol": "dns", "action": "hijack-dns" },
+      { "ip_is_private": true, "outbound": "direct-out" },
+      {
+        "rule_set": ["geosite-youtube"],
+        "outbound": "hy2-out"
+      },
+      {
+        "domain_suffix": ["zoom.us", "zoom.com", "zoomcdn.net"],
+        "outbound": "hy2-out"
+      },
+      {
+        "rule_set": ["geosite-tiktok", "geoip-telegram", "geosite-gfw"],
+        "outbound": "trojan-out"
+      },
+      { "outbound": "direct-out" }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-gfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/gfw.srs",
+        "download_detour": "trojan-out"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-youtube",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/youtube.srs",
+        "download_detour": "trojan-out"
+      },
+      {
+        "type": "remote",
+        "tag": "geosite-tiktok",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/tiktok.srs",
+        "download_detour": "trojan-out"
+      },
+      {
+        "type": "remote",
+        "tag": "geoip-telegram",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/telegramip.srs",
+        "download_detour": "trojan-out"
+      }
+    ]
+  }
+}
