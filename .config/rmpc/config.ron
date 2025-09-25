@@ -154,8 +154,9 @@
 							(size: "30%", pane: Split(
 								direction: Vertical,
 								panes: [
-									(size: "40%", pane: Pane(AlbumArt)),
-									(size: "60%", pane: Pane(Lyrics)),
+									(size: "60%", pane: Pane(AlbumArt)),
+									(size: "1", pane: Pane(Property(content: []))),
+									(size: "40%", pane: Pane(Lyrics)),
 								],
 							)),
 							(size: "70%", pane: Pane(Queue)),
