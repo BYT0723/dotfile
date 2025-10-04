@@ -4,7 +4,7 @@
     origin = bottom-right
     width = (200, 800)
     height = (1, 400)
-    offset = (10,10)
+    offset = (5,5)
     frame_color = "#8aadf4"
 		frame_width = 1
     highlight = "#8aadf4"

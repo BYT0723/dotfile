@@ -188,5 +188,5 @@ alias layoutOnlyDP="xrandr --output HDMI-A-0 --off --output eDP --auto --mode 19
 
 alias wallpapers="cd ~/.local/share/Steam/steamapps/workshop/content/431960/"
 
-alias rav='bash /home/walter/.dwm/random_file.sh /home/walter/disks/private/share/'
-alias rv='bash /home/walter/.dwm/random_file.sh'
+alias rav='bash /home/walter/.dwm/tools/random_file.sh /home/walter/disks/private/share/'
+alias rv='bash /home/walter/.dwm/tools/random_file.sh'

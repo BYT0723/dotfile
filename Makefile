@@ -20,6 +20,7 @@ update:
 	@rsync -av --delete ~/.config/easyeffects/input/  ./.config/easyeffects/input/
 	@rsync -av --delete ~/.config/easyeffects/output/ ./.config/easyeffects/output/
 	@rsync -av --delete ~/.config/rmpc/ 		 ./.config/rmpc/
+	@rsync -av --delete /etc/sing-box/			 ./sing-box/client/
 	@mkdir -p ./.config/tmux
 	@rsync -av ~/.config/tmux/tmux.conf ./.config/tmux/ --exclude 'plugins/'
 	@crontab -l > crontab
