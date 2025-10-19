@@ -2,7 +2,15 @@
   "version": 3,
   "rules": [
     {
-      "domain_suffix": ["f95zone.to", "candy.ai"]
+      "domain_suffix": [
+        "nerdfonts.com",
+        "f95zone.to",
+        "candy.ai",
+        "wallhaven.cc",
+        "zoom.us",
+        "zoom.com",
+        "zoomcdn.net"
+      ]
     }
   ]
 }

@@ -248,4 +248,4 @@ vimcmd_symbol = '[](green)'
 [hostname]
 ssh_only = true
 format = '[$ssh_symbol](bold blue)'
-disabled = false
+disabled = true

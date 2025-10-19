@@ -8,14 +8,19 @@
         "tag": "google",
         "type": "https",
         "server": "9.9.9.9",
-        "detour": "hy2-out"
+        "detour": "trojan-out"
       },
       { "tag": "ali", "type": "tls", "server": "223.5.5.5" },
       { "tag": "local", "type": "local" }
     ],
     "rules": [
       {
-        "rule_set": ["geosite-gfw", "geosite-proxy-custom"],
+        "rule_set": [
+          "geosite-gfw",
+          "geosite-proxy-custom",
+          "geosite-youtube",
+          "geosite-tiktok"
+        ],
         "server": "google"
       }
     ],
@@ -33,11 +38,11 @@
       "auto_redirect": true
     },
     {
-      "listen": "0.0.0.0",
+      "listen": "127.0.0.1",
       "listen_port": 10808,
       "tag": "mixed-in",
       "type": "mixed",
-      "users": [{ "username": "guest", "password": "tylersmixedsingbox" }]
+      "users": []
     },
     {
       "type": "socks",
@@ -82,9 +87,7 @@
       "multiplex": {
         "enabled": true,
         "protocol": "smux",
-        "max_connections": 4,
-        "min_streams": 8,
-        "max_streams": 0
+        "min_streams": 4
       }
     }
   ],
@@ -103,10 +106,6 @@
       { "inbound": ["socks-in"], "action": "route", "outbound": "trojan-out" },
       {
         "rule_set": ["geosite-youtube", "geosite-tiktok"],
-        "outbound": "hy2-out"
-      },
-      {
-        "domain_suffix": ["zoom.us", "zoom.com", "zoomcdn.net"],
         "outbound": "hy2-out"
       },
       {
@@ -130,6 +129,13 @@
         "download_detour": "trojan-out"
       },
       {
+        "tag": "geoip-telegram",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/telegramip.srs",
+        "download_detour": "trojan-out"
+      },
+      {
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
@@ -141,13 +147,6 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/tiktok.srs",
-        "download_detour": "trojan-out"
-      },
-      {
-        "tag": "geoip-telegram",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/telegramip.srs",
         "download_detour": "trojan-out"
       }
     ]
