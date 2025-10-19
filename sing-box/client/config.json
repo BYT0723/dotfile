@@ -1,13 +1,18 @@
 {
   "log": {
-    "level": "info"
+    "level": "error"
   },
   "dns": {
     "servers": [
       {
+        "tag": "cloudflare",
+        "type": "tls",
+        "server": "1.1.1.1"
+      },
+      {
         "tag": "google",
         "type": "https",
-        "server": "9.9.9.9",
+        "server": "8.8.8.8",
         "detour": "trojan-out"
       },
       { "tag": "ali", "type": "tls", "server": "223.5.5.5" },
@@ -16,12 +21,12 @@
     "rules": [
       {
         "rule_set": [
-          "geosite-gfw",
           "geosite-proxy-custom",
+          "geosite-gfw",
           "geosite-youtube",
           "geosite-tiktok"
         ],
-        "server": "google"
+        "server": "cloudflare"
       }
     ],
     "final": "local",
@@ -93,12 +98,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "default_domain_resolver": {
-      "server": "local",
-      "strategy": "prefer_ipv4",
-      "rewrite_ttl": 60,
-      "client_subnet": "1.1.1.1"
-    },
+    "default_domain_resolver": "local",
     "rules": [
       { "action": "sniff" },
       { "protocol": "dns", "action": "hijack-dns" },
@@ -125,29 +125,25 @@
         "tag": "geosite-gfw",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/gfw.srs",
-        "download_detour": "trojan-out"
+        "url": "https://raw.gitmirror.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/gfw.srs"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/telegramip.srs",
-        "download_detour": "trojan-out"
+        "url": "https://raw.gitmirror.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/telegramip.srs"
       },
       {
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/youtube.srs",
-        "download_detour": "trojan-out"
+        "url": "https://raw.gitmirror.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/youtube.srs"
       },
       {
         "tag": "geosite-tiktok",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/tiktok.srs",
-        "download_detour": "trojan-out"
+        "url": "https://raw.gitmirror.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/tiktok.srs"
       }
     ]
   }
