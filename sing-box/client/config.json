@@ -92,7 +92,7 @@
       "multiplex": {
         "enabled": true,
         "protocol": "smux",
-        "min_streams": 4
+        "max_streams": 4
       }
     }
   ],
