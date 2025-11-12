@@ -26,11 +26,12 @@
           "geosite-youtube",
           "geosite-tiktok"
         ],
-        "server": "cloudflare"
+        "server": "google"
       }
     ],
     "final": "local",
-    "strategy": "prefer_ipv4"
+    "strategy": "prefer_ipv4",
+    "cache_capacity": 4096
   },
   "inbounds": [
     {
@@ -41,13 +42,6 @@
       "route_address": ["0.0.0.0/1", "128.0.0.0/1", "::/1", "8000::/1"],
       "auto_route": true,
       "auto_redirect": true
-    },
-    {
-      "listen": "127.0.0.1",
-      "listen_port": 10808,
-      "tag": "mixed-in",
-      "type": "mixed",
-      "users": []
     },
     {
       "type": "socks",
@@ -105,11 +99,15 @@
       { "ip_is_private": true, "outbound": "direct-out" },
       { "inbound": ["socks-in"], "action": "route", "outbound": "trojan-out" },
       {
-        "rule_set": ["geosite-youtube", "geosite-tiktok"],
+        "rule_set": [
+          "geosite-youtube",
+          "geosite-tiktok",
+          "geosite-proxy-custom"
+        ],
         "outbound": "hy2-out"
       },
       {
-        "rule_set": ["geoip-telegram", "geosite-gfw", "geosite-proxy-custom"],
+        "rule_set": ["geoip-telegram", "geosite-gfw"],
         "outbound": "trojan-out"
       },
       { "outbound": "direct-out" }
