@@ -26,8 +26,8 @@ $sudo\
 right_format = """
 $memory_usage\
 $cmd_duration\
+$status \
 $time\
-$status\
 """
 
 [aws]
@@ -234,16 +234,16 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol($version)]($style)\]'
 
 [status]
-symbol = ' '
-success_symbol = ' '
-format = '[$common_meaning$signal_name$maybe_int$symbol]($style)'
+symbol = ''
+success_symbol = ''
+format = '[$common_meaning$signal_name$maybe_int $symbol]($style)'
 map_symbol = true
 disabled = false
 
 [character]
-success_symbol = '[](green)'
-error_symbol = '[](green)'
-vimcmd_symbol = '[](green)'
+success_symbol = '[](green)'
+error_symbol = '[](green)'
+vimcmd_symbol = '[](green)'
 
 [hostname]
 ssh_only = true
