@@ -32,4 +32,5 @@ install:
 	@rsync -av --delete ./.zshrc ~/.zshrc
 	@rsync -av --delete ./.zimrc ~/.zimrc
 	@rsync -av --delete ./.config/ ~/.config/
+	@rsync -av --delete ./.local/share/ ~/.local/share/
 	@(cat crontab) | crontab -
