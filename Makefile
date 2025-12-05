@@ -17,8 +17,9 @@ update:
 	@rsync -av --delete ~/.config/lazygit/   ./.config/lazygit/
 	@rsync -av --delete ~/.config/newsboat/  ./.config/newsboat/
 	@rsync -av --delete ~/.config/conky/     ./.config/conky/
-	@rsync -av --delete ~/.config/easyeffects/input/  ./.config/easyeffects/input/
-	@rsync -av --delete ~/.config/easyeffects/output/ ./.config/easyeffects/output/
+	@mkdir -p ./.local/share/easyeffects
+	@rsync -av --delete ~/.local/share/easyeffects/input/  ./.local/share/easyeffects/input/
+	@rsync -av --delete ~/.local/share/easyeffects/output/ ./.local/share/easyeffects/output/
 	@rsync -av --delete ~/.config/rmpc/ 		 ./.config/rmpc/
 	@rsync -av --delete /etc/sing-box/			 ./sing-box/client/
 	@mkdir -p ./.config/tmux
