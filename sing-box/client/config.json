@@ -4,18 +4,13 @@
   },
   "dns": {
     "servers": [
-      {
-        "tag": "cloudflare",
-        "type": "tls",
-        "server": "1.1.1.1"
-      },
+      { "tag": "cloudflare", "type": "tls", "server": "1.1.1.1" },
       {
         "tag": "google",
-        "type": "https",
+        "type": "tls",
         "server": "8.8.8.8",
         "detour": "trojan-out"
       },
-      { "tag": "ali", "type": "tls", "server": "223.5.5.5" },
       { "tag": "local", "type": "local" }
     ],
     "rules": [
@@ -26,7 +21,7 @@
           "geosite-youtube",
           "geosite-tiktok"
         ],
-        "server": "cloudflare"
+        "server": "google"
       }
     ],
     "final": "local",
@@ -99,15 +94,16 @@
       { "ip_is_private": true, "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
       {
-        "rule_set": [
-          "geosite-youtube",
-          "geosite-tiktok",
-          "geosite-proxy-custom"
-        ],
+        "rule_set": ["geosite-youtube"],
         "outbound": "hy2-out"
       },
       {
-        "rule_set": ["geoip-telegram", "geosite-gfw"],
+        "rule_set": [
+          "geosite-tiktok",
+          "geoip-telegram",
+          "geosite-gfw",
+          "geosite-proxy-custom"
+        ],
         "outbound": "trojan-out"
       },
       { "outbound": "direct-out" }
@@ -123,35 +119,35 @@
         "tag": "geosite-gfw",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/gfw.srs",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/gfw.srs",
         "download_detour": "trojan-out"
       },
       {
         "tag": "geosite-ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/ai.srs",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/ai.srs",
         "download_detour": "trojan-out"
       },
       {
         "tag": "geoip-telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/telegramip.srs",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/telegramip.srs",
         "download_detour": "trojan-out"
       },
       {
         "tag": "geosite-youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/youtube.srs",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/youtube.srs",
         "download_detour": "trojan-out"
       },
       {
         "tag": "geosite-tiktok",
         "type": "remote",
         "format": "binary",
-        "url": "https://raw.githubusercontent.com/DustinWin/ruleset_geodata/refs/heads/sing-box-ruleset/tiktok.srs",
+        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/tiktok.srs",
         "download_detour": "trojan-out"
       }
     ]
