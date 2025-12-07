@@ -82,8 +82,8 @@ export GOPATH=~/GoPath
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # rust env
-export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
-export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup
+export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 export PATH=$PATH:~/.cargo/bin
 
 # flutter

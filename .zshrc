@@ -139,11 +139,15 @@ zmodload zsh/zprof
 #     tmux attach -t Main || tmux new -s Main
 # fi
 
-if [[ -f "$HOME/.note" ]] && [[ ! -z "$(grep '^\*' $HOME/.note)" ]]; then
+note="$HOME/.note"
+if [[ -f "$note" ]]; then
     if [[ ! -z "$(command -v boxes)" ]]; then
-        grep '^\*' $HOME/.note | cut -c3- | boxes -d parchment | lolcat -S $RANDOM -p 2
+        grep '^\*' "$note" | cut -c3- | boxes -d parchment | lolcat -p 2 -S $RANDOM
+        echo ""
+    elif [[ ! -z "$(command -v cowsay)" ]]; then
+        grep '^\*' "$note" | cut -c3- | cowsay -f small -W $(tput cols) -n | lolcat -p 2 -S $RANDOM
     else
-        grep '^\*' $HOME/.note | cut -c3- | lolcat -S $RANDOM -p 2
+        grep '^\*' "$note" | cut -c3- | lolcat -p 2 -S $RANDOM
     fi
-    echo ""
 fi
+
