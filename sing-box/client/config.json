@@ -4,10 +4,17 @@
   },
   "dns": {
     "servers": [
-      { "tag": "cloudflare", "type": "tls", "server": "1.1.1.1" },
+      { "tag": "ali", "type": "udp", "server": "223.5.5.5" },
+      { "tag": "cloudflare-tls", "type": "tls", "server": "1.1.1.1" },
+      {
+        "tag": "google-tls",
+        "type": "tls",
+        "server": "8.8.8.8",
+        "detour": "trojan-out"
+      },
       {
         "tag": "google",
-        "type": "tls",
+        "type": "udp",
         "server": "8.8.8.8",
         "detour": "trojan-out"
       },
@@ -56,7 +63,7 @@
       "tag": "hy2-out",
       "server": "x.byt0723.xyz",
       "server_port": 21212,
-      "up_mbps": 20,
+      "up_mbps": 100,
       "down_mbps": 100,
       "obfs": {
         "type": "salamander",
@@ -76,12 +83,11 @@
       "password": "tylersproxy",
       "tls": {
         "enabled": true,
-        "server_name": "blog.byt0723.xyz"
+        "server_name": "blog.byt0723.xyz",
+        "utls": { "enabled": true, "fingerprint": "firefox" }
       },
       "multiplex": {
-        "enabled": true,
-        "protocol": "smux",
-        "max_streams": 4
+        "enabled": true
       }
     }
   ],
@@ -92,6 +98,7 @@
       { "action": "sniff" },
       { "protocol": "dns", "action": "hijack-dns" },
       { "ip_is_private": true, "outbound": "direct-out" },
+      { "process_name": ["trojan-go"], "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
       {
         "rule_set": ["geosite-youtube"],
