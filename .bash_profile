@@ -96,6 +96,7 @@ alias tsc='trans zh:en -speak'
 alias v='nvim'
 alias sv='sudo -E nvim'
 alias profile='nvim ~/.bash_profile'
+alias secret='nvim ~/.bash_secret'
 alias pcconf='nvim ~/.dwm/configs/picom.conf'
 
 # weather

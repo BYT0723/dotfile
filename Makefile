@@ -1,6 +1,7 @@
 update:
 	@rsync -av /etc/environment ./
 	@rsync -av ~/.bash_profile ./
+	@rsync -av ~/.bashrc ./
 	@rsync -av ~/.zshrc ./
 	@rsync -av ~/.zimrc ./
 	@rsync -av ~/.config/starship.toml ./.config/
@@ -31,6 +32,7 @@ install:
 	@sudo rsync -av --delete ./environment /etc/environment
 	# 同理，把 ./. 同步回 ~/
 	@rsync -av --delete ./.bash_profile ~/.bash_profile
+	@rsync -av --delete ./.bashrc ~/.bashrc
 	@rsync -av --delete ./.zshrc ~/.zshrc
 	@rsync -av --delete ./.zimrc ~/.zimrc
 	@rsync -av --delete ./.config/ ~/.config/
