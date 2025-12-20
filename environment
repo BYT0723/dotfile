@@ -1,0 +1,13 @@
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+GLFW_IM_MODULE=ibus
+QT_QPA_PLATFORMTHEME=qt6ct
+
+# fix Menu disappearing in Java program in Dwm
+_JAVA_AWT_WM_NONREPARENTING=1
+
+#http_proxy=http://127.0.0.1:8118
+#https_proxy=http://127.0.0.1:8118
+#all_proxy=http://127.0.0.1:8118

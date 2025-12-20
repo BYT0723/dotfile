@@ -1,4 +1,5 @@
 update:
+	@rsync -av /etc/environment ./
 	@rsync -av ~/.bash_profile ./
 	@rsync -av ~/.zshrc ./
 	@rsync -av ~/.zimrc ./
@@ -27,6 +28,7 @@ update:
 	@crontab -l > crontab
 
 install:
+	@sudo rsync -av --delete ./environment /etc/environment
 	# 同理，把 ./. 同步回 ~/
 	@rsync -av --delete ./.bash_profile ~/.bash_profile
 	@rsync -av --delete ./.zshrc ~/.zshrc
