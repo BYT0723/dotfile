@@ -6,15 +6,11 @@
     "servers": [
       { "tag": "ali", "type": "udp", "server": "223.5.5.5" },
       { "tag": "cloudflare-tls", "type": "tls", "server": "1.1.1.1" },
+      { "tag": "quad9", "type": "udp", "server": "9.9.9.9" },
+      { "tag": "google", "type": "udp", "server": "8.8.8.8" },
       {
         "tag": "google-tls",
         "type": "tls",
-        "server": "8.8.8.8",
-        "detour": "trojan-out"
-      },
-      {
-        "tag": "google",
-        "type": "udp",
         "server": "8.8.8.8",
         "detour": "trojan-out"
       },
@@ -26,9 +22,10 @@
           "geosite-proxy-custom",
           "geosite-gfw",
           "geosite-youtube",
-          "geosite-tiktok"
+          "geosite-tiktok",
+          "geosite-ai"
         ],
-        "server": "google"
+        "server": "cloudflare-tls"
       }
     ],
     "final": "local",
@@ -87,7 +84,11 @@
         "utls": { "enabled": true, "fingerprint": "firefox" }
       },
       "multiplex": {
-        "enabled": true
+        "enabled": true,
+        "padding": true,
+        "max_connections": 6,
+        "min_streams": 2,
+        "max_streams": 0
       }
     }
   ],
@@ -98,17 +99,17 @@
       { "action": "sniff" },
       { "protocol": "dns", "action": "hijack-dns" },
       { "ip_is_private": true, "outbound": "direct-out" },
-      { "process_name": ["trojan-go"], "outbound": "direct-out" },
+      { "process_name": ["trojan-go", "ssh"], "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
       {
-        "rule_set": ["geosite-youtube"],
+        "rule_set": ["geosite-youtube", "geosite-tiktok"],
         "outbound": "hy2-out"
       },
       {
         "rule_set": [
-          "geosite-tiktok",
           "geoip-telegram",
           "geosite-gfw",
+          "geosite-ai",
           "geosite-proxy-custom"
         ],
         "outbound": "trojan-out"
@@ -124,38 +125,33 @@
       },
       {
         "tag": "geosite-gfw",
-        "type": "remote",
+        "type": "local",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/gfw.srs",
-        "download_detour": "trojan-out"
+        "path": "/etc/sing-box/rules/ruleset_geodata/gfw.srs"
       },
       {
         "tag": "geosite-ai",
-        "type": "remote",
+        "type": "local",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/ai.srs",
-        "download_detour": "trojan-out"
+        "path": "/etc/sing-box/rules/ruleset_geodata/ai.srs"
       },
       {
         "tag": "geoip-telegram",
-        "type": "remote",
+        "type": "local",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/telegramip.srs",
-        "download_detour": "trojan-out"
+        "path": "/etc/sing-box/rules/ruleset_geodata/telegramip.srs"
       },
       {
         "tag": "geosite-youtube",
-        "type": "remote",
+        "type": "local",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/youtube.srs",
-        "download_detour": "trojan-out"
+        "path": "/etc/sing-box/rules/ruleset_geodata/youtube.srs"
       },
       {
         "tag": "geosite-tiktok",
-        "type": "remote",
+        "type": "local",
         "format": "binary",
-        "url": "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@sing-box-ruleset/tiktok.srs",
-        "download_detour": "trojan-out"
+        "path": "/etc/sing-box/rules/ruleset_geodata/tiktok.srs"
       }
     ]
   }

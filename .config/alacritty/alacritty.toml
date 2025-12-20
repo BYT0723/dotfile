@@ -17,7 +17,7 @@ TERM = "alacritty"
 
 [font]
 builtin_box_drawing = true
-size = 17
+size = 13
 
 [font.bold]
 style = "Bold"
@@ -55,7 +55,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
 dynamic_title = true
-opacity = 0.8
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]

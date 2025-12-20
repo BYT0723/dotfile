@@ -26,10 +26,8 @@ export FILEMANAGER=pcmanfm
 export MYVIMRC=~/.config/nvim/init.vim
 export TERM=xterm-256color
 
-# export KITTY_SHELL_INTEGRATION=no-cursor
-
 # AI
-export OPENAI_API_KEY=8ab203dd-ce91-4865-9924-4320f62c84ca
+export OPENAI_API_KEY=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
 export GEMINI_API_KEY=AIzaSyBhVreStZCjgKj07vGNN9IkNClQHzJWHs0
 export DEEPSEEK_API_KEY=sk-01950b4296174ce7b237ee7f158f5aaa
 
@@ -38,37 +36,31 @@ export GIT_TERMINAL_PROMPT=1
 
 # fzf config
 export FZF_COMPLETION_TRIGGER="?"
-export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,winDesk,.npm} --type f"
-export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
-  --highlight-line \
-  --info=inline-right \
-  --ansi \
-  --layout=reverse \
-  --border=none
-  --color=bg+:#2d3f76 \
-  --color=bg:#1e2030 \
-  --color=border:#589ed7 \
-  --color=fg:#c8d3f5 \
-  --color=gutter:#1e2030 \
-  --color=header:#ff966c \
-  --color=hl+:#65bcff \
-  --color=hl:#65bcff \
-  --color=info:#545c7e \
-  --color=marker:#ff007c \
-  --color=pointer:#ff007c \
-  --color=prompt:#65bcff \
-  --color=query:#c8d3f5:regular \
-  --color=scrollbar:#589ed7 \
-  --color=separator:#ff966c \
-  --color=spinner:#ff007c \
-"
-
-# nnn
-export NNN_PLUG='i:imgview;p:preview-tabbed;t:preview-tui;f:fzcd'
-export NNN_BMS='w:~/Desktop/Wallpapers'
-export NNN_SEL='/tmp/.sel'
-export NNN_FIFO='/tmp/nnn.fifo'
+# export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,winDesk,.npm} --type f"
+# export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+#   --highlight-line \
+#   --info=inline-right \
+#   --ansi \
+#   --layout=reverse \
+#   --border=none
+#   --color=bg+:#2d3f76 \
+#   --color=bg:#1e2030 \
+#   --color=border:#589ed7 \
+#   --color=fg:#c8d3f5 \
+#   --color=gutter:#1e2030 \
+#   --color=header:#ff966c \
+#   --color=hl+:#65bcff \
+#   --color=hl:#65bcff \
+#   --color=info:#545c7e \
+#   --color=marker:#ff007c \
+#   --color=pointer:#ff007c \
+#   --color=prompt:#65bcff \
+#   --color=query:#c8d3f5:regular \
+#   --color=scrollbar:#589ed7 \
+#   --color=separator:#ff966c \
+#   --color=spinner:#ff007c \
+# "
 
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/opt/net.downloadhelper.coapp/bin
@@ -105,23 +97,13 @@ alias tt="time zsh -i -c exit"
 alias rm='gio trash'
 # proxy
 alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
-alias noproxy='http_proxy="" https_proxy="" all_proxy=""'
 
-alias pac='sudo -E nvim /etc/privoxy/pac.action'
+alias pac='sudo -E nvim /etc/sing-box/rules/geosite-proxy.json'
 
 # nbfc
 alias startnbfc='systemctl start nbfc_service'
 alias stopnbfc='systemctl stop nbfc_service'
 alias nbfcconf='sudo -E nvim "/opt/nbfc/Configs/Xiaomi Mi Book (TM1613, TM1703).xml"'
-# ssh
-alias sshpi='ssh 192.168.3.8'
-
-# alias sshtrojan='ssh -l root 65.49.196.194 -p 29793'
-alias sshtrojan='ssh -l root proxy.byt0723.xyz -p 29793'
-# alias scptrojan='sudo scp -P 29793 root@byt0723.xyz:~/config.json /etc/trojan/config.json'
-
-# live
-alias danmu="surf 'https://blc.lolicon.app/live.html#face=false&room=23970948'"
 
 #
 # Start APP
@@ -137,8 +119,7 @@ alias lg='lazygit'
 alias ld='lazydocker'
 alias le='yazi'
 alias lmail='aerc'
-alias dkc='docker-compose'
-# traslate
+# translate
 alias ts='ydict -v 1 -c'
 alias tse='trans en:zh -speak'
 alias tsc='trans zh:en -speak'
@@ -148,10 +129,10 @@ alias tsc='trans zh:en -speak'
 #
 # samba
 
-alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/private /home/walter/disks/private'
-alias umcloud='sudo umount ~/disks/private'
-alias mresource='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/share /home/walter/disks/resource'
-alias umresource='sudo umount ~/disks/resource'
+# alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/private /home/walter/disks/private'
+# alias umcloud='sudo umount ~/disks/private'
+# alias mresource='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/share /home/walter/disks/resource'
+# alias umresource='sudo umount ~/disks/resource'
 # alias mshare='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberry.local/private /home/walter/disks/private'
 # alias umshare='sudo umount ~/disks/private'
 
@@ -163,8 +144,6 @@ alias cdnv='cd ~/.config/nvim/'
 alias cdhub='cd ~/Workspace/Github/'
 alias cddwm='cd ~/Workspace/Github/dwm/'
 alias cdst='cd ~/Workspace/Github/st/'
-alias cdblog='cd ~/Workspace/Github/blog/'
-alias cdstudy='cd ~/Desktop/Study/'
 
 #
 # Quick Open Profile
@@ -173,18 +152,10 @@ alias cdstudy='cd ~/Desktop/Study/'
 alias v='nvim'
 alias sv='sudo -E nvim'
 alias profile='nvim ~/.bash_profile'
-alias soprofile='source ~/.bash_profile'
 alias pcconf='nvim ~/.dwm/configs/picom.conf'
 
 # wether
 alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
-
-# display
-alias layoutAbove="xrandr --output eDP --auto --output HDMI-A-0 --auto --mode 2560x1440 --above eDP --dpi 96"
-alias layoutRight="xrandr --output eDP --auto --output HDMI-A-0 --auto --mode 2560x1440 --right-of eDP --dpi 96"
-alias layoutMirror="xrandr --output eDP --auto --output HDMI-A-0 --auto --mode 1920x1080 --same-as eDP"
-alias layoutOnlyHDMI="xrandr --output eDP --off --output HDMI-A-0 --auto --mode 2560x1440"
-alias layoutOnlyDP="xrandr --output HDMI-A-0 --off --output eDP --auto --mode 1920x1080 "
 
 alias wallpapers="cd ~/.local/share/Steam/steamapps/workshop/content/431960/"
 
