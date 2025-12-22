@@ -52,7 +52,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
 dynamic_title = true
-opacity = 0.9
+opacity = 0.8
 title = "Alacritty"
 
 [window.class]

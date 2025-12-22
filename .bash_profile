@@ -82,11 +82,11 @@ alias tsc='trans zh:en -speak'
 #
 # samba
 
-# alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/private /home/walter/disks/private'
+# alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/private ~/disks/private'
 # alias umcloud='sudo umount ~/disks/private'
-# alias mresource='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/share /home/walter/disks/resource'
+# alias mresource='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/share ~/disks/resource'
 # alias umresource='sudo umount ~/disks/resource'
-# alias mshare='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberry.local/private /home/walter/disks/private'
+# alias mshare='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberry.local/private ~/disks/private'
 # alias umshare='sudo umount ~/disks/private'
 
 #
@@ -102,5 +102,5 @@ alias pcconf='nvim ~/.dwm/configs/picom.conf'
 # weather
 alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
 
-alias rav='bash /home/walter/.dwm/tools/random_file.sh /home/walter/disks/private/share/'
-alias rv='bash /home/walter/.dwm/tools/random_file.sh'
+alias rav='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/'
+alias rv='bash ~/.dwm/tools/random_file.sh'

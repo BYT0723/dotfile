@@ -5,7 +5,9 @@
   "dns": {
     "servers": [
       { "tag": "ali", "type": "udp", "server": "223.5.5.5" },
+      { "tag": "ali-backup", "type": "udp", "server": "223.6.6.6" },
       { "tag": "cloudflare-tls", "type": "tls", "server": "1.1.1.1" },
+      { "tag": "cloudflare-tls-backup", "type": "tls", "server": "1.0.0.1" },
       { "tag": "quad9", "type": "udp", "server": "9.9.9.9" },
       { "tag": "google", "type": "udp", "server": "8.8.8.8" },
       {
@@ -22,15 +24,14 @@
           "geosite-proxy-custom",
           "geosite-gfw",
           "geosite-youtube",
-          "geosite-tiktok",
-          "geosite-ai"
+          "geosite-tiktok"
         ],
         "server": "cloudflare-tls"
       }
     ],
-    "final": "local",
+    "final": "ali",
     "strategy": "prefer_ipv4",
-    "cache_capacity": 4096
+    "cache_capacity": 8192
   },
   "inbounds": [
     {
@@ -86,6 +87,7 @@
       "multiplex": {
         "enabled": true,
         "padding": true,
+        "protocol": "smux",
         "max_connections": 6,
         "min_streams": 2,
         "max_streams": 0
@@ -94,24 +96,19 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "default_domain_resolver": "local",
+    "default_domain_resolver": "ali",
     "rules": [
       { "action": "sniff" },
       { "protocol": "dns", "action": "hijack-dns" },
       { "ip_is_private": true, "outbound": "direct-out" },
-      { "process_name": ["trojan-go", "ssh"], "outbound": "direct-out" },
+      { "process_name": ["trojan-go"], "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
       {
         "rule_set": ["geosite-youtube", "geosite-tiktok"],
         "outbound": "hy2-out"
       },
       {
-        "rule_set": [
-          "geoip-telegram",
-          "geosite-gfw",
-          "geosite-ai",
-          "geosite-proxy-custom"
-        ],
+        "rule_set": ["geoip-telegram", "geosite-gfw", "geosite-proxy-custom"],
         "outbound": "trojan-out"
       },
       { "outbound": "direct-out" }
@@ -124,16 +121,22 @@
         "path": "/etc/sing-box/rules/geosite-proxy.json"
       },
       {
+        "tag": "geosite-cn-lite",
+        "type": "local",
+        "format": "binary",
+        "path": "/etc/sing-box/rules/ruleset_geodata/cn-lite.srs"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "local",
+        "format": "binary",
+        "path": "/etc/sing-box/rules/ruleset_geodata/cnip.srs"
+      },
+      {
         "tag": "geosite-gfw",
         "type": "local",
         "format": "binary",
         "path": "/etc/sing-box/rules/ruleset_geodata/gfw.srs"
-      },
-      {
-        "tag": "geosite-ai",
-        "type": "local",
-        "format": "binary",
-        "path": "/etc/sing-box/rules/ruleset_geodata/ai.srs"
       },
       {
         "tag": "geoip-telegram",
