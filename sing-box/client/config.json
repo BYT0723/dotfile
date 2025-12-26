@@ -5,11 +5,7 @@
   "dns": {
     "servers": [
       { "tag": "ali", "type": "udp", "server": "223.5.5.5" },
-      { "tag": "ali-backup", "type": "udp", "server": "223.6.6.6" },
       { "tag": "cloudflare-tls", "type": "tls", "server": "1.1.1.1" },
-      { "tag": "cloudflare-tls-backup", "type": "tls", "server": "1.0.0.1" },
-      { "tag": "quad9", "type": "udp", "server": "9.9.9.9" },
-      { "tag": "google", "type": "udp", "server": "8.8.8.8" },
       {
         "tag": "google-tls",
         "type": "tls",
@@ -24,9 +20,10 @@
           "geosite-proxy-custom",
           "geosite-gfw",
           "geosite-youtube",
-          "geosite-tiktok"
+          "geosite-tiktok",
+          "geosite-ai"
         ],
-        "server": "cloudflare-tls"
+        "server": "google-tls"
       }
     ],
     "final": "ali",
@@ -82,11 +79,10 @@
       "tls": {
         "enabled": true,
         "server_name": "blog.byt0723.xyz",
-        "utls": { "enabled": true, "fingerprint": "firefox" }
+        "utls": { "enabled": true }
       },
       "multiplex": {
         "enabled": true,
-        "padding": true,
         "protocol": "smux",
         "max_connections": 6,
         "min_streams": 2,
@@ -101,14 +97,19 @@
       { "action": "sniff" },
       { "protocol": "dns", "action": "hijack-dns" },
       { "ip_is_private": true, "outbound": "direct-out" },
-      { "process_name": ["trojan-go"], "outbound": "direct-out" },
+      { "process_name": ["trojan-go", "thunder "], "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
       {
         "rule_set": ["geosite-youtube", "geosite-tiktok"],
         "outbound": "hy2-out"
       },
       {
-        "rule_set": ["geoip-telegram", "geosite-gfw", "geosite-proxy-custom"],
+        "rule_set": [
+          "geoip-telegram",
+          "geosite-gfw",
+          "geosite-proxy-custom",
+          "geosite-ai"
+        ],
         "outbound": "trojan-out"
       },
       { "outbound": "direct-out" }
@@ -137,6 +138,12 @@
         "type": "local",
         "format": "binary",
         "path": "/etc/sing-box/rules/ruleset_geodata/gfw.srs"
+      },
+      {
+        "tag": "geosite-ai",
+        "type": "local",
+        "format": "binary",
+        "path": "/etc/sing-box/rules/ruleset_geodata/ai.srs"
       },
       {
         "tag": "geoip-telegram",
