@@ -16,13 +16,7 @@
     ],
     "rules": [
       {
-        "rule_set": [
-          "geosite-proxy-custom",
-          "geosite-gfw",
-          "geosite-youtube",
-          "geosite-tiktok",
-          "geosite-ai"
-        ],
+        "rule_set": ["geosite-proxy-custom", "geosite-gfw"],
         "server": "google-tls"
       }
     ],
@@ -79,13 +73,14 @@
       "tls": {
         "enabled": true,
         "server_name": "blog.byt0723.xyz",
-        "utls": { "enabled": true }
+        "utls": { "enabled": true, "fingerprint": "firefox" }
       },
       "multiplex": {
         "enabled": true,
+        "padding": true,
         "protocol": "smux",
-        "max_connections": 6,
-        "min_streams": 2,
+        "max_connections": 2,
+        "min_streams": 4,
         "max_streams": 0
       }
     }
@@ -100,16 +95,7 @@
       { "process_name": ["trojan-go", "thunder "], "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
       {
-        "rule_set": ["geosite-youtube", "geosite-tiktok"],
-        "outbound": "hy2-out"
-      },
-      {
-        "rule_set": [
-          "geoip-telegram",
-          "geosite-gfw",
-          "geosite-proxy-custom",
-          "geosite-ai"
-        ],
+        "rule_set": ["geoip-telegram", "geosite-gfw", "geosite-proxy-custom"],
         "outbound": "trojan-out"
       },
       { "outbound": "direct-out" }
@@ -122,46 +108,16 @@
         "path": "/etc/sing-box/rules/geosite-proxy.json"
       },
       {
-        "tag": "geosite-cn-lite",
-        "type": "local",
-        "format": "binary",
-        "path": "/etc/sing-box/rules/ruleset_geodata/cn-lite.srs"
-      },
-      {
-        "tag": "geoip-cn",
-        "type": "local",
-        "format": "binary",
-        "path": "/etc/sing-box/rules/ruleset_geodata/cnip.srs"
-      },
-      {
         "tag": "geosite-gfw",
         "type": "local",
         "format": "binary",
         "path": "/etc/sing-box/rules/ruleset_geodata/gfw.srs"
       },
       {
-        "tag": "geosite-ai",
-        "type": "local",
-        "format": "binary",
-        "path": "/etc/sing-box/rules/ruleset_geodata/ai.srs"
-      },
-      {
         "tag": "geoip-telegram",
         "type": "local",
         "format": "binary",
         "path": "/etc/sing-box/rules/ruleset_geodata/telegramip.srs"
-      },
-      {
-        "tag": "geosite-youtube",
-        "type": "local",
-        "format": "binary",
-        "path": "/etc/sing-box/rules/ruleset_geodata/youtube.srs"
-      },
-      {
-        "tag": "geosite-tiktok",
-        "type": "local",
-        "format": "binary",
-        "path": "/etc/sing-box/rules/ruleset_geodata/tiktok.srs"
       }
     ]
   }
