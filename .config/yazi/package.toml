@@ -13,5 +13,10 @@ use = "Rolv-Apneseth/starship"
 rev = "eca1861"
 hash = "e519d894e94ded741e06aae4d4775981"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "398796d"
+hash = "48a77ab785d1ee73bc2d7bbe2a4c2090"
+
 [flavor]
 deps = []
