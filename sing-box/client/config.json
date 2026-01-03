@@ -16,8 +16,12 @@
     ],
     "rules": [
       {
-        "rule_set": ["geosite-proxy-custom", "geosite-gfw"],
+        "domain": ["imap.gmail.com", "smtp.gmail.com"],
         "server": "google-tls"
+      },
+      {
+        "rule_set": ["geosite-proxy-custom", "geosite-gfw"],
+        "server": "cloudflare-tls"
       }
     ],
     "final": "ali",
