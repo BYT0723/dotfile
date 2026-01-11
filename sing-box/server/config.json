@@ -1,12 +1,12 @@
 {
-	"log": {
-		"level": "info"
-	},
+  "log": {
+    "level": "info"
+  },
   "inbounds": [
     {
       "type": "trojan",
       "tag": "trojan-in",
-      "listen": "0.0.0.0",
+      "listen": "::",
       "listen_port": 9723,
       "users": [
         {
@@ -25,13 +25,14 @@
         "server_port": 80
       },
       "multiplex": {
-        "enabled": true
+        "enabled": true,
+        "padding": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "hy2-in",
-      "listen": "0.0.0.0",
+      "tag": "hysteria2-in",
+      "listen": "::",
       "listen_port": 21212,
       "users": [
         {
@@ -51,6 +52,28 @@
         "server_name": "blog.byt0723.xyz",
         "certificate_path": "/root/.acme.sh/blog.byt0723.xyz_ecc/fullchain.cer",
         "key_path": "/root/.acme.sh/blog.byt0723.xyz_ecc/blog.byt0723.xyz.key"
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "anytls-in",
+      "listen": "::",
+      "listen_port": 9733,
+      "users": [{ "name": "tyler", "password": "tylersproxy" }],
+      "padding_scheme": [],
+      "tls": {
+        "enabled": true,
+        "server_name": "cdnjs.cloudflare.com",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "cdnjs.cloudflare.com",
+            "server_port": 443
+          },
+          "private_key": "iLXtj18Zm2JflcuUadOPjEkVQhN-9zAZRpq5Hb674ng",
+          "short_id": ["62960cd8d3a0fd1e"],
+          "max_time_difference": "1m"
+        }
       }
     }
   ]
