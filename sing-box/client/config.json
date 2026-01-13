@@ -15,10 +15,7 @@
       { "tag": "local", "type": "local" }
     ],
     "rules": [
-      {
-        "domain": ["imap.gmail.com", "smtp.gmail.com"],
-        "server": "ali"
-      },
+      { "domain": ["imap.gmail.com", "smtp.gmail.com"], "server": "ali" },
       {
         "rule_set": ["geosite-proxy-custom", "geosite-gfw"],
         "server": "cloudflare-tls"
@@ -97,10 +94,10 @@
       "password": "tylersproxy",
       "idle_session_check_interval": "30s",
       "idle_session_timeout": "30s",
-      "min_idle_session": 0,
+      "min_idle_session": 2,
       "tls": {
         "enabled": true,
-        "server_name": "cdnjs.cloudflare.com",
+        "server_name": "aws.amazon.com",
         "utls": { "enabled": true, "fingerprint": "firefox" },
         "reality": {
           "enabled": true,

@@ -67,7 +67,7 @@
         "reality": {
           "enabled": true,
           "handshake": {
-            "server": "cdnjs.cloudflare.com",
+            "server": "wiki.archlinux.org",
             "server_port": 443
           },
           "private_key": "iLXtj18Zm2JflcuUadOPjEkVQhN-9zAZRpq5Hb674ng",
