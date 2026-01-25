@@ -131,6 +131,16 @@ for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search
 
 zmodload zsh/zprof
 
+# --------------------
+# Tmux configuration
+# --------------------
+
+# 在 tmux 内恢复光标样式
+if [[ "$TERM" == "screen"* || "$TERM" == "tmux"* ]]; then
+    printf '\e[6 q'  # insert mode / bar
+else
+    printf '\e[5 q'  # normal / block
+fi
 
 # windows class_g 为float-term时，attach or new float-term tmux session
 if [ -z "$TMUX" ] && [ -n "$WINDOWID" ]; then

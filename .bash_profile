@@ -8,7 +8,7 @@ export BROWSER=firefox
 export EDITOR=nvim
 export VISUAL=neovide
 export FILEMANAGER=pcmanfm
-export TERMINAL=alacritty
+export TERMINAL=kitty
 export TERM=xterm-256color
 
 # wine
@@ -101,6 +101,9 @@ alias pcconf='nvim ~/.dwm/configs/picom.conf'
 
 # weather
 alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
+
+# cursor setting
+alias c="printf '\e[6 q'"
 
 alias rav='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/'
 alias rv='bash ~/.dwm/tools/random_file.sh'
