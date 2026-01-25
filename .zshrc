@@ -122,8 +122,6 @@ source ${ZIM_HOME}/init.zsh
 zmodload -F zsh/terminfo +p:terminfo
 for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
 for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
-for key ('k') bindkey -M vicmd ${key} history-substring-search-up
-for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 
 [ -f ~/.bash_profile ] && source ~/.bash_profile
 
@@ -134,10 +132,12 @@ for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 zmodload zsh/zprof
 
 
-# 当打开alacritty并且为zsh时，attach tmux | new tmux session
-# if [ -z "$TMUX" -a $(ps h o cmd -p $PPID | awk '{print $1}') = "alacritty" ]; then
-#     tmux attach -t Main || tmux new -s Main
-# fi
+# windows class_g 为float-term时，attach or new float-term tmux session
+if [ -z "$TMUX" ] && [ -n "$WINDOWID" ]; then
+	if echo "$(xprop -id "$WINDOWID" WM_CLASS 2>/dev/null)" | grep -q '"float-term"'; then
+		tmux new -s "float-term-$WINDOWID" \; set destroy-unattached on
+	fi
+fi
 
 note="$HOME/.note"
 if [[ -f "$note" ]]; then

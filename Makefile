@@ -8,6 +8,7 @@ update:
 	@rsync -av ~/.config/starship.toml ./.config/
 	@rsync -av ~/.config/screenkey.json ./.config/
 	@rsync -av --delete ~/.config/alacritty/ ./.config/alacritty/
+	@rsync -av --delete ~/.config/kitty/ ./.config/kitty/
 	@rsync -av --delete ~/.config/mpd/       ./.config/mpd/
 	@rsync -av --delete ~/.config/mpv/       ./.config/mpv/
 	@rsync -av --delete ~/.config/ncmpcpp/   ./.config/ncmpcpp/
