@@ -149,15 +149,17 @@ fi
 # 	fi
 # fi
 
-note="$HOME/.note"
-if [[ -f "$note" ]]; then
-    if [[ ! -z "$(command -v boxes)" ]]; then
-        grep '^\*' "$note" | cut -c3- | boxes -d parchment | lolcat -p 2 -S $RANDOM
-        echo ""
-    elif [[ ! -z "$(command -v cowsay)" ]]; then
-        grep '^\*' "$note" | cut -c3- | cowsay -f small -W $(tput cols) -n | lolcat -p 2 -S $RANDOM
-    else
-        grep '^\*' "$note" | cut -c3- | lolcat -p 2 -S $RANDOM
-    fi
+# When it is not float-term, output note
+if ! echo "$(xprop -id "$WINDOWID" WM_CLASS 2>/dev/null)" | grep -q '"float-term"'; then
+	note="$HOME/.note"
+	if [[ -f "$note" ]]; then
+		if [[ ! -z "$(command -v boxes)" ]]; then
+			grep '^\*' "$note" | cut -c3- | boxes -d parchment | lolcat -p 2 -S $RANDOM
+			echo ""
+		elif [[ ! -z "$(command -v cowsay)" ]]; then
+			grep '^\*' "$note" | cut -c3- | cowsay -f small -W $(tput cols) -n | lolcat -p 2 -S $RANDOM
+		else
+			grep '^\*' "$note" | cut -c3- | lolcat -p 2 -S $RANDOM
+		fi
+	fi
 fi
-
