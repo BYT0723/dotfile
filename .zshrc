@@ -143,11 +143,11 @@ else
 fi
 
 # windows class_g 为float-term时，attach or new float-term tmux session
-if [ -z "$TMUX" ] && [ -n "$WINDOWID" ]; then
-	if echo "$(xprop -id "$WINDOWID" WM_CLASS 2>/dev/null)" | grep -q '"float-term"'; then
-		tmux new -s "float-term-$WINDOWID" \; set destroy-unattached on
-	fi
-fi
+# if [ -z "$TMUX" ] && [ -n "$WINDOWID" ]; then
+# 	if echo "$(xprop -id "$WINDOWID" WM_CLASS 2>/dev/null)" | grep -q '"float-term"'; then
+# 		tmux new -s "float-term-$WINDOWID" \; set destroy-unattached on
+# 	fi
+# fi
 
 note="$HOME/.note"
 if [[ -f "$note" ]]; then
