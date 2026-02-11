@@ -17,15 +17,15 @@
     "rules": [
       {
         "domain": ["imap.gmail.com", "smtp.gmail.com"],
-        "server": "google-tls"
+        "server": "cloudflare-tls"
       },
       {
-        "rule_set": ["geosite-proxy-custom", "geosite-gfw"],
+        "rule_set": ["geosite-tiktok", "geosite-gfw", "geosite-proxy-custom"],
         "server": "cloudflare-tls"
       }
     ],
     "final": "ali",
-    "strategy": "prefer_ipv4",
+    "strategy": "ipv4_only",
     "cache_capacity": 8192
   },
   "inbounds": [
@@ -58,16 +58,9 @@
       "server_port": 21212,
       "up_mbps": 100,
       "down_mbps": 100,
-      "obfs": {
-        "type": "salamander",
-        "password": "tylersobfs"
-      },
+      "obfs": { "type": "salamander", "password": "tylersobfs" },
       "password": "tylersproxy",
-      "tls": {
-        "enabled": true,
-        "server_name": "blog.byt0723.xyz",
-        "utls": { "enabled": true, "fingerprint": "firefox" }
-      }
+      "tls": { "enabled": true, "server_name": "blog.byt0723.xyz" }
     },
     {
       "type": "trojan",
@@ -79,13 +72,18 @@
       "tls": {
         "enabled": true,
         "server_name": "blog.byt0723.xyz",
-        "utls": { "enabled": true, "fingerprint": "firefox" }
+        "utls": { "enabled": true },
+        "reality": {
+          "enabled": true,
+          "public_key": "yb2NPhEDHcuyl1Cl5widznuNcHCAm5S3Tb2x3mpsczM",
+          "short_id": "a513605241f3e708"
+        }
       },
       "multiplex": {
         "enabled": true,
         "padding": true,
         "protocol": "smux",
-        "max_connections": 3,
+        "max_connections": 2,
         "min_streams": 8,
         "max_streams": 0
       }
@@ -96,9 +94,6 @@
       "server": "x.byt0723.xyz",
       "server_port": 9733,
       "password": "tylersproxy",
-      "idle_session_check_interval": "30s",
-      "idle_session_timeout": "30s",
-      "min_idle_session": 0,
       "tls": {
         "enabled": true,
         "server_name": "blog.byt0723.xyz",
@@ -125,11 +120,12 @@
         "outbound": "anytls-out"
       },
       {
-        "rule_set": ["geosite-tiktok"],
-        "outbound": "anytls-out"
-      },
-      {
-        "rule_set": ["geoip-telegram", "geosite-gfw", "geosite-proxy-custom"],
+        "rule_set": [
+          "geoip-telegram",
+          "geosite-tiktok",
+          "geosite-gfw",
+          "geosite-proxy-custom"
+        ],
         "outbound": "trojan-out"
       },
       { "outbound": "direct-out" }

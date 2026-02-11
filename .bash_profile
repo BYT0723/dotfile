@@ -64,8 +64,7 @@ alias pac='sudo -E nvim /etc/sing-box/rules/geosite-proxy.json'
 # ncmpcpp
 alias nm='ncmpcpp'
 alias np='ncpamixer'
-# neofetch
-alias neo='neofetch'
+alias fetch='fastfetch'
 # git
 alias lg='lazygit'
 # docker

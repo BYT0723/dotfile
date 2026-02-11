@@ -14,11 +14,6 @@ rev = "eca1861"
 hash = "e519d894e94ded741e06aae4d4775981"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:smart-paste"
-rev = "6c71385"
-hash = "75fd60b2df7115e0a6ca31a6a804d320"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:mount"
 rev = "6c71385"
 hash = "e2d4bfccf31e5ab05f46fee4797c5215"
