@@ -11,7 +11,6 @@ update:
 	@rsync -av --delete ~/.config/kitty/     ./.config/kitty/
 	@rsync -av --delete ~/.config/mpd/       ./.config/mpd/
 	@rsync -av --delete ~/.config/mpv/       ./.config/mpv/
-	@rsync -av --delete ~/.config/ncmpcpp/   ./.config/ncmpcpp/
 	@rsync -av --delete ~/.config/rmpc/ 		 ./.config/rmpc/
 	@rsync -av --delete ~/.config/dunst/     ./.config/dunst/
 	@rsync -av --delete ~/.config/zathura/   ./.config/zathura/
