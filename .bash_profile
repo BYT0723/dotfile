@@ -6,7 +6,6 @@
 # User configuration
 export BROWSER=firefox
 export EDITOR=nvim
-export VISUAL=neovide
 export FILEMANAGER=pcmanfm
 export TERMINAL=kitty
 export TERM=xterm-256color
