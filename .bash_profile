@@ -103,3 +103,4 @@ alias c="printf '\e[6 q'"
 
 alias rav='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/'
 alias rv='bash ~/.dwm/tools/random_file.sh'
+alias uenv='export XAUTHORITY=$(echo /tmp/xauth_*)'
