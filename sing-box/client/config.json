@@ -21,7 +21,7 @@
       },
       {
         "rule_set": ["geosite-tiktok", "geosite-gfw", "geosite-proxy-custom"],
-        "server": "cloudflare-tls"
+        "server": "google-tls"
       }
     ],
     "final": "ali",

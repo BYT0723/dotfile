@@ -25,7 +25,6 @@ export PATH=$PATH:/opt/net.downloadhelper.coapp/bin
 # go env
 export GOROOT=/usr/lib/go
 export GO111MODULE=on
-export CGO_ENABLED=1
 export GOPROXY=https://goproxy.cn/
 export GOPATH=~/GoPath
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
@@ -61,7 +60,6 @@ alias pac='sudo -E nvim /etc/sing-box/rules/geosite-proxy.json'
 # Start APP
 #
 # ncmpcpp
-alias nm='ncmpcpp'
 alias np='ncpamixer'
 alias fetch='fastfetch'
 # git
@@ -95,7 +93,7 @@ alias v='nvim'
 alias sv='sudo -E nvim'
 alias profile='nvim ~/.bash_profile'
 alias secret='nvim ~/.bash_secret'
-alias pcconf='nvim ~/.dwm/configs/picom.conf'
+alias pcconf='nvim ~/.config/dwm/picom.conf'
 
 # weather
 alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"

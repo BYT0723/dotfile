@@ -2,9 +2,6 @@
 
 ## 每个月1号进行系统备份
 # 0 22 1 * * bash /home/walter/.dwm/system-backup.sh
-## 每15分钟同步一次邮箱
-## minute hour day month week[0-6][sunday-saturday] command
-*/5 * * * * bash /home/walter/.dwm/tools/mail.sh
 
 
 # WORK
