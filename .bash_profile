@@ -101,6 +101,8 @@ alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}')
 # cursor setting
 alias c="printf '\e[6 q'"
 
-alias rav='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/'
+alias rav='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/日产/'
+alias rgc='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/国产/'
+alias ral='bash ~/.dwm/tools/random_file.sh ~/disks/private/share'
 alias rv='bash ~/.dwm/tools/random_file.sh'
 alias uenv='export XAUTHORITY=$(echo /tmp/xauth_*)'

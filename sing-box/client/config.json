@@ -21,11 +21,10 @@
       },
       {
         "rule_set": ["geosite-tiktok", "geosite-gfw", "geosite-proxy-custom"],
-        "server": "google-tls"
+        "server": "cloudflare-tls"
       }
     ],
     "final": "ali",
-    "strategy": "ipv4_only",
     "cache_capacity": 8192
   },
   "inbounds": [
@@ -81,10 +80,9 @@
       },
       "multiplex": {
         "enabled": true,
-        "padding": true,
         "protocol": "smux",
-        "max_connections": 2,
-        "min_streams": 8,
+        "max_connections": 4,
+        "min_streams": 32,
         "max_streams": 0
       }
     },
@@ -115,10 +113,6 @@
       { "ip_is_private": true, "outbound": "direct-out" },
       { "process_name": ["trojan-go", "thunder "], "outbound": "direct-out" },
       { "inbound": ["socks-in"], "outbound": "trojan-out" },
-      {
-        "port": [993, 465, 587],
-        "outbound": "anytls-out"
-      },
       {
         "rule_set": [
           "geoip-telegram",
