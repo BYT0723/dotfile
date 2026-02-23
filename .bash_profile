@@ -74,18 +74,6 @@ alias tse='trans en:zh -speak'
 alias tsc='trans zh:en -speak'
 
 #
-# System Property
-#
-# samba
-
-# alias mcloud='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/private ~/disks/private'
-# alias umcloud='sudo umount ~/disks/private'
-# alias mresource='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000,soft //192.168.3.51/share ~/disks/resource'
-# alias umresource='sudo umount ~/disks/resource'
-# alias mshare='sudo mount -t cifs -o user=walter,pass=wangtao,uid=1000,gid=1000 //raspberry.local/private ~/disks/private'
-# alias umshare='sudo umount ~/disks/private'
-
-#
 # Quick Open Profile
 #
 # edit nvim config file
@@ -101,8 +89,7 @@ alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}')
 # cursor setting
 alias c="printf '\e[6 q'"
 
-alias rav='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/日产/'
-alias rgc='bash ~/.dwm/tools/random_file.sh ~/disks/private/share/国产/'
-alias ral='bash ~/.dwm/tools/random_file.sh ~/disks/private/share'
-alias rv='bash ~/.dwm/tools/random_file.sh'
+# xauth env update
 alias uenv='export XAUTHORITY=$(echo /tmp/xauth_*)'
+
+alias rv='bash ~/.dwm/tools/random_file.sh'
