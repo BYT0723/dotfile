@@ -152,7 +152,7 @@ keymap = [
 	{ on = "<F1>", run = "help", desc = "Open help" },
 
   # custom
-  { on = [ "<C-o>", "w"], run = "shell '~/.dwm/tools/wallpaper.sh -s \"$0\"'"}
+  { on = [ "<C-o>", "w"], run = "shell '~/.dwm/tools/wallpaper.sh -s \"$0\" >/dev/null'"}
 ]
 
 [tasks]
