@@ -4,31 +4,36 @@
   },
   "dns": {
     "servers": [
-      { "tag": "ali", "type": "udp", "server": "223.5.5.5" },
-      { "tag": "cloudflare-tls", "type": "tls", "server": "1.1.1.1" },
+      { "tag": "ali-doh", "type": "https", "server": "223.5.5.5" },
       {
-        "tag": "google-tls",
+        "tag": "cloudflare-dot",
+        "type": "tls",
+        "server": "1.1.1.1",
+        "detour": "trojan-dns"
+      },
+      {
+        "tag": "google-dot",
         "type": "tls",
         "server": "8.8.8.8",
-        "detour": "trojan-out"
+        "detour": "trojan-dns"
+      },
+      {
+        "tag": "google-doh",
+        "type": "https",
+        "server": "8.8.8.8",
+        "detour": "trojan-dns"
       },
       { "tag": "local", "type": "local" }
     ],
     "rules": [
-      {
-        "rule_set": ["geosite-ad"],
-        "action": "predefined",
-        "rcode": "REFUSED"
-      },
+      { "rule_set": ["geosite-ad"], "action": "reject" },
       {
         "rule_set": ["geosite-proxy-custom", "geosite-tiktok", "geosite-gfw"],
-        "server": "cloudflare-tls",
-        "client_subnet": "104.225.239.12"
+        "server": "cloudflare-dot"
       }
     ],
-    "final": "ali",
+    "final": "ali-doh",
     "strategy": "ipv4_only",
-    "independent_cache": true,
     "cache_capacity": 4096,
     "reverse_mapping": true
   },
@@ -72,7 +77,6 @@
       "server": "x.byt0723.xyz",
       "server_port": 9723,
       "password": "tylersproxy",
-      "tcp_fast_open": true,
       "tls": {
         "enabled": true,
         "server_name": "blog.byt0723.xyz",
@@ -86,10 +90,31 @@
       "multiplex": {
         "enabled": true,
         "protocol": "smux",
-        "padding": true,
         "max_connections": 6,
         "min_streams": 8,
         "max_streams": 0
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-dns",
+      "server": "x.byt0723.xyz",
+      "server_port": 9723,
+      "password": "tylersproxy",
+      "tls": {
+        "enabled": true,
+        "server_name": "blog.byt0723.xyz",
+        "utls": { "enabled": true },
+        "reality": {
+          "enabled": true,
+          "public_key": "yb2NPhEDHcuyl1Cl5widznuNcHCAm5S3Tb2x3mpsczM",
+          "short_id": "a513605241f3e708"
+        }
+      },
+      "multiplex": {
+        "enabled": true,
+        "protocol": "smux",
+        "max_streams": 4
       }
     },
     {
@@ -112,7 +137,7 @@
   ],
   "route": {
     "auto_detect_interface": true,
-    "default_domain_resolver": "ali",
+    "default_domain_resolver": "ali-doh",
     "rules": [
       { "action": "sniff" },
       { "protocol": "dns", "action": "hijack-dns" },
