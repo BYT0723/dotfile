@@ -54,12 +54,12 @@ function conky_wlan()
 end
 
 -- Down/Up speed
-function conky_down()
+function conky_downspeed()
 	local iface = conky_iface()
 	return conky_parse("${downspeed " .. iface .. "}")
 end
 
-function conky_up()
+function conky_upspeed()
 	local iface = conky_iface()
 	return conky_parse("${upspeed " .. iface .. "}")
 end
