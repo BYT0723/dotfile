@@ -22,7 +22,7 @@ update:
 	@mkdir -p ./.local/share/easyeffects
 	@rsync -av --delete ~/.local/share/easyeffects/input/  ./.local/share/easyeffects/input/
 	@rsync -av --delete ~/.local/share/easyeffects/output/ ./.local/share/easyeffects/output/
-	@rsync -av --delete /etc/sing-box/			 ./sing-box/client/
+	@[ -d /etc/sing-box ] && rsync -av --delete  /etc/sing-box/			 ./sing-box/client/
 	@mkdir -p ./.config/tmux
 	@rsync -av ~/.config/tmux/tmux.conf ./.config/tmux/ --exclude 'plugins/'
 	@crontab -l > crontab
