@@ -9,19 +9,19 @@
         "tag": "cloudflare-dot",
         "type": "tls",
         "server": "1.1.1.1",
-        "detour": "trojan-dns"
+        "detour": "anytls-out"
       },
       {
         "tag": "google-dot",
         "type": "tls",
         "server": "8.8.8.8",
-        "detour": "trojan-dns"
+        "detour": "anytls-out"
       },
       {
         "tag": "google-doh",
         "type": "https",
         "server": "8.8.8.8",
-        "detour": "trojan-dns"
+        "detour": "anytls-out"
       },
       { "tag": "local", "type": "local" }
     ],
@@ -93,28 +93,6 @@
         "max_connections": 6,
         "min_streams": 8,
         "max_streams": 0
-      }
-    },
-    {
-      "type": "trojan",
-      "tag": "trojan-dns",
-      "server": "x.byt0723.xyz",
-      "server_port": 9723,
-      "password": "tylersproxy",
-      "tls": {
-        "enabled": true,
-        "server_name": "blog.byt0723.xyz",
-        "utls": { "enabled": true },
-        "reality": {
-          "enabled": true,
-          "public_key": "yb2NPhEDHcuyl1Cl5widznuNcHCAm5S3Tb2x3mpsczM",
-          "short_id": "a513605241f3e708"
-        }
-      },
-      "multiplex": {
-        "enabled": true,
-        "protocol": "smux",
-        "max_streams": 4
       }
     },
     {

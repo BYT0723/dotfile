@@ -15,7 +15,10 @@ update:
 	@rsync -av --delete ~/.config/dunst/     ./.config/dunst/
 	@rsync -av --delete ~/.config/zathura/   ./.config/zathura/
 	@rsync -av --delete ~/.config/yazi/      ./.config/yazi/ --exclude 'plugins/'
+	@rsync -av --delete ~/.config/yazi_wallpaper      ./.config/yazi_wallpaper
 	@rsync -av --delete ~/.config/aerc/      ./.config/aerc/
+	@rsync -av --delete ~/.notmuch-config    ./
+	@rsync -av --delete ~/.offlineimaprc     ./
 	@rsync -av --delete ~/.config/lazygit/   ./.config/lazygit/
 	@rsync -av --delete ~/.config/newsboat/  ./.config/newsboat/
 	@rsync -av --delete ~/.config/conky/     ./.config/conky/
@@ -35,6 +38,8 @@ install:
 	@rsync -av --delete ./.bashrc ~/.bashrc
 	@rsync -av --delete ./.zshrc ~/.zshrc
 	@rsync -av --delete ./.zimrc ~/.zimrc
+	@rsync -av --delete ./.offlineimaprc ~/.offlineimaprc
+	@rsync -av --delete ./.notmuch-config ~/.notmuch-config
 	@rsync -av --delete ./.config/ ~/.config/
 	@rsync -av --delete ./.local/share/ ~/.local/share/
 	@(cat crontab) | crontab -
