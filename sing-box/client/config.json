@@ -155,7 +155,7 @@
       "type": "selector",
       "tag": "proxy-out",
       "outbounds": ["trojan-out", "trojan-ws-cdn", "anytls-out", "hy2-out"],
-      "default": "trojan-out"
+      "default": "trojan-ws-cdn"
     },
     {
       "type": "selector",
