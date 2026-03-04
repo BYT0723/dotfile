@@ -14,5 +14,7 @@
 # minute hour day month week[0-6][sunday-saturday] command
 0 * 19-31 7 * bash /home/walter/.dwm/tools/clock.sh HOME 搬瓦工VPS续费了吗？
 
+0 * 09-30 4 * bash /home/walter/.dwm/tools/clock.sh HOME 域名该续费了？还是买新的呢？
+
 #TEMP
 

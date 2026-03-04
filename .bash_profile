@@ -73,6 +73,9 @@ alias ts='ydict -v 1 -c'
 alias tse='trans en:zh -speak'
 alias tsc='trans zh:en -speak'
 
+alias cal='cal -s'
+alias ccal='ccal -u'
+
 #
 # Quick Open Profile
 #

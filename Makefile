@@ -7,6 +7,7 @@ update:
 	@rsync -av ~/.zimrc ./
 	@rsync -av ~/.config/starship.toml ./.config/
 	@rsync -av ~/.config/screenkey.json ./.config/
+	@rsync -av --delete ~/.config/fontconfig       ./.config/fontconfig
 	@rsync -av --delete ~/.config/dwm/       ./.config/dwm/
 	@rsync -av --delete ~/.config/kitty/     ./.config/kitty/
 	@rsync -av --delete ~/.config/mpd/       ./.config/mpd/
