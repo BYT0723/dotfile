@@ -32,8 +32,62 @@
         "server_port": 80
       },
       "multiplex": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-dns-in",
+      "listen": "::",
+      "listen_port": 9724,
+      "users": [
+        {
+          "name": "tyler",
+          "password": "tylersdnsproxy"
+        }
+      ],
+      "tls": {
         "enabled": true,
-        "padding": true
+        "server_name": "blog.byt0723.xyz",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "douyin.com",
+            "server_port": 443
+          },
+          "private_key": "0O1QRrVRGUVGvUik0oKqjyaIi-ZQDUvdfNmDHMjKXFs",
+          "short_id": ["6057db2e47fd389b"]
+        }
+      },
+      "fallback": {
+        "server": "127.0.0.1",
+        "server_port": 80
+      },
+      "multiplex": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "trojan-ws-in",
+      "listen": "127.0.0.1",
+      "listen_port": 9725,
+      "users": [
+        {
+          "name": "tyler",
+          "password": "tylerswsproxy"
+        }
+      ],
+      "tls": {
+        "enabled": false
+      },
+      "fallback": {
+        "server": "127.0.0.1",
+        "server_port": 80
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/wss"
       }
     },
     {
