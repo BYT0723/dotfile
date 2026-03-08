@@ -1,5 +1,5 @@
 [general]
-accounts = Gmail,QQMail
+accounts = Gmail,QQMail,163Mail
 autorefresh=60
 
 # 默认情况下，将 Gmail 和 QQ 邮箱的同步方式设置为不同的 repository
@@ -15,6 +15,11 @@ remoterepository = RemoteGmail
 localrepository = LocalQQMail
 remoterepository = RemoteQQMail
 
+# 163 Mail 配置
+[Account 163Mail]
+localrepository = Local163Mail
+remoterepository = Remote163Mail
+
 # Gmail 本地存储
 [Repository LocalGmail]
 type = Maildir
@@ -24,6 +29,11 @@ localfolders = ~/Mail/gmail
 [Repository LocalQQMail]
 type = Maildir
 localfolders = ~/Mail/qqmail
+
+# 163 Mail 本地存储
+[Repository Local163Mail]
+type = Maildir
+localfolders = ~/Mail/163mail
 
 # Gmail 远程存储
 [Repository RemoteGmail]
@@ -43,6 +53,17 @@ remotehost = imap.qq.com
 remoteport = 993
 ssl = yes
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-remoteuser = 1151713064@qq.com
+remoteuser = twang9739@qq.com
 remotepass = ahoeapcznovhihad
+folderfilter = lambda folder: folder in ['INBOX']
+
+# 163 Mail 远程存储
+[Repository Remote163Mail]
+type = IMAP
+remotehost = imap.163.com
+remoteport = 993
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = twang9739@163.com
+remotepass = KNbyRTfqZDnSpfEN
 folderfilter = lambda folder: folder in ['INBOX']

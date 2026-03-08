@@ -96,3 +96,5 @@ alias c="printf '\e[6 q'"
 alias uenv='export XAUTHORITY=$(echo /tmp/xauth_*)'
 
 alias rv='bash ~/.dwm/tools/random_file.sh'
+
+alias wallpapers='cd ~/.local/share/Steam/steamapps/workshop/content'
