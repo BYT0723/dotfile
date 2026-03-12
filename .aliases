@@ -35,9 +35,9 @@ alias ccal='ccal -u'
 # edit nvim config file
 alias v='nvim'
 alias sv='sudo -E nvim'
-alias profile='nvim ~/.profile'
-alias alias='nvim ~/.aliases'
-alias secret='nvim ~/.secret'
+alias ep='nvim ~/.profile'
+alias ea='nvim ~/.aliases'
+alias es='nvim ~/.secret'
 alias pcconf='nvim ~/.config/dwm/picom.conf'
 
 # weather

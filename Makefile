@@ -1,10 +1,11 @@
 update:
 	@rsync -av /etc/environment ./
-	@rsync -av ~/.bash_profile ./
-	@rsync -av ~/.Xresources ./
+	@rsync -av ~/.profile ./
+	@rsync -av ~/.aliases ./
 	@rsync -av ~/.bashrc ./
 	@rsync -av ~/.zshrc ./
 	@rsync -av ~/.zimrc ./
+	@rsync -av ~/.Xresources ./
 	@rsync -av ~/.config/starship.toml ./.config/
 	@rsync -av ~/.config/screenkey.json ./.config/
 	@rsync -av --delete ~/.config/dwm/       ./.config/dwm/
@@ -17,15 +18,15 @@ update:
 	@rsync -av --delete ~/.config/yazi/      ./.config/yazi/ --exclude 'plugins/'
 	@rsync -av --delete ~/.config/yazi_wallpaper      ./.config/yazi_wallpaper
 	@rsync -av --delete ~/.config/aerc/      ./.config/aerc/
-	@rsync -av --delete ~/.notmuch-config    ./
-	@rsync -av --delete ~/.offlineimaprc     ./
 	@rsync -av --delete ~/.config/lazygit/   ./.config/lazygit/
-	@rsync -av --delete ~/.config/newsboat/  ./.config/newsboat/
-	@rsync -av --delete ~/.config/conky/     ./.config/conky/
+	@rsync -av --delete ~/.notmuch-config    ./ || true
+	@rsync -av --delete ~/.offlineimaprc     ./ || true
+	@rsync -av --delete ~/.config/newsboat/  ./.config/newsboat/ || true
+	@rsync -av --delete ~/.config/conky/     ./.config/conky/ || true
+	@rsync -av --delete  /etc/sing-box/			 ./sing-box/client/ || true
 	@mkdir -p ./.local/share/easyeffects
 	@rsync -av --delete ~/.local/share/easyeffects/input/  ./.local/share/easyeffects/input/
 	@rsync -av --delete ~/.local/share/easyeffects/output/ ./.local/share/easyeffects/output/
-	@[ -d /etc/sing-box ] && rsync -av --delete  /etc/sing-box/			 ./sing-box/client/
 	@mkdir -p ./.config/tmux
 	@rsync -av ~/.config/tmux/tmux.conf ./.config/tmux/ --exclude 'plugins/'
 	@crontab -l > crontab
