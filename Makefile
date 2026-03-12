@@ -16,9 +16,9 @@ update:
 	@rsync -av --delete ~/.config/dunst/     ./.config/dunst/
 	@rsync -av --delete ~/.config/zathura/   ./.config/zathura/
 	@rsync -av --delete ~/.config/yazi/      ./.config/yazi/ --exclude 'plugins/'
-	@rsync -av --delete ~/.config/yazi_wallpaper      ./.config/yazi_wallpaper
+	@rsync -av --delete ~/.config/yazi_wallpaper/      ./.config/yazi_wallpaper/
 	@rsync -av --delete ~/.config/aerc/      ./.config/aerc/
-	@rsync -av --delete ~/.config/lazygit/   ./.config/lazygit/
+	@rsync -av --delete ~/.config/lazygit/config.yml   ./.config/lazygit/config.yml
 	@rsync -av --delete ~/.notmuch-config    ./ || true
 	@rsync -av --delete ~/.offlineimaprc     ./ || true
 	@rsync -av --delete ~/.config/newsboat/  ./.config/newsboat/ || true
