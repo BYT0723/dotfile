@@ -123,7 +123,8 @@ zmodload -F zsh/terminfo +p:terminfo
 for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
 for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
 
-[ -f ~/.bash_profile ] && source ~/.bash_profile
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
+[ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 
 [ ! -z "$(command -v starship)" ] && eval "$(starship init zsh)" ||  echo "startship not found"
 [ ! -z "$(command -v zoxide)" ] && eval "$(zoxide init zsh)" || echo "zoxide not found"

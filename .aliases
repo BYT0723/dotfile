@@ -1,0 +1,54 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+# test zsh startup time
+alias tt="time zsh -i -c exit"
+# protect
+alias rm='gio trash'
+# proxy
+alias proxy='ALL_PROXY=socks5://127.0.0.1:1080'
+
+alias pac='sudo -E nvim /etc/sing-box/rules/geosite-proxy.json'
+
+#
+# Start APP
+#
+# ncmpcpp
+alias np='ncpamixer'
+alias fetch='fastfetch'
+# git
+alias lg='lazygit'
+# docker
+alias ld='lazydocker'
+alias le='yazi'
+alias lmail='aerc'
+# translate
+alias ts='ydict -v 1 -c'
+alias tse='trans en:zh -speak'
+alias tsc='trans zh:en -speak'
+
+alias cal='cal -s'
+alias ccal='ccal -u'
+
+#
+# Quick Open Profile
+#
+# edit nvim config file
+alias v='nvim'
+alias sv='sudo -E nvim'
+alias profile='nvim ~/.profile'
+alias alias='nvim ~/.aliases'
+alias secret='nvim ~/.secret'
+alias pcconf='nvim ~/.config/dwm/picom.conf'
+
+# weather
+alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
+
+# cursor setting
+alias c="printf '\e[6 q'"
+
+# xauth env update
+alias uenv='export XAUTHORITY=$(echo /tmp/xauth_*)'
+
+alias rv='bash ~/.dwm/tools/random_file.sh'
+
+alias wallpapers='cd ~/.local/share/Steam/steamapps/workshop/content'
