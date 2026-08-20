@@ -1,0 +1,99 @@
+[global]
+    monitor = 0
+    follow = keyboard
+    origin = bottom-right
+    width = (200, 800)
+    height = (1, 400)
+    offset = (5,5)
+	frame_width = 1
+    separator_color = frame
+
+    padding = 8
+    horizontal_padding = 12
+
+	gap_size = 8
+
+    font = "CaskaydiaCove Nerd Font 12"
+
+    # The format of the message.  Possible variables are:
+    #   %a  appname
+    #   %s  summary
+    #   %b  body
+    #   %i  iconname (including its path)
+    #   %I  iconname (without its path)
+    #   %p  progress value if set ([  0%] to [100%]) or nothing
+    #   %n  progress value if set without any extra characters
+    #   %%  Literal %
+    # Markup is allowed
+    format = "<b>%s</b>\n<small>%b</small>"
+
+    enable_recursive_icon_lookup = true
+    icon_theme = WhiteSur-dark
+    min_icon_size = 32
+    max_icon_size = 48
+
+    # dmenu path.
+    dmenu = "rofi -no-show-icons -no-lazy-grab -no-plugins -dmenu -mesg 'Context Menu'"
+
+    # Browser for opening urls in context menu.
+    browser = /usr/bin/xdg-open
+
+    # Always run rule-defined scripts, even if the notification is suppressed
+    always_run_script = true
+
+    corner_radius = 6
+
+    mouse_left_click = do_action,remove_current
+    mouse_middle_click= close_all
+    mouse_right_click = remove_current
+
+    foreground = "#a9b1d6"
+    background = "#15161e"
+    frame_color = "#a9b1d6"
+    highlight = "#8aadf4"
+
+[urgency_low]
+
+[urgency_normal]
+
+[urgency_critical]
+    frame_color = "#a9b1d6"
+
+[netowkr-manager]
+	appname = 网络管理器小程序
+	history_ignore = yes
+
+[fcitx5-rime]
+	appname = 中州韵
+    history_ignore = yes
+
+[udiskie]
+    appname = udiskie
+    history_ignore = yes
+
+[flameshot]
+	appname = flameshot
+    history_ignore = yes
+
+[history-ignore]
+	category = "history-ignore"
+    history_ignore = yes
+
+[music]
+    category = "mpd"
+    history_ignore = yes
+    timeout = 2
+    min_icon_size = 24
+    format = "<b>%s</b>"
+
+[tools]
+    category = "tools"
+    timeout = 1
+    history_ignore = yes
+    min_icon_size = 24
+    format = "<b>%s</b>\n%b"
+
+[status]
+    category = "status"
+    history_ignore = yes
+    format = "<small>%b</small>"

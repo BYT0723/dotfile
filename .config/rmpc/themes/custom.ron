@@ -1,0 +1,122 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    draw_borders: false,
+    show_song_table_header: false,
+    symbols: (song: "🎵", dir: "📁", playlist: "🎼", marker: "\u{e0b0}"),
+    layout: Split(
+        direction: Vertical,
+        panes: [
+            (
+                size: "2",
+                pane: Split(
+					direction: Horizontal,
+					panes: [
+						(
+							size: "20",
+							pane: Component("header_left"),
+						),
+						(
+							size: "100%",
+							pane: Component("header_center"),
+						),
+						(
+							size: "20",
+							pane: Component("header_right"),
+						),
+					]
+				),
+            ),
+            (
+                size: "85%",
+                pane: Pane(TabContent),
+            ),
+			(size: "15%", pane: Pane(Cava)),
+			(
+				size: "1",
+				pane: Component("progress_bar"),
+			),
+        ],
+    ),
+    components: {
+		"progress_bar": Split(
+			direction: Horizontal,
+			panes: [
+				(size: "100%", pane: Pane(ProgressBar)),
+                (size: "1", pane: Pane(Property(content: [(kind: Text(" "))]))),
+				(size: "12", pane: Pane(Property(
+					content: [
+						(kind: Property(Status(Elapsed))),
+						(kind: Text("/")),
+						(kind: Property(Status(Duration))),
+					],
+					align: Left,
+				))),
+				(size: "8", pane: Pane(Property(
+					content: [
+						(kind: Property(Status(Bitrate))),
+						(kind: Text("kbps")),
+					],
+					align: Right,
+				)))
+			],
+		),
+        "volume": Split(
+            direction: Horizontal,
+            panes: [
+                (size: "3", pane: Pane(Property(content: [(kind: Text("  "), style: (fg: "blue"))]))),
+                (size: "100%", pane: Pane(Volume(kind: Slider(symbols: (filled: "─", thumb: "●", track: "─"))))),
+                (size: "1", pane: Pane(Property(content: [(kind: Text(" "))]))),
+            ]
+        ),
+		"header_left": Pane(Property(
+			content:[
+				(kind: Property(Status(RepeatV2(on_label: "  ", off_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"))))),
+				(kind: Property(Status(RandomV2(on_label: "  ", off_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"))))),
+				(kind: Property(Status(ConsumeV2(on_label: "  ", off_label: "  ", oneshot_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"), oneshot_style: (fg: "gray"))))),
+				(kind: Property(Status(SingleV2(on_label: "  ", off_label: "  ", oneshot_label: "  ", on_style: (fg: "green", modifiers: "Bold"), off_style: (fg: "dark_gray"), oneshot_style: (fg: "gray")))))
+			],
+			align: Left,
+		)),
+		"header_center": Pane(Property(
+			content:[
+				(kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"),default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold"))),
+				(kind: Text(" - ")),
+				(kind: Property(Song(Title)),default: (kind: Text("Unknown"))),
+				(kind: Text(" ")),
+				(kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "yellow", modifiers: "Bold"))
+			],
+			align: Center,
+		)),
+		"header_right": Split(
+			direction: Horizontal,
+			panes: [
+				(size: "100%", pane: Component("volume"))
+			]
+		)
+    },
+    progress_bar: (
+        symbols: ["=", "=", ">", " ", " "],
+    ),
+    scrollbar: (
+        symbols: ["│", "█", "▲", "▼"],
+        track_style: (),
+        ends_style: (),
+    ),
+    tab_bar: (),
+    song_table_format: [
+        (
+            prop: (
+                kind: Group([
+                    (kind: Property(Title)),
+                    (kind: Text(" - ")),
+                    (kind: Property(Artist)),
+                ]),
+                default: (kind: Property(Filename)),
+            ),
+            width: "100%",
+            alignment: Center,
+        ),
+    ]
+)

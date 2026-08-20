@@ -1,0 +1,59 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+# test zsh startup time
+alias tt="time zsh -i -c exit"
+# protect
+alias rm='gio trash'
+
+#
+# Start APP
+#
+# ncmpcpp
+alias np='ncpamixer'
+# git
+alias lg='lazygit'
+# docker
+alias ld='lazydocker'
+alias le='yazi'
+alias lm='aerc'
+# translate
+alias ts='ydict -v 1 -c'
+
+alias cal='cal -s'
+alias ccal='ccal -u'
+
+#
+# Quick Open Profile
+#
+# edit nvim config file
+alias v='nvim'
+alias sv='sudo -E nvim'
+alias ep='nvim ~/.profile'
+alias ea='nvim ~/.aliases'
+alias es='nvim ~/.secret'
+alias pcconf='nvim ~/.config/dwm/picom.conf'
+
+alias disk-utilization='sudo ncdu / --exclude /home/walter/disks'
+
+# weather
+alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
+
+# xauth env update
+alias rv='bash ~/.dwm/tools/random_file.sh'
+alias wallpapers='cd ~/.local/share/Steam/steamapps/workshop/content'
+
+tse() {
+	if [ -t 0 ]; then
+		trans en:zh -speak "$*"
+	else
+		trans en:zh -speak "$(cat)"
+	fi
+}
+
+tsc() {
+	if [ -t 0 ]; then
+		trans zh:en -speak "$*"
+	else
+		trans zh:en -speak "$(cat)"
+	fi
+}

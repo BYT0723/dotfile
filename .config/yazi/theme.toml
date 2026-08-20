@@ -1,0 +1,26 @@
+[flavor]
+dark = ""
+light = ""
+
+[mgr]
+border_symbol = " "
+
+[tabs]
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[indicator]
+padding = { open = "█", close = "█" }
+
+
+[mode]
+normal_main = { bg = "blue", bold = true }
+normal_alt  = { fg = "blue", bg = "gray" }
+select_main = { bg = "red", bold = true }
+select_alt  = { fg = "red", bg = "gray" }
+unset_main = { bg = "red", bold = true }
+unset_alt  = { fg = "red", bg = "gray" }

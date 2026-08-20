@@ -1,0 +1,4 @@
+patch:
+  # 默认英文模式：给 rime_ice 的 ascii_mode 开关设置 reset
+  # 源 schema 没有 reset，导致状态在切换窗口时保留（一直是中文）
+  "switches/@0/reset": 1

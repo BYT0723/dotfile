@@ -1,0 +1,6 @@
+.config/aerc/accounts.conf filter=git-crypt diff=git-crypt
+.config/jellyfin-mpv-shim/cred.json filter=git-crypt diff=git-crypt
+.config/dwm/mail.json filter=git-crypt diff=git-crypt
+.secret filter=git-crypt diff=git-crypt
+sing-box/client/config.json filter=git-crypt diff=git-crypt
+sing-box/server/config.json filter=git-crypt diff=git-crypt

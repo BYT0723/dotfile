@@ -1,0 +1,28 @@
+{
+  "auto": {
+    "enabled": true,
+    "sun_rise_offset": 60,
+    "sun_set_offset": 0
+  },
+  "cursor": {
+    "theme": "Bibata-Modern-Ice",
+    "size": 32
+  },
+  "dpi": 120,
+  "light": {
+    "rofi": "paper",
+    "fcitx5": "macOS-light",
+    "kitty": "Tokyo Night Day",
+    "icon": "Tela-manjaro-light",
+    "gtk": "Orchis-Light",
+    "colorscheme": "tokyonight-day"
+  },
+  "dark": {
+    "rofi": "onedark",
+    "fcitx5": "macOS-dark",
+    "kitty": "Tokyo Night",
+    "icon": "Tela-manjaro-dark",
+    "gtk": "Orchis-Dark",
+    "colorscheme": "tokyonight-night"
+  }
+}

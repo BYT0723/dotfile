@@ -1,0 +1,5 @@
+include /usr/share/doc/newsboat/contrib/colorschemes/nord
+refresh-on-startup yes
+reload-time 15
+reload-threads 100
+show-read-feeds yes

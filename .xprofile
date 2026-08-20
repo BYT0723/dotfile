@@ -1,0 +1,12 @@
+# fcitx5 environment
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export SDL_IM_MODULE=fcitx
+# for kitty
+export GLFW_IM_MODULE=ibus
+
+# fix Menu disappearing in Java program in Dwm
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+export QT_QPA_PLATFORMTHEME=gtk3

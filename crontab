@@ -1,0 +1,20 @@
+# SYSTEM
+
+## 每个月1号进行系统备份
+# 0 22 1 * * bash /home/walter/.dwm/system-backup.sh
+
+
+# WORK
+
+# 30 9 * * 1-5 bash /home/walter/.dwm/clock.sh -c WORK 投简历了小伙子
+
+# HOME
+
+
+# minute hour day month week[0-6][sunday-saturday] command
+0 * 01-07 6 * bash /home/walter/.dwm/tools/clock.sh -c HOME "Dedione's VPS续费了吗?"
+
+0 * 09-30 4 * bash /home/walter/.dwm/tools/clock.sh -c HOME 域名该续费了？还是买新的呢？
+
+#TEMP
+

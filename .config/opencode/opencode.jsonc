@@ -1,0 +1,63 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode-go/deepseek-v4-flash",
+  "instructions": [
+    "~/Workspace/Github/agent-skills/AGENTS.md"
+  ],
+  "skills": {
+    "paths": ["~/Workspace/Github/agent-skills/skills"]
+  },
+  "permission": {
+    "edit": "allow",
+    "bash": {
+      "*": "allow",
+      "rm -rf *": "ask",
+      "sudo *": "ask",
+      "chmod 777 *": "ask",
+      "chown *": "ask",
+      "mkfs.*": "ask",
+      "git commit*": "ask",
+      "git push*": "ask",
+	  "kill": "ask",
+	  "pkill": "ask",
+    },
+    "webfetch": "allow",
+    "websearch": "allow",
+  },
+  "agent": {
+    "plan": {
+      "mode": "primary",
+      "model": "opencode-go/deepseek-v4-flash",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask",
+      },
+    },
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}",
+      },
+      "enabled": true,
+    },
+    "gh_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
+    },
+    "firefox-devtools": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@mozilla/firefox-devtools-mcp@latest",
+        "--enable-script",
+        "--start-url",
+        "about:blank",
+      ],
+      "enabled": true,
+    },
+  },
+}

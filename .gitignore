@@ -1,0 +1,6 @@
+.config/tmux/plugins
+.config/yazi/plugins
+.config/gh/
+.config/github-copilot/
+*.bak
+*.state

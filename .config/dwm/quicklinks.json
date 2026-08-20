@@ -1,0 +1,334 @@
+{
+  "links": [
+    {
+      "id": "b55e88b0-7a66-4ece-a18e-c77d15a52784",
+      "name": "Google",
+      "url": "https://google.com/"
+    },
+    {
+      "name": "Bing",
+      "url": "https://cn.bing.com/",
+      "id": "b65abe83-48de-4ec3-9de7-ecff442bec18"
+    },
+    {
+      "name": "Yandex",
+      "url": "https://yandex.com/",
+      "id": "3828e5eb-8f62-493c-8e74-52e21a88695a"
+    },
+    {
+      "name": "GMail",
+      "url": "https://mail.google.com/",
+      "id": "fb7ea384-a754-4d18-9067-305759dd43f0"
+    },
+    {
+      "name": "QQMail",
+      "url": "https://mail.qq.com/",
+      "id": "5d71182a-4370-4875-a2b9-7f4143c24e9d"
+    },
+    {
+      "name": "163Mail",
+      "url": "https://mail.163.com/",
+      "id": "6b94c6fe-88c2-495a-9cee-10585783e5de"
+    },
+    {
+      "name": "Youtube",
+      "url": "https://youtube.com/",
+      "id": "87456d6d-43a7-4a34-bd3e-b9589efb7bec"
+    },
+    {
+      "id": "5cb1b755-cb7a-473a-a3b1-c7c5c148802c",
+      "name": "抖音 (video/douyin)",
+      "url": "https://douyin.com/"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://x.com/",
+      "id": "52d3a550-a56b-4d37-8f12-92861f83fd90"
+    },
+    {
+      "name": "Twitch (live)",
+      "url": "https://twitch.com/",
+      "id": "ad643320-6db5-449f-8725-8c9c7cd94a11"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/",
+      "id": "6e9a1954-1a11-4d4d-8fab-37625f28b074"
+    },
+    {
+      "id": "9e2700e7-3b6f-4841-b7b8-6cd5e7a7e071",
+      "name": "Leetcode",
+      "url": "https://leetcode.cn/"
+    },
+    {
+      "name": "Go Package Doc (golang/doc)",
+      "url": "https://pkg.go.dev/",
+      "id": "ff7df25f-6cbe-407a-9bea-2ffc8104fe56"
+    },
+    {
+      "id": "676cc292-db17-43c4-9011-7ea20fe47fcf",
+      "name": "ChatGPT (ai/chat)",
+      "url": "https://chatgpt.com"
+    },
+    {
+      "name": "DeepSeek (ai/chat)",
+      "url": "https://chat.deepseek.com",
+      "id": "9482ef2a-56c2-4292-a7fa-13d6f5f2dfc5"
+    },
+    {
+      "name": "DeepSeek API Usage (ai)",
+      "url": "https://platform.deepseek.com/usage",
+      "id": "5df4f367-048c-43e8-919f-ed14960d6e0a"
+    },
+    {
+      "name": "QQMusic",
+      "url": "https://y.qq.com/",
+      "id": "2309d138-930f-410c-94b4-111c54d0e9bb"
+    },
+    {
+      "name": "HiRes Forum (Music)",
+      "url": "https://www.hi-res.com.cn/",
+      "id": "f7b5c447-3c00-41b7-9c43-b1066ad26037"
+    },
+    {
+      "name": "Netease Cloud Music",
+      "url": "https://music.163.com/",
+      "id": "20a890a7-0053-4783-8811-d00b95f98781"
+    },
+    {
+      "name": "Google Translate (translate)",
+      "url": "https://translate.google.com/",
+      "id": "c65cdd03-21fa-486b-bdd2-5afa181150b1"
+    },
+    {
+      "id": "838d691d-e93b-4b10-9129-e965f48148fa",
+      "name": "ArchLinux App Wiki",
+      "url": "https://wiki.archlinux.org/title/List_of_applications"
+    },
+    {
+      "name": "Awesome Neovim (nvim/plugin)",
+      "url": "https://github.com/rockerBOO/awesome-neovim",
+      "id": "5d2d53ff-6f19-439c-9c57-1733e8822572"
+    },
+    {
+      "name": "Neovim Lsp Config (nvim/lsp)",
+      "url": "https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md",
+      "id": "f3579233-d0bf-4b4a-9768-55e94313fd38"
+    },
+    {
+      "name": "Neovim Documents (nvim/doc)",
+      "url": "https://neovim.io/doc/user/",
+      "id": "6272ca82-fe37-4799-9c1d-4f1aef115040"
+    },
+    {
+      "name": "Sing-Box Documents (singbox)",
+      "url": "https://sing-box.sagernet.org/",
+      "id": "a6ef2cda-7c86-479e-a72b-0724e8eb37ab"
+    },
+    {
+      "name": "Sing-Box UI (singbox/ui)",
+      "url": "http://127.0.0.1:9090/",
+      "id": "608a451b-8fa0-4822-9ee8-592c4a64090b"
+    },
+    {
+      "name": "Trojan-Go Documents",
+      "url": "https://p4gefau1t.github.io/trojan-go/",
+      "id": "25b0e08d-29d0-416f-8762-da17151362f4"
+    },
+    {
+      "name": "Rofi Bash Scripts",
+      "url": "https://github.com/adi1090x/rofi",
+      "id": "db4c4f87-cf50-4465-b971-f744a46502f6"
+    },
+    {
+      "id": "e7b6fc12-92b8-4aba-90b4-88e19e496d1c",
+      "name": "NerdFonts (font/symbol)",
+      "url": "https://www.nerdfonts.com/cheat-sheet"
+    },
+    {
+      "id": "9c186ba9-72a2-4fb5-86b9-590d599d96f7",
+      "name": "Bandwagon (network/host)",
+      "url": "https://bandwagonhost.com/"
+    },
+    {
+      "name": "Bandwagon Mirror (network/host)",
+      "url": "https://bwh81.net/",
+      "id": "efc9f67e-f1d6-4454-ab82-d86e1ae7eff1"
+    },
+    {
+      "name": "Dedione (network/host)",
+      "url": "https://dedione.com/clientarea.php/",
+      "id": "9448acb0-80be-4b60-84cc-a3194b36802d"
+    },
+    {
+      "name": "Namesilo (network/domain)",
+      "url": "https://www.namesilo.com/account_domain_manage_dns.php",
+      "id": "730a8ac6-f394-4e44-9d2b-fe07d3d7cfd3"
+    },
+    {
+      "id": "6562e65e-b731-42bc-b3a2-de523bfd2cb2",
+      "name": "Cloudflare (network/domain/cdn)",
+      "url": "https://dash.cloudflare.com/036bf795ccb45f6695b33920cbf897f4/home/overview"
+    },
+    {
+      "id": "56ece9e0-185a-4e74-86f3-8f493bd8bbcf",
+      "name": "ZeroTier (network/virtual lan)",
+      "url": "https://my.zerotier.com/network/88503383908a87a7"
+    },
+    {
+      "name": "F95zone (game/forum)",
+      "url": "https://f95zone.to/",
+      "id": "079d4ec4-1508-47d7-867d-350343636bae"
+    },
+    {
+      "name": "赛博徒步-螯太线 (game/aotaixian)",
+      "url": "https://cyberhiking.com/",
+      "id": "d847d9e6-c8ce-44b9-9d70-57c29f14eeec"
+    },
+    {
+      "id": "f1f36290-e49c-4219-8eab-862ee206c685",
+      "name": "Wallhaven (wallpaper)",
+      "url": "https://wallhaven.cc/"
+    },
+    {
+      "id": "872c4626-05dc-44b6-a51e-09973f11a62c",
+      "name": "BiliBili Live Setting (live)",
+      "url": "https://link.bilibili.com/p/center/index#/my-room/start-live"
+    },
+    {
+      "id": "f08a52fe-83fd-49c5-991a-33d6efd9db89",
+      "name": "SkrBT (search/bt/torrent)",
+      "url": "https://skrbtso.cc/"
+    },
+    {
+      "name": "The Pirate Bay (search/bt/torrent)",
+      "url": "https://thepiratebay.org/",
+      "id": "9abd7b80-256b-4bbb-8c1b-4080ee2c316a"
+    },
+    {
+      "name": "Torrent Kitty(search/bt/torrent)",
+      "url": "https://www.torrentkitty.tv/",
+      "id": "eb4e8517-8d38-41ba-9d6a-ef72b53faa8a"
+    },
+    {
+      "id": "9bcf1c36-83ae-48ff-8ee5-ab52c1cac250",
+      "name": "Minecraft Wiki (game/mc)",
+      "url": "https://zh.minecraft.wiki/"
+    },
+    {
+      "name": "blablalink (nikke/forum)",
+      "url": "https://www.blablalink.com/",
+      "id": "9eac723b-9632-4de7-aa16-03d78d355759"
+    },
+    {
+      "name": "PornHub (porn/video)",
+      "url": "https://pornhub.com/",
+      "id": "3e931ab3-db3e-403e-83eb-84340fec039a"
+    },
+    {
+      "name": "91Porny (porn)",
+      "url": "https://91porny.com/",
+      "id": "444751df-fd99-4155-b7af-844cdc54a5d5"
+    },
+    {
+      "name": "91Porn (porn)",
+      "url": "https://91porn.com/",
+      "id": "5d6f0150-1703-4992-99fa-4d2a856548ea"
+    },
+    {
+      "name": "JavDB (porn/av)",
+      "url": "https://javdb.com/",
+      "id": "c85f83d8-d6d1-4732-97a2-6594315dd7ba"
+    },
+    {
+      "name": "JableTV (porn/av)",
+      "url": "https://jable.tv/",
+      "id": "2c2e3069-de7d-4e71-9a98-417e13003776"
+    },
+    {
+      "name": "Netflav (porn/av)",
+      "url": "https://netflav.tv/",
+      "id": "daeaa276-4df8-4d69-9eb3-f6b5013f59cf"
+    },
+    {
+      "name": "Hanime1 (porn/anime)",
+      "url": "https://hanime1.me/",
+      "id": "b60d06e1-95cf-4f27-ad6b-5149d76983b5"
+    },
+    {
+      "name": "Hanime (porn/anime)",
+      "url": "https://hanime.tv/",
+      "id": "b533b89a-74bd-4763-a912-f0d86cc21b82"
+    },
+    {
+      "name": "草榴(porn/forum/caoliu)",
+      "url": "https://t66y.com/",
+      "id": "97d3616e-7095-4ce2-bc5e-ef6ff7ed82f0"
+    },
+    {
+      "name": "PornDude (porn/portal)",
+      "url": "https://theporndude.com",
+      "id": "262d972f-9cad-4292-af4a-bfb3675a0396"
+    },
+    {
+      "id": "60b9a360-90f7-4fd4-aeba-4b61d8a23883",
+      "name": "FontAwesome (font/symbol)",
+      "url": "https://fontawesome.com/icons"
+    },
+    {
+      "name": "Tiktok (video)",
+      "url": "https://tiktok.com",
+      "id": "966eb902-6ded-417a-9d9c-aaafa7468d9e"
+    },
+    {
+      "name": "Google Maps",
+      "url": "https://www.google.com/maps",
+      "id": "23f8df8e-aa6a-410b-bd79-d8eceb2a6124"
+    },
+    {
+      "name": "Baidu Maps",
+      "url": "https://map.baidu.com",
+      "id": "66799bc2-9dad-4283-9031-12165f58f3ca"
+    },
+    {
+      "name": "GaoDe Maps",
+      "url": "https://ditu.amap.com/",
+      "id": "0ba672a4-284e-41bf-8212-26864c25d88f"
+    },
+    {
+      "name": "Boss直聘",
+      "url": "https://www.zhipin.com",
+      "id": "d7d1c4f5-e1ac-41cd-bc18-ed028f8b705d"
+    },
+    {
+      "id": "8deeed2d-50c2-4f60-a5d9-144a4e551769",
+      "name": "taobao",
+      "url": "https://www.taobao.com/"
+    },
+    {
+      "id": "ad3362be-ae8f-4734-a20f-9b6104f6ae01",
+      "name": "Archlinux CN Forum",
+      "url": "https://forum.archlinuxcn.org/"
+    },
+    {
+      "id": "e5dd4552-5e56-4961-8fc9-56847b37c872",
+      "name": "51吃瓜 (51cg/porn)",
+      "url": "https://51cg1.com/"
+    },
+    {
+      "name": "每日大赛 (mrds/porn)",
+      "url": "https://mrdsk.com/",
+      "id": "3c7779c1-a69b-4b5c-8c82-9ecff2d8d8d9"
+    },
+    {
+      "name": "hltv (game/cs2)",
+      "url": "https://www.hltv.org/",
+      "id": "ac6dac12-21e7-489a-8fe9-53a6e3107eb2"
+    },
+    {
+      "name": "porn4fans (porn/onlyfans)",
+      "url": "https://www.porn4fans.com/",
+      "id": "6bac840b-1161-4c41-9062-f18bc6333d07"
+    }
+  ]
+}
