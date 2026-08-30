@@ -1,43 +1,46 @@
 {
   "render": {
     "video": {
-      "fps": 30
+      "fps": 24
     }
   },
   "monitors": {
     "HDMI-A-0": {
       "random": 1,
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/images/vertical",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/videos/vertical/common",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/portrait/image/common",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/common",
       "duration": 30,
-      "random_depth": 3
+      "random_depth": 3,
+      "random_type": "video"
     },
     "eDP": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/images/new",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/videos/common",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW",
       "random": 1,
       "duration": 30,
-      "random_depth": 3
+      "random_depth": 3,
+      "random_type": "image"
     },
     "DisplayPort-0": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/images/new",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/videos/common",
-      "random": 1,
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW",
+      "random": 0,
       "duration": 30,
-      "random_depth": 3
+      "random_depth": 3,
+      "random_type": "video"
     },
     "Landscape": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/images/multi_monitor",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/videos/multi_monitor",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common",
       "random_type": "image",
       "random": 1,
       "duration": 30,
       "random_depth": 3
     },
     "Screen": {
-      "random_image_dir": "~/Pictures",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common",
       "duration": "30",
-      "random_video_dir": "~/Videos",
       "random_depth": "3",
       "random_type": "image",
       "random": "0"

@@ -86,13 +86,16 @@ gcr
 gifsicle
 git
 git-crypt
+git-filter-repo
 git-lfs
 github-cli
 gitleaks
 glmark2
+gn
 go
 godot
 gparted
+gperf
 graphviz
 grsync
 grub
@@ -155,6 +158,7 @@ make
 mariadb-libs
 mda.lv2
 mesa-utils
+meson
 minidlna
 modemmanager
 mpc
@@ -164,6 +168,7 @@ mpv-mpris
 mpv-osc-modern-git
 mpv-osc-thumbfast-git
 mpv-playlistmanager-git
+nasm
 ncdu
 ncmpcpp
 ncpamixer
@@ -176,7 +181,9 @@ nethogs
 network-manager-applet
 networkmanager
 newsboat
+ninja
 nmap
+nodejs
 nodejs-vite
 noto-fonts
 noto-fonts-cjk
@@ -263,12 +270,15 @@ shadowsocks-rust
 shadowsocks-v2ray-plugin
 sing-box-alpha
 sl
+snap-pac
+snapper
 snixembed
 solaar
 sox
 speedtest-cli
 spotify-launcher
 sqlitebrowser
+squashfs-tools
 sshfs
 sshpass
 starship
@@ -291,7 +301,6 @@ translate-shell
 trash-cli
 tree
 tree-sitter-cli
-tsukimi-git
 ttf-0xproto-nerd
 ttf-3270-nerd
 ttf-agave-nerd
@@ -369,6 +378,7 @@ uthash
 uv
 v4l2loopback-dc-dkms
 v4l2loopback-utils
+vala
 ventoy-bin
 viewnior
 vim

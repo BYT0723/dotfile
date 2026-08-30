@@ -1,14 +1,14 @@
 {
   "auto": {
     "enabled": true,
-    "sun_rise_offset": 60,
-    "sun_set_offset": 0
+    "sun_rise_offset": 120,
+    "sun_set_offset": -60
   },
   "cursor": {
     "theme": "Bibata-Modern-Ice",
-    "size": 32
+    "size": 24
   },
-  "dpi": 120,
+  "dpi": 96,
   "light": {
     "rofi": "paper",
     "fcitx5": "macOS-light",

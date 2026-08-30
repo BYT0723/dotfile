@@ -1,19 +1,122 @@
 {
+  "searcher": [
+    {
+      "name": "google",
+      "url": "https://www.google.com/search?q={key}"
+    },
+    {
+      "name": "bing",
+      "url": "https://www.bing.com/search?q={key}"
+    },
+    {
+      "name": "cnbing",
+      "url": "https://cn.bing.com/search?q={key}"
+    },
+    {
+      "name": "baidu",
+      "url": "https://www.baidu.com/s?wd={key}"
+    },
+    {
+      "name": "duckduckgo",
+      "url": "https://duckduckgo.com/?q={key}"
+    },
+    {
+      "name": "github",
+      "url": "https://github.com/search?q={key}"
+    },
+    {
+      "name": "googlemap",
+      "url": "https://www.google.com/maps/search/{key}"
+    },
+    {
+      "name": "baidumap",
+      "url": "https://map.baidu.com/search/?querytype=s&wd={key}"
+    },
+    {
+      "name": "youtube",
+      "url": "https://www.youtube.com/results?search_query={key}"
+    },
+    {
+      "name": "douyin",
+      "url": "https://www.douyin.com/jingxuan/search/{key}?type=general"
+    },
+    {
+      "name": "gopkg",
+      "url": "https://pkg.go.dev/search?q={key}"
+    },
+    {
+      "name": "stackoverflow",
+      "url": "https://stackoverflow.com/search?q={key}"
+    },
+    {
+      "name": "reddit",
+      "url": "https://www.reddit.com/search/?q={key}"
+    },
+    {
+      "name": "archwiki",
+      "url": "https://wiki.archlinux.org/title/Special:Search?search={key}"
+    },
+    {
+      "name": "man",
+      "url": "https://man.archlinux.org/search?q={key}"
+    },
+    {
+      "name": "pkgbuild",
+      "url": "https://archlinux.org/packages/?q={key}"
+    },
+    {
+      "name": "aur",
+      "url": "https://aur.archlinux.org/packages?K={key}"
+    },
+    {
+      "name": "wiki",
+      "url": "https://en.wikipedia.org/w/index.php?search={key}"
+    },
+    {
+      "name": "zhwiki",
+      "url": "https://zh.wikipedia.org/w/index.php?search={key}"
+    },
+    {
+      "name": "huggingface",
+      "url": "https://huggingface.co/search/full-text?q={key}"
+    },
+    {
+      "name": "x",
+      "url": "https://x.com/search?q={key}&src=typed_query"
+    },
+    {
+      "name": "JavDB",
+      "url": "https://javdb.com/search?q={key}&f=all"
+    },
+    {
+      "name": "SkrBT",
+      "url": "https://skrbtso.cc/search?keyword={key}"
+    },
+    {
+      "name": "torrentkitty",
+      "url": "https://www.torrentkitty.tv/search/{key}"
+    }
+  ],
   "links": [
     {
       "id": "b55e88b0-7a66-4ece-a18e-c77d15a52784",
       "name": "Google",
-      "url": "https://google.com/"
+      "url": "https://www.google.com/"
     },
     {
-      "name": "Bing",
-      "url": "https://cn.bing.com/",
-      "id": "b65abe83-48de-4ec3-9de7-ecff442bec18"
+      "id": "b65abe83-48de-4ec3-9de7-ecff442bec18",
+      "name": "Bing (CN)",
+      "url": "https://cn.bing.com/"
     },
     {
+      "id": "3828e5eb-8f62-493c-8e74-52e21a88695a",
       "name": "Yandex",
-      "url": "https://yandex.com/",
-      "id": "3828e5eb-8f62-493c-8e74-52e21a88695a"
+      "url": "https://yandex.com/"
+    },
+    {
+      "id": "6e9a1954-1a11-4d4d-8fab-37625f28b074",
+      "name": "Github",
+      "url": "https://github.com/"
     },
     {
       "name": "GMail",
@@ -49,11 +152,6 @@
       "name": "Twitch (live)",
       "url": "https://twitch.com/",
       "id": "ad643320-6db5-449f-8725-8c9c7cd94a11"
-    },
-    {
-      "name": "Github",
-      "url": "https://github.com/",
-      "id": "6e9a1954-1a11-4d4d-8fab-37625f28b074"
     },
     {
       "id": "9e2700e7-3b6f-4841-b7b8-6cd5e7a7e071",
@@ -206,9 +304,9 @@
       "id": "9abd7b80-256b-4bbb-8c1b-4080ee2c316a"
     },
     {
+      "id": "eb4e8517-8d38-41ba-9d6a-ef72b53faa8a",
       "name": "Torrent Kitty(search/bt/torrent)",
-      "url": "https://www.torrentkitty.tv/",
-      "id": "eb4e8517-8d38-41ba-9d6a-ef72b53faa8a"
+      "url": "https://www.torrentkitty.tv/search/"
     },
     {
       "id": "9bcf1c36-83ae-48ff-8ee5-ab52c1cac250",
@@ -296,13 +394,13 @@
       "id": "0ba672a4-284e-41bf-8212-26864c25d88f"
     },
     {
-      "name": "Boss直聘",
-      "url": "https://www.zhipin.com",
-      "id": "d7d1c4f5-e1ac-41cd-bc18-ed028f8b705d"
+      "id": "d7d1c4f5-e1ac-41cd-bc18-ed028f8b705d",
+      "name": "Boss直聘 (work/job)",
+      "url": "https://www.zhipin.com"
     },
     {
       "id": "8deeed2d-50c2-4f60-a5d9-144a4e551769",
-      "name": "taobao",
+      "name": "淘宝 (taobao/shop)",
       "url": "https://www.taobao.com/"
     },
     {
@@ -329,6 +427,31 @@
       "name": "porn4fans (porn/onlyfans)",
       "url": "https://www.porn4fans.com/",
       "id": "6bac840b-1161-4c41-9062-f18bc6333d07"
+    },
+    {
+      "id": "cb40e68c-afbe-47b9-b51c-887f416b912e",
+      "name": "Zoom Earth (weather/typhoon)",
+      "url": "https://zoom.earth"
+    },
+    {
+      "name": "中央气象台台风网 (weather/typhoon)",
+      "url": "https://typhoon.nmc.cn/web.html",
+      "id": "bb61c07d-05a9-48bb-a74c-05be8ce2b8a8"
+    },
+    {
+      "name": "句乐部(study/english)",
+      "url": "https://julebu.co",
+      "id": "783395de-e299-4be8-beaf-8c6b49f94875"
+    },
+    {
+      "name": "Qwerty Learner (study/english)",
+      "url": "https://qwertylearner.cn/",
+      "id": "7b219210-b49c-4dbe-987e-6856a960db10"
+    },
+    {
+      "name": "句乐部 Global (study/english)",
+      "url": "https://julebu.ai",
+      "id": "1c289ac7-441c-43cc-9401-1e210c7231bb"
     }
   ]
 }

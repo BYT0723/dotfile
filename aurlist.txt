@@ -9,7 +9,6 @@ electron12-bin
 fcitx5-themes-candlelight
 feishu-bin
 ffcast
-http-parser
 imapfilter
 lib32-amdgpu-pro-oglp
 lib32-vulkan-amdgpu-pro

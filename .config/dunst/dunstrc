@@ -5,13 +5,13 @@
     width = (200, 800)
     height = (1, 400)
     offset = (5,5)
-	frame_width = 1
+    frame_width = 1
     separator_color = frame
 
     padding = 8
     horizontal_padding = 12
 
-	gap_size = 8
+    gap_size = 8
 
     font = "CaskaydiaCove Nerd Font 12"
 
@@ -28,7 +28,7 @@
     format = "<b>%s</b>\n<small>%b</small>"
 
     enable_recursive_icon_lookup = true
-    icon_theme = WhiteSur-dark
+    icon_theme = "Tela-manjaro-dark"
     min_icon_size = 32
     max_icon_size = 48
 
@@ -60,11 +60,11 @@
     frame_color = "#a9b1d6"
 
 [netowkr-manager]
-	appname = 网络管理器小程序
-	history_ignore = yes
+    appname = 网络管理器小程序
+    history_ignore = yes
 
 [fcitx5-rime]
-	appname = 中州韵
+    appname = 中州韵
     history_ignore = yes
 
 [udiskie]
@@ -72,11 +72,11 @@
     history_ignore = yes
 
 [flameshot]
-	appname = flameshot
+    appname = flameshot
     history_ignore = yes
 
 [history-ignore]
-	category = "history-ignore"
+    category = "history-ignore"
     history_ignore = yes
 
 [music]
