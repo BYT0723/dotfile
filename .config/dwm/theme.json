@@ -2,14 +2,19 @@
   "auto": {
     "enabled": true,
     "sun_rise_offset": 120,
-    "sun_set_offset": -60
+    "sun_set_offset": 0
   },
   "cursor": {
     "theme": "Bibata-Modern-Ice",
-    "size": 24
+    "size": 32
   },
   "dpi": 96,
   "light": {
+    "brightness": {
+      "eDP": 50,
+      "HDMI-A-0": 60,
+      "DisplayPort-0": 40
+    },
     "rofi": "paper",
     "fcitx5": "macOS-light",
     "kitty": "Tokyo Night Day",
@@ -18,6 +23,11 @@
     "colorscheme": "tokyonight-day"
   },
   "dark": {
+    "brightness": {
+      "eDP": 50,
+      "HDMI-A-0": 50,
+      "DisplayPort-0": 30
+    },
     "rofi": "onedark",
     "fcitx5": "macOS-dark",
     "kitty": "Tokyo Night",

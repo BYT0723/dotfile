@@ -6,7 +6,7 @@
   },
   "monitors": {
     "HDMI-A-0": {
-      "random": 1,
+      "random": 0,
       "random_image_dir": "/home/walter/Desktop/Wallpapers/portrait/image/common",
       "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/common",
       "duration": 30,

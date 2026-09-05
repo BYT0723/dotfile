@@ -3,7 +3,7 @@ amf-amdgpu-pro
 android-sdk-platform-tools
 another-redis-desktop-manager-bin
 boxes
-droidcam-dkms-git
+droidcam
 droidcam-obs-plugin
 electron12-bin
 fcitx5-themes-candlelight
@@ -12,6 +12,7 @@ ffcast
 imapfilter
 lib32-amdgpu-pro-oglp
 lib32-vulkan-amdgpu-pro
+linux-wallpaperengine-git
 linuxqq
 mpv-playlistmanager-git
 ncpamixer
@@ -19,6 +20,7 @@ netease-cloud-music
 noto-fonts-cjk-fontconfig
 oneko
 qqmusic-bin
+qt5-virtualkeyboard
 sacd-extract
 selectdefaultapplication-fork-git
 sunloginclient
@@ -28,7 +30,6 @@ ttf-ms-fonts
 ttf-twemoji
 ttf-wps-fonts
 typora
-v4l2loopback-dc-dkms
 ventoy-bin
 vulkan-amdgpu-pro
 wechat-bin

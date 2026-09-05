@@ -136,7 +136,7 @@ if [ -f "$HOME/.dwm/utils/shell-lib.sh" ]; then
 	source "$HOME/.dwm/utils/shell-lib.sh"
 
 	# output note
-	! is_float_term && echo_note
+	# ! is_float_term && echo_note
 
 
 	precmd() {

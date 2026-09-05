@@ -21,7 +21,7 @@ export PATH=$PATH:/opt/net.downloadhelper.coapp/bin
 export GOROOT=/usr/lib/go
 export GO111MODULE=on
 export GOPROXY=https://goproxy.cn/
-export GOPATH=~/GoPath
+export GOPATH=~/.local/share/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # rust env

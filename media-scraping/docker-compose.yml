@@ -9,12 +9,12 @@ services:
       - ${HOME}/Applications/media-scraping/jellyfin/config:/config
       - ${HOME}/Applications/media-scraping/jellyfin/cache:/cache
       - type: bind
-        source: ${HOME}/disks/private
+        source: /mnt/private
         target: /mnt/private
         bind:
           propagation: rshared
       - type: bind
-        source: ${HOME}/disks/resource
+        source: /mnt/resource
         target: /mnt/resource
         bind:
           propagation: rshared

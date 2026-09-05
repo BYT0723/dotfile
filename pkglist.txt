@@ -42,9 +42,12 @@ ccal
 chromium
 cmake
 conky
+cowsay
 cronie
 dante
 dbeaver
+ddcui
+ddcutil
 dhcp
 dialog
 discord
@@ -53,7 +56,7 @@ docker
 docker-compose
 dosfstools
 downgrade
-droidcam-dkms-git
+droidcam
 droidcam-obs-plugin
 dunst
 easyeffects
@@ -90,6 +93,7 @@ git-filter-repo
 git-lfs
 github-cli
 gitleaks
+glfw
 glmark2
 gn
 go
@@ -147,6 +151,7 @@ linux-headers
 linux-lts
 linux-lts-docs
 linux-lts-headers
+linux-wallpaperengine-git
 linuxqq
 lld
 lolcat
@@ -270,7 +275,6 @@ shadowsocks-rust
 shadowsocks-v2ray-plugin
 sing-box-alpha
 sl
-snap-pac
 snapper
 snixembed
 solaar
@@ -376,7 +380,6 @@ usb_modeswitch
 usbutils
 uthash
 uv
-v4l2loopback-dc-dkms
 v4l2loopback-utils
 vala
 ventoy-bin

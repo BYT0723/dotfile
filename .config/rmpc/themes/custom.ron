@@ -81,9 +81,9 @@
 		)),
 		"header_center": Pane(Property(
 			content:[
-				(kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"),default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold"))),
+				(kind: Property(Song(Title)), style: (fg: "yellow", modifiers: "Bold"),default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold"))),
 				(kind: Text(" - ")),
-				(kind: Property(Song(Title)),default: (kind: Text("Unknown"))),
+				(kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"),default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold"))),
 				(kind: Text(" ")),
 				(kind: Property(Status(StateV2(playing_label: "", paused_label: "", stopped_label: ""))), style: (fg: "yellow", modifiers: "Bold"))
 			],
