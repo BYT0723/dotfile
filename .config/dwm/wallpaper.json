@@ -1,17 +1,13 @@
 {
-  "render": {
-    "video": {
-      "fps": 24
-    }
-  },
   "monitors": {
     "HDMI-A-0": {
-      "random": 0,
+      "random": 1,
       "random_image_dir": "/home/walter/Desktop/Wallpapers/portrait/image/common",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/common",
-      "duration": 30,
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/dances",
+      "duration": 15,
       "random_depth": 3,
-      "random_type": "video"
+      "random_type": "video",
+      "video-render": {}
     },
     "eDP": {
       "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common",
@@ -19,7 +15,8 @@
       "random": 1,
       "duration": 30,
       "random_depth": 3,
-      "random_type": "image"
+      "random_type": "image",
+      "video-render": {}
     },
     "DisplayPort-0": {
       "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common",
@@ -27,15 +24,17 @@
       "random": 0,
       "duration": 30,
       "random_depth": 3,
-      "random_type": "video"
+      "random_type": "video",
+      "video-render": {}
     },
     "Landscape": {
       "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common",
       "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common",
       "random_type": "image",
-      "random": 1,
+      "random": 0,
       "duration": 30,
-      "random_depth": 3
+      "random_depth": 3,
+      "video-render": {}
     },
     "Screen": {
       "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common",
@@ -43,7 +42,8 @@
       "duration": "30",
       "random_depth": "3",
       "random_type": "image",
-      "random": "0"
+      "random": "0",
+      "video-render": {}
     }
   },
   "groups": {

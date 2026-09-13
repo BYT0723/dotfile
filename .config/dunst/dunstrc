@@ -13,7 +13,7 @@
 
     gap_size = 8
 
-    font = "CaskaydiaCove Nerd Font 12"
+    font = "CaskaydiaCove Nerd Font 14"
 
     # The format of the message.  Possible variables are:
     #   %a  appname

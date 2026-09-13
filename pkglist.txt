@@ -24,21 +24,19 @@ autorandr
 baidupcs-go
 base
 base-devel
-batsignal
 bc
 bind
 blueman
 bluez
 bluez-utils
 borg
-boxes
 brightnessctl
 btop
 calf
 catimg
 cava
-cbatticon
 ccal
+chipmunk
 chromium
 cmake
 conky
@@ -66,7 +64,6 @@ fastfetch
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
-fcitx5-material-color
 fcitx5-mozc
 fcitx5-qt
 fcitx5-rime
@@ -84,6 +81,7 @@ fluidsynth
 font-manager
 fontforge
 fprintd
+fuzzel
 fzf
 gcr
 gifsicle
@@ -108,6 +106,7 @@ gst-libav
 gst-plugins-bad
 gst-plugins-good
 gst-plugins-ugly
+gtk-layer-shell
 gum
 gvfs
 gvfs-smb
@@ -160,6 +159,7 @@ lxappearance
 lxsession
 maim
 make
+mako
 mariadb-libs
 mda.lv2
 mesa-utils
@@ -187,6 +187,7 @@ network-manager-applet
 networkmanager
 newsboat
 ninja
+niri
 nmap
 nodejs
 nodejs-vite
@@ -225,8 +226,10 @@ otf-opendyslexic-nerd
 otf-overpass-nerd
 pamixer
 papirus-icon-theme
+paprefs
 paru
 pass
+pasystray
 pavucontrol
 pcmanfm
 perf
@@ -273,7 +276,7 @@ sddm
 selectdefaultapplication-fork-git
 shadowsocks-rust
 shadowsocks-v2ray-plugin
-sing-box-alpha
+sing-box
 sl
 snapper
 snixembed
@@ -288,6 +291,7 @@ sshpass
 starship
 steam
 sunloginclient
+swaylock
 systray-x-common
 tela-icon-theme-git
 telegram-desktop
@@ -305,6 +309,7 @@ translate-shell
 trash-cli
 tree
 tree-sitter-cli
+tsukimi
 ttf-0xproto-nerd
 ttf-3270-nerd
 ttf-agave-nerd
@@ -387,10 +392,12 @@ viewnior
 vim
 virtualbox
 vlc
+volumeicon
 vorta
 vulkan-amdgpu-pro
 vulkan-radeon
 w3m
+waybar
 webkit2gtk-4.1
 wechat-bin
 wemeet-bin
@@ -401,6 +408,7 @@ wine
 wine-mono
 wireless-regdb
 wireshark-qt
+wl-clipboard
 wmctrl
 xarchiver
 xautolock
@@ -476,6 +484,7 @@ zathura-cb
 zathura-djvu
 zathura-pdf-mupdf
 zathura-ps
+zellij
 zerotier-one
 zip
 zoxide

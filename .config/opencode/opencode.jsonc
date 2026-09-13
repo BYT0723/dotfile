@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "opencode-go/deepseek-v4-flash",
+  "model": "opencode-go/muse-spark-1.3-contributor",
   "skills": {
     "paths": ["~/Workspace/Github/agent-skills/skills"]
   },
@@ -24,7 +24,7 @@
   "agent": {
     "plan": {
       "mode": "primary",
-      "model": "opencode-go/deepseek-v4-flash",
+      "model": "opencode-go/muse-spark-1.3-contributor",
       "permission": {
         "edit": "deny",
         "bash": "ask",

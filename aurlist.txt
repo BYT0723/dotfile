@@ -2,7 +2,7 @@ amdgpu-pro-oglp
 amf-amdgpu-pro
 android-sdk-platform-tools
 another-redis-desktop-manager-bin
-boxes
+chipmunk
 droidcam
 droidcam-obs-plugin
 electron12-bin
@@ -39,3 +39,4 @@ whitesur-icon-theme
 xautolock
 xrectsel
 xunlei-bin
+youtube-dl-git

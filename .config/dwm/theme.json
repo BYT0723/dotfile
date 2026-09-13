@@ -1,19 +1,19 @@
 {
   "auto": {
     "enabled": true,
-    "sun_rise_offset": 120,
+    "sun_rise_offset": 30,
     "sun_set_offset": 0
   },
   "cursor": {
     "theme": "Bibata-Modern-Ice",
-    "size": 32
+    "size": 24
   },
   "dpi": 96,
   "light": {
     "brightness": {
-      "eDP": 50,
-      "HDMI-A-0": 60,
-      "DisplayPort-0": 40
+      "eDP": 80,
+      "HDMI-A-0": 90,
+      "DisplayPort-0": 70
     },
     "rofi": "paper",
     "fcitx5": "macOS-light",
