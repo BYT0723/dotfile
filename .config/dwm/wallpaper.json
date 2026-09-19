@@ -1,49 +1,69 @@
 {
   "monitors": {
     "HDMI-A-0": {
-      "random": 1,
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/portrait/image/common",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/dances",
+      "random": 0,
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/portrait/image/common/light",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/common/light",
       "duration": 15,
       "random_depth": 3,
       "random_type": "video",
-      "video-render": {}
+      "video-render": {
+        "fps": 0
+      },
+      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/portrait/image/common/dark",
+      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/portrait/video/common/dark"
     },
     "eDP": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common/light",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW/light",
       "random": 1,
       "duration": 30,
       "random_depth": 3,
       "random_type": "image",
-      "video-render": {}
+      "video-render": {
+        "fps": 0
+      },
+      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/image/common/dark",
+      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW/dark"
     },
     "DisplayPort-0": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common/light",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW/light",
       "random": 0,
       "duration": 30,
       "random_depth": 3,
       "random_type": "video",
-      "video-render": {}
+      "video-render": {
+        "fps": 0
+      },
+      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/image/common/dark",
+      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW/dark"
     },
     "Landscape": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common/light",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common/light",
       "random_type": "image",
-      "random": 0,
+      "random": 1,
       "duration": 30,
       "random_depth": 3,
-      "video-render": {}
+      "video-render": {
+        "fps": 0
+      },
+      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/image/common/dark",
+      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/video/common/dark"
     },
     "Screen": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common",
+      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common/light",
+      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common/light",
       "duration": "30",
       "random_depth": "3",
       "random_type": "image",
       "random": "0",
-      "video-render": {}
+      "video-render": {
+        "fps": 0
+      },
+      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/image/common/dark",
+      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/video/common/dark"
     }
   },
   "groups": {

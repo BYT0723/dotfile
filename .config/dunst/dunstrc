@@ -71,8 +71,16 @@
     appname = udiskie
     history_ignore = yes
 
+[pasystray]
+    appname = pasystray
+    history_ignore = yes
+
 [flameshot]
     appname = flameshot
+    history_ignore = yes
+
+[osd-lyrics]
+    appname = "OSD Lyrics"
     history_ignore = yes
 
 [history-ignore]

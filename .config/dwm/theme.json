@@ -2,7 +2,10 @@
   "auto": {
     "enabled": true,
     "sun_rise_offset": 30,
-    "sun_set_offset": 0
+    "sun_set_offset": 0,
+    "dawn_minutes": 30,
+    "dusk_minutes": 30,
+    "transition_anchor": "after"
   },
   "cursor": {
     "theme": "Bibata-Modern-Ice",

@@ -33,27 +33,27 @@ alias ea='nvim ~/.aliases'
 alias es='nvim ~/.secret'
 alias pcconf='nvim ~/.config/dwm/picom.conf'
 
-alias disk-utilization='sudo ncdu / --exclude /home/walter/disks'
+alias disk-utilization='sudo ncdu -x --exclude /mnt --exclude .snapshots'
 
 # weather
 alias weather="curl -H 'Accept-Language:'$(echo $LANG | awk -F '_' '{print $1}') 'wttr.in'"
 
 # xauth env update
 alias rv='bash ~/.dwm/tools/random_file.sh'
-alias wallpapers='cd ~/.local/share/Steam/steamapps/workshop/content'
+alias wallpapers='cd ~/.local/share/Steam/steamapps/workshop/content/431960'
 
 tse() {
-	if [ -t 0 ]; then
-		trans en:zh -speak "$*"
-	else
-		trans en:zh -speak "$(cat)"
-	fi
+    if [ -t 0 ]; then
+        trans en:zh -speak "$*"
+    else
+        trans en:zh -speak "$(cat)"
+    fi
 }
 
 tsc() {
-	if [ -t 0 ]; then
-		trans zh:en -speak "$*"
-	else
-		trans zh:en -speak "$(cat)"
-	fi
+    if [ -t 0 ]; then
+        trans zh:en -speak "$*"
+    else
+        trans zh:en -speak "$(cat)"
+    fi
 }

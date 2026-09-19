@@ -24,6 +24,7 @@ autorandr
 baidupcs-go
 base
 base-devel
+batsignal
 bc
 bind
 blueman
@@ -113,7 +114,6 @@ gvfs-smb
 helvum
 hspell
 htop
-hysteria
 imapfilter
 imv
 inetutils
@@ -168,6 +168,7 @@ minidlna
 modemmanager
 mpc
 mpd
+mpdris2-rs
 mpv
 mpv-mpris
 mpv-osc-modern-git
@@ -212,6 +213,7 @@ openfortivpn
 openresolv
 openssh
 os-prober
+osdlyrics-git
 otf-aurulent-nerd
 otf-codenewroman-nerd
 otf-comicshanns-nerd
@@ -392,7 +394,6 @@ viewnior
 vim
 virtualbox
 vlc
-volumeicon
 vorta
 vulkan-amdgpu-pro
 vulkan-radeon
