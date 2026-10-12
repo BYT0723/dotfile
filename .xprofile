@@ -8,5 +8,4 @@ export GLFW_IM_MODULE=ibus
 
 # fix Menu disappearing in Java program in Dwm
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-export QT_QPA_PLATFORMTHEME=gtk3
+export QT_QPA_PLATFORMTHEME=qt6ct

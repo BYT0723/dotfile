@@ -3,39 +3,41 @@
     "enabled": true,
     "sun_rise_offset": 30,
     "sun_set_offset": 0,
-    "dawn_minutes": 30,
-    "dusk_minutes": 30,
-    "transition_anchor": "after"
+    "dawn_minutes": 120,
+    "dusk_minutes": 120,
+    "transition_anchor": "center"
   },
   "cursor": {
     "theme": "Bibata-Modern-Ice",
-    "size": 24
+    "size": 28
   },
   "dpi": 96,
   "light": {
     "brightness": {
-      "eDP": 80,
-      "HDMI-A-0": 90,
-      "DisplayPort-0": 70
+      "eDP-1": 80,
+      "HDMI-1": 100,
+      "DP-1": 70
     },
     "rofi": "paper",
     "fcitx5": "macOS-light",
     "kitty": "Tokyo Night Day",
     "icon": "Tela-manjaro-light",
     "gtk": "Orchis-Light",
+    "qt": "Orchis-solid",
     "colorscheme": "tokyonight-day"
   },
   "dark": {
     "brightness": {
-      "eDP": 50,
-      "HDMI-A-0": 50,
-      "DisplayPort-0": 30
+      "eDP-1": 50,
+      "HDMI-1": 50,
+      "DP-1": 30
     },
     "rofi": "onedark",
     "fcitx5": "macOS-dark",
     "kitty": "Tokyo Night",
     "icon": "Tela-manjaro-dark",
     "gtk": "Orchis-Dark",
+    "qt": "Orchis-solidDark",
     "colorscheme": "tokyonight-night"
   }
 }

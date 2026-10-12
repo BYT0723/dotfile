@@ -16,6 +16,7 @@ $java\
 $julia\
 $nodejs\
 $nim\
+$python\
 $rust\
 $scala\
 $docker_context\

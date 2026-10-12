@@ -95,6 +95,10 @@
     {
       "name": "torrentkitty",
       "url": "https://www.torrentkitty.tv/search/{key}"
+    },
+    {
+      "name": "ua9a",
+      "url": "https://u9a9.com/?type=2&search={key}"
     }
   ],
   "links": [
@@ -144,9 +148,9 @@
       "url": "https://douyin.com/"
     },
     {
-      "name": "Twitter",
-      "url": "https://x.com/",
-      "id": "52d3a550-a56b-4d37-8f12-92861f83fd90"
+      "id": "52d3a550-a56b-4d37-8f12-92861f83fd90",
+      "name": "X (twitter)",
+      "url": "https://x.com/"
     },
     {
       "name": "Twitch (live)",
@@ -410,7 +414,7 @@
     },
     {
       "id": "e5dd4552-5e56-4961-8fc9-56847b37c872",
-      "name": "51吃瓜 (51cg/porn)",
+      "name": "51吃瓜 (51cg/porn/chigua)",
       "url": "https://chigua.com/"
     },
     {
@@ -477,6 +481,21 @@
       "name": "弗一把 (cs2/game/fuyiba)",
       "url": "https://shnlfriberg.online/",
       "id": "593c5e56-6f4b-455c-8a13-7c6eff16c362"
+    },
+    {
+      "name": "UA9A (resources)",
+      "url": "https://u9a9.com/",
+      "id": "9b698b17-e9c5-472a-8d7e-247576f98243"
+    },
+    {
+      "id": "f93e16b3-db50-4591-a72a-68b194f5d783",
+      "name": "VPS Hub (vps/host rank)",
+      "url": "https://vpshub.org/zh/"
+    },
+    {
+      "name": "EQ调节",
+      "url": "https://squig.link/",
+      "id": "abfbb0b8-2758-4d0e-80e4-6dca00e436d5"
     }
   ]
 }

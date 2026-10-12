@@ -21,7 +21,7 @@ CONFIG_DIRS = \
 	mpv \
 	newsboat \
 	opencode \
-	pcmanfm \
+	Thunar \
 	pipewire \
 	qt6ct \
 	rmpc \

@@ -2,6 +2,7 @@ amdgpu-pro-oglp
 amf-amdgpu-pro
 android-sdk-platform-tools
 another-redis-desktop-manager-bin
+bgutil-ytdlp-pot-provider
 chipmunk
 droidcam
 droidcam-obs-plugin
@@ -11,7 +12,10 @@ feishu-bin
 ffcast
 gtk-sharp-2
 imapfilter
+kvantum-theme-orchis-git
+kvantum-theme-whitesur-git
 lib32-amdgpu-pro-oglp
+lib32-libwebp
 lib32-vulkan-amdgpu-pro
 libappindicator-gtk2
 libdbusmenu-gtk2
@@ -26,10 +30,14 @@ oneko
 osdlyrics-git
 qqmusic-bin
 qt5-virtualkeyboard
+resterm-bin
 sacd-extract
+scenefx0.5
 selectdefaultapplication-fork-git
+steamcmd
 sunloginclient
 taglib1
+tcptraceroute
 ttf-icomoon-feather
 ttf-ms-fonts
 ttf-twemoji

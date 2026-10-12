@@ -1,10 +1,8 @@
 [global]
-    monitor = 0
-    follow = keyboard
-    origin = bottom-right
+    origin = top-right
     width = (200, 800)
     height = (1, 400)
-    offset = (5,5)
+    offset = (5,40)
     frame_width = 1
     separator_color = frame
 
