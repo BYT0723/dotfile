@@ -88,6 +88,7 @@ fprintd
 fuzzel
 fzf
 gcr
+ghidra
 gifsicle
 git
 git-crypt
@@ -244,6 +245,7 @@ paru
 pass
 pasystray
 pavucontrol
+pcmanfm
 perf
 picom
 pipewire-alsa
@@ -288,6 +290,7 @@ scenefx0.5
 scrcpy
 screenkey
 sddm
+sdl2_mixer
 selectdefaultapplication-fork-git
 shadowsocks-rust
 shadowsocks-v2ray-plugin
@@ -298,6 +301,7 @@ snapper
 solaar
 sox
 speedtest-cli
+spirv-cross
 spotify-launcher
 sqlitebrowser
 squashfs-tools
@@ -313,10 +317,6 @@ systray-x-common
 tcptraceroute
 tela-icon-theme-git
 telegram-desktop
-thunar
-thunar-archive-plugin
-thunar-media-tags-plugin
-thunar-volman
 thunderbird
 tidy
 tigervnc

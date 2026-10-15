@@ -13,7 +13,6 @@
       "chmod 777 *": "ask",
       "chown *": "ask",
       "mkfs.*": "ask",
-      "git commit*": "ask",
       "git push*": "ask",
 	  "kill": "ask",
 	  "pkill": "ask",
@@ -56,6 +55,20 @@
         "--start-url",
         "about:blank",
       ],
+    },
+    "rea": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "rea-agents@6.5.0",
+        "mcp"
+      ],
+      "environment": {
+        "GHIDRA_INSTALL_DIR": "/opt/ghidra",
+        "REA_GHIDRA_STARTUP_TIMEOUT_MS": "1800000"
+      },
+      "enabled": true
     },
   },
 }

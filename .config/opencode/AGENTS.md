@@ -34,6 +34,14 @@
 
 加载后必须完整遵循 skill 内的每一步流程，不允许跳过、合并或自行发挥。该写 spec 就写 spec，该写测试就写测试。
 
+## Development Workflow（必须遵守，GitHub Flow + Conventional Commits）
+- NEVER 在 `main`/`master`/`release/*` 开发提交；开工先 `git status` + `git branch --show-current`，在保护分支或基线过期则基于最新基线新建分支，工作区脏则停下确认。
+- One branch one task：独立任务独立分支，禁 2+ 无关修改/顺手重构/格式化/升级依赖，禁复用旧分支；命名 `type/desc` 小写短横线，`type` 限 `feat|fix|perf|refactor|security|docs|test|chore|hotfix`。
+- Commits：`type(scope): subject` 英文原子提交；禁自动 commit/push/merge，禁 force/reset 改写公共历史。
+- Scope：最小 diff，API/schema/配置/依赖等 breaking change 先汇报；禁 secrets/私钥/隐私、`node_modules/dist/build` 产物。
+- Gates：先读源码测试，沿用 skill+TDD；必跑 lint/typecheck/test/build（按仓库实有），`git diff --stat` 自检无无关文件、无调试残留。
+- 收尾：禁自行合并/删远程分支，停留特性分支给 PR 报告（改动、验证、风险），等用户决策。
+
 ## Documentation & Research
 
 - When you need to look up library/framework documentation, use `context7` tools.
