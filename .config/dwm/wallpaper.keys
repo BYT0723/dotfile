@@ -7,3 +7,4 @@ j seek -30
 - cycle mute
 = cycle pause
 r cycle_values video-rotate 90 180 270 0
+Ctrl+r reload

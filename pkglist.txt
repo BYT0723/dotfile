@@ -1,3 +1,4 @@
+1password-cli
 7zip
 acpi
 aerc
@@ -78,6 +79,7 @@ ffcast
 ffmpeg
 ffmpegthumbnailer
 firefox
+firefox-i18n-zh-cn
 flameshot
 flatpak
 fluidsynth
@@ -261,6 +263,7 @@ pulseaudio-alsa
 pulseaudio-qt
 pyenv
 python-cookiecutter
+python-openai-whisper
 python-pip
 python-pynvim
 qbittorrent

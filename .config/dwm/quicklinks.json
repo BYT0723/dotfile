@@ -493,9 +493,14 @@
       "url": "https://vpshub.org/zh/"
     },
     {
-      "name": "EQ调节",
-      "url": "https://squig.link/",
-      "id": "abfbb0b8-2758-4d0e-80e4-6dca00e436d5"
+      "id": "abfbb0b8-2758-4d0e-80e4-6dca00e436d5",
+      "name": "SQUIGLINK (EQ调节)",
+      "url": "https://squig.link/"
+    },
+    {
+      "name": "PairDrop (file transfer LAN/WAN)",
+      "url": "https://pairdrop.net/",
+      "id": "93fbd6c9-7507-4d64-9bfa-43dbce452c9e"
     }
   ]
 }

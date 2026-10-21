@@ -2,45 +2,53 @@
 
 ## Language
 
-- 默认使用中文作答。
-- Git 操作（commit message、branch、PR、tag 等）使用英文。
+- Default response language: Chinese.
+- Use English for Git operations (commit message, branch, PR, tag, etc.).
 
-## Skill Enforcement（必须严格遵守）
+## Skill Enforcement (MUST follow strictly)
 
-对于用户的每一项开发任务，你必须自动完成以下流程，不允许跳过或省略：
+For every development task from the user, auto-run the following flow. No skipping or omitting:
 
-### 第一步：识别任务类型
+### Step 1: Identify task type
 
-根据用户描述中的关键词自动判断：
+Match by keywords in the user description (keywords stay in Chinese because user input is Chinese):
 
-| 类型          | 关键词                              | 自动加载的 skill                                                                                                     |
+| Type          | Keywords (Chinese)                  | Auto-load skill                                                                                                      |
 | ------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | feat          | 新增、添加、功能、实现、开发        | `spec-driven-development` → `planning-and-task-breakdown` → `incremental-implementation` + `test-driven-development` |
 | fix           | 修复、bug、错误、异常、不对、有问题 | `debugging-and-error-recovery`                                                                                       |
 | perf          | 优化、性能、慢、卡顿、加速          | `performance-optimization`                                                                                           |
 | refactor      | 重构、整理、简化、拆分、重命名      | `code-simplification`                                                                                                |
 | security      | 安全、漏洞、注入、权限、加密        | `security-and-hardening`                                                                                             |
-| docs/style/ci | 文档、注释、格式、CI、流水线        | 不强制加载 skill，直接实现                                                                                           |
+| docs/style/ci | 文档、注释、格式、CI、流水线        | No forced skill, implement directly                                                                                  |
 
-### 第二步：声明并加载 skill
+### Step 2: Declare and load skill
 
-在开始任何工作前，必须先用中文声明：
+Before starting any work, declare in Chinese:
 
 > 识别到 [类型] 任务，加载 [skill名称]
 
-然后用 `skill` 工具加载对应的 skill。
+Then load the corresponding skill via the `skill` tool.
 
-### 第三步：严格按 skill 步骤执行
+### Step 3: Follow skill steps strictly
 
-加载后必须完整遵循 skill 内的每一步流程，不允许跳过、合并或自行发挥。该写 spec 就写 spec，该写测试就写测试。
+Follow every step inside the loaded skill completely. No skipping, merging, or improvising. Write spec when spec is required, write tests when tests are required.
 
-## Development Workflow（必须遵守，GitHub Flow + Conventional Commits）
-- NEVER 在 `main`/`master`/`release/*` 开发提交；开工先 `git status` + `git branch --show-current`，在保护分支或基线过期则基于最新基线新建分支，工作区脏则停下确认。
-- One branch one task：独立任务独立分支，禁 2+ 无关修改/顺手重构/格式化/升级依赖，禁复用旧分支；命名 `type/desc` 小写短横线，`type` 限 `feat|fix|perf|refactor|security|docs|test|chore|hotfix`。
-- Commits：`type(scope): subject` 英文原子提交；禁自动 commit/push/merge，禁 force/reset 改写公共历史。
-- Scope：最小 diff，API/schema/配置/依赖等 breaking change 先汇报；禁 secrets/私钥/隐私、`node_modules/dist/build` 产物。
-- Gates：先读源码测试，沿用 skill+TDD；必跑 lint/typecheck/test/build（按仓库实有），`git diff --stat` 自检无无关文件、无调试残留。
-- 收尾：禁自行合并/删远程分支，停留特性分支给 PR 报告（改动、验证、风险），等用户决策。
+## Development Workflow (MUST follow, GitHub Flow + Conventional Commits, multi-agent by default)
+
+- NEVER develop/commit directly on `main`/`master`/`release/*`; at start run `git status` + `git branch --show-current` + `git worktree list` to confirm exclusive ownership of one worktree/branch; if on a protected branch, baseline outdated, or directory occupied, create a new isolated slot; if working tree dirty, stop and confirm.
+- One task = one worktree + one branch + one session: separate worktree/branch per independent task; forbid 2+ unrelated changes / drive-by refactor / formatting / dep upgrades; forbid reusing others' worktree or old branches; naming `type/desc` lowercase with dashes, directory prefers `/tmp/opencode/<repo>-<type-desc>`, `type` limited to `feat|fix|perf|refactor|security|docs|test|chore|hotfix`.
+- Commits: `type(scope): subject` in English, atomic; solo/worker may auto-commit locally, integration is done by main session in the base worktree via merge/rebase + delete local branch/worktree; forbid auto push/PR/delete remote branches, forbid force/reset rewriting public history.
+- Scope: minimal diff; report first on API/schema/config/dependency breaking changes; forbid secrets/private keys/privacy, `node_modules/dist/build` artifacts.
+- Gates: read source and tests first, follow skill+TDD; detect and run lint/typecheck/test/build per repo (declare skip if absent), self-check with `git diff --stat` inside current worktree for unrelated files or debug leftovers.
+- Ending: ask user to choose `/ship` or `/publish`; `/ship` means main session integrates locally then reports done, `/publish` pushes/PRs only on explicit call; never push `main/master/release/*` directly, never auto-merge own PR.
+
+## Parallel Work (multi-agent, MUST follow)
+
+- Main session splits + integrates, workers touch only own worktree/branch: forbid 2 agents writing same dir/branch, different edits on same branch also count as conflict.
+- New slot: `git worktree add /tmp/opencode/<repo>-<type-desc> -b <type/desc>` or `tools.opencode.worktree_create`; on finish `worktree remove` then delete local branch, never touch remotes.
+- Runtime isolation: separate port/DB/sqlite file/dev server per agent, no shared mutable state.
+- Split by vertical slice + file ownership + interface contract first, run tests to guard semantic conflicts even with clean textual merge.
 
 ## Documentation & Research
 

@@ -1,3 +1,4 @@
+export PATH="$HOME/.npm-global/bin:$PATH"
 # User configuration
 export BROWSER=firefox
 export EDITOR=nvim

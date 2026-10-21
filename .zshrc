@@ -1,3 +1,4 @@
+export PATH="$HOME/.npm-global/bin:$PATH"
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -143,3 +144,6 @@ if [ -f "$HOME/.dwm/utils/shell-lib.sh" ]; then
 		init_tmux_cursor
 	}
 fi
+
+# OpenClaw Completion
+[ -f '/home/walter/.openclaw/completions/openclaw.zsh' ] && source '/home/walter/.openclaw/completions/openclaw.zsh'

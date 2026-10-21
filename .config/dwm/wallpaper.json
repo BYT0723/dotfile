@@ -3,31 +3,32 @@
   "monitors": {
     "HDMI-1": {
       "random": 0,
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/portrait/image/common/light",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/portrait/video/common/light",
+      "random_image_dir": "~/Desktop/Wallpapers/portrait/image/common/light",
+      "random_video_dir": "~/Desktop/Wallpapers/portrait/video/common/light",
       "duration": 15,
       "random_type": "image",
       "video-render": {
         "fps": 60
       },
-      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/portrait/image/common/dark",
-      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/portrait/video/common/dark"
+      "random_image_dir_dark": "~/Desktop/Wallpapers/portrait/image/common/dark",
+      "random_video_dir_dark": "~/Desktop/Wallpapers/portrait/video/common/dark",
+      "random_web_dir": "~/Downloads/steam-workshop/WallpaperEngine_431960"
     },
     "eDP-1": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common/light",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW/light",
+      "random_image_dir": "~/Desktop/Wallpapers/landscape/image/common/light",
+      "random_video_dir": "~/Desktop/Wallpapers/landscape/video/NSFW/light",
       "random": 1,
       "duration": 30,
       "random_type": "image",
       "video-render": {
         "fps": 60
       },
-      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/image/common/dark",
-      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/video/NSFW/dark"
+      "random_image_dir_dark": "~/Desktop/Wallpapers/landscape/image/common/dark",
+      "random_video_dir_dark": "~/Desktop/Wallpapers/landscape/video/NSFW/dark"
     },
     "DP-1": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/landscape/image/common/light",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/landscape/video/common/light",
+      "random_image_dir": "~/Desktop/Wallpapers/landscape/image/common/light",
+      "random_video_dir": "~/Desktop/Wallpapers/landscape/video/common/light",
       "random": 0,
       "duration": 15,
       "random_type": "web",
@@ -35,38 +36,43 @@
         "fps": 30,
         "volume": 0
       },
-      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/image/common/dark",
-      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/landscape/video/common/dark"
+      "random_image_dir_dark": "~/Desktop/Wallpapers/landscape/image/common/dark",
+      "random_video_dir_dark": "~/Desktop/Wallpapers/landscape/video/common/dark",
+      "random_web_dir": "~/Desktop/Wallpapers/web",
+      "random_scene_dir": "~/Downloads/steam-workshop/WallpaperEngine_431960"
     },
     "Landscape": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common/light",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common/light",
+      "random_image_dir": "~/Desktop/Wallpapers/spanning/image/common/light",
+      "random_video_dir": "~/Desktop/Wallpapers/spanning/video/common/light",
       "random_type": "image",
       "random": 1,
       "duration": 30,
       "video-render": {
         "fps": 60
       },
-      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/image/common/dark",
-      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/video/common/dark"
+      "random_image_dir_dark": "~/Desktop/Wallpapers/spanning/image/common/dark",
+      "random_video_dir_dark": "~/Desktop/Wallpapers/spanning/video/common/dark"
     },
     "Screen": {
-      "random_image_dir": "/home/walter/Desktop/Wallpapers/spanning/image/common/light",
-      "random_video_dir": "/home/walter/Desktop/Wallpapers/spanning/video/common/light",
+      "random_image_dir": "~/Desktop/Wallpapers/spanning/image/common/light",
+      "random_video_dir": "~/Desktop/Wallpapers/spanning/video/common/light",
       "duration": "30",
       "random_type": "video",
       "random": "0",
       "video-render": {
         "fps": 60
       },
-      "random_image_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/image/common/dark",
-      "random_video_dir_dark": "/home/walter/Desktop/Wallpapers/spanning/video/common/dark"
+      "random_image_dir_dark": "~/Desktop/Wallpapers/spanning/image/common/dark",
+      "random_video_dir_dark": "~/Desktop/Wallpapers/spanning/video/common/dark"
     }
   },
   "groups": {
     "Landscape": {
       "enabled": false,
-      "members": ["eDP-1", "DP-1"]
+      "members": [
+        "eDP-1",
+        "DP-1"
+      ]
     }
   }
 }

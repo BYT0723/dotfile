@@ -15,8 +15,8 @@
   "light": {
     "brightness": {
       "eDP-1": 80,
-      "HDMI-1": 100,
-      "DP-1": 70
+      "HDMI-1": 80,
+      "DP-1": 50
     },
     "rofi": "paper",
     "fcitx5": "macOS-light",

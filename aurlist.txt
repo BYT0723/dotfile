@@ -1,3 +1,4 @@
+1password-cli
 amdgpu-pro-oglp
 amf-amdgpu-pro
 android-sdk-platform-tools
