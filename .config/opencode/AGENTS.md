@@ -37,7 +37,7 @@ Follow every step inside the loaded skill completely. No skipping, merging, or i
 ## Development Workflow (MUST follow, GitHub Flow + Conventional Commits, multi-agent by default)
 
 - NEVER develop/commit directly on `main`/`master`/`release/*`; at start run `git status` + `git branch --show-current` + `git worktree list` to confirm exclusive ownership of one worktree/branch; if on a protected branch, baseline outdated, or directory occupied, create a new isolated slot; if working tree dirty, stop and confirm.
-- One task = one worktree + one branch + one session: separate worktree/branch per independent task; forbid 2+ unrelated changes / drive-by refactor / formatting / dep upgrades; forbid reusing others' worktree or old branches; naming `type/desc` lowercase with dashes, directory prefers `/tmp/opencode/<repo>-<type-desc>`, `type` limited to `feat|fix|perf|refactor|security|docs|test|chore|hotfix`.
+- One task = one worktree + one branch + one session: separate worktree/branch per independent task; forbid 2+ unrelated changes / drive-by refactor / formatting / dep upgrades; forbid reusing others' worktree or old branches; naming `type/desc` lowercase with dashes, directory MUST be `~/Workspace/Worktrees/<repo>-<type-desc>` (persistent across reboot, FORBID `/tmp`, `/var/tmp`, `/dev/shm`), `type` limited to `feat|fix|perf|refactor|security|docs|test|chore|hotfix`.
 - Commits: `type(scope): subject` in English, atomic; solo/worker may auto-commit locally, integration is done by main session in the base worktree via merge/rebase + delete local branch/worktree; forbid auto push/PR/delete remote branches, forbid force/reset rewriting public history.
 - Scope: minimal diff; report first on API/schema/config/dependency breaking changes; forbid secrets/private keys/privacy, `node_modules/dist/build` artifacts.
 - Gates: read source and tests first, follow skill+TDD; detect and run lint/typecheck/test/build per repo (declare skip if absent), self-check with `git diff --stat` inside current worktree for unrelated files or debug leftovers.
@@ -46,7 +46,7 @@ Follow every step inside the loaded skill completely. No skipping, merging, or i
 ## Parallel Work (multi-agent, MUST follow)
 
 - Main session splits + integrates, workers touch only own worktree/branch: forbid 2 agents writing same dir/branch, different edits on same branch also count as conflict.
-- New slot: `git worktree add /tmp/opencode/<repo>-<type-desc> -b <type/desc>` or `tools.opencode.worktree_create`; on finish `worktree remove` then delete local branch, never touch remotes.
+- New slot: `git worktree add ~/Workspace/Worktrees/<repo>-<type-desc> -b <type/desc>` (FORBID `/tmp/...`; FORBID relying on `tools.opencode.worktree_create` default path — only use it if it creates under `~/Workspace/Worktrees/`); on finish `worktree remove` then delete local branch, never touch remotes. Rationale: `/tmp` is tmpfs on most Linux and is cleared on reboot — uncommitted work in a `/tmp` worktree is unrecoverable, only pushed/committed objects in the main `.git` survive.
 - Runtime isolation: separate port/DB/sqlite file/dev server per agent, no shared mutable state.
 - Split by vertical slice + file ownership + interface contract first, run tests to guard semantic conflicts even with clean textual merge.
 

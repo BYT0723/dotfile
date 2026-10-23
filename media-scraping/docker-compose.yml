@@ -34,7 +34,7 @@ services:
     restart: "no"
 
   metatube:
-    image: ghcr.io/metatube-community/metatube-server:latest
+    image: ghcr.io/metatube-community/metatube-server:dev
     container_name: metatube-server
     ports:
       - 8085:8080
